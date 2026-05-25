@@ -1,0 +1,22 @@
+{
+  "name": "NovaVentory",
+  "short_name": "NovaVentory",
+  "description": "Viking-inspired jewelry and accessories from NovaVentory on Etsy.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#050505",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

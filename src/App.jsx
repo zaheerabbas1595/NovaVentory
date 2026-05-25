@@ -11,6 +11,7 @@ import {
   Truck,
 } from 'lucide-react'
 import './App.css'
+import { createStructuredData, shopUrl, updateDocumentSeo } from './seo'
 
 import etsyTwistedCuff from './assets/etsy-listings/viking-twisted-cuff.jpg'
 import etsyWolfFang from './assets/etsy-listings/wolf-fang-pendant.jpg'
@@ -312,8 +313,30 @@ function Header() {
         <a className="brand" href="#home" aria-label="NovaVentory home">
           NovaVentory
         </a>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <a href="#products">Products</a>
+          <a href="#reviews">Reviews</a>
+          <a href={shopUrl} target="_blank" rel="noreferrer">
+            Etsy
+          </a>
+        </nav>
       </div>
     </header>
+  )
+}
+
+function Seo() {
+  useEffect(() => {
+    updateDocumentSeo()
+  }, [])
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(createStructuredData(products)),
+      }}
+    />
   )
 }
 
@@ -447,15 +470,22 @@ function Hero() {
 
 function ProductCard({ product }) {
   return (
-    <article className="product-card">
+    <article className="product-card" itemScope itemType="https://schema.org/Product">
       <div className="product-image">
         <span>{product.badge}</span>
-        <img src={product.image} alt={product.name} />
+        <img src={product.image} alt={product.name} itemProp="image" />
       </div>
       <div className="product-info">
-        <h3>{product.name}</h3>
+        <h3 itemProp="name">{product.name}</h3>
         <p>
-          <span>{product.price}</span>
+          <span itemProp="offers" itemScope itemType="https://schema.org/Offer">
+            <meta itemProp="priceCurrency" content="USD" />
+            <meta itemProp="availability" content="https://schema.org/InStock" />
+            <meta itemProp="url" content={product.href} />
+            <data itemProp="price" value={product.price.replace('$', '')}>
+              {product.price}
+            </data>
+          </span>
           <del>{product.oldPrice}</del>
         </p>
         <a
@@ -510,7 +540,7 @@ function TestimonialSlider() {
   }
 
   return (
-    <section className="testimonial-section" aria-label="Client reviews">
+    <section className="testimonial-section" id="reviews" aria-label="Client reviews">
       <div className="section-title">
         <p className="eyebrow">Loved by Viking jewelry collectors</p>
         <h2>Client Reviews</h2>
@@ -569,6 +599,7 @@ function TestimonialSlider() {
 function App() {
   return (
     <>
+      <Seo />
       <Header />
       <main>
         <Hero />
@@ -581,8 +612,8 @@ function App() {
               Raven motifs, black leather, and twisted metal bracelets bring a
               rugged edge to the season.
             </p>
-          <a className="inline-link" href="#products">
-              Read more
+            <a className="inline-link" href="#products">
+              Explore Viking jewelry
               <ArrowRight size={17} />
             </a>
           </div>
