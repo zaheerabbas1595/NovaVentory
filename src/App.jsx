@@ -156,6 +156,126 @@ const services = [
   },
 ]
 
+const legalPages = {
+  '/privacy-policy': {
+    title: 'Privacy Policy | NovaVentory',
+    description:
+      'Privacy Policy for NovaVentory, including how this website and Etsy checkout may handle customer information.',
+    eyebrow: 'Privacy Policy',
+    heading: 'Privacy Policy',
+    updated: 'May 26, 2026',
+    sections: [
+      {
+        title: 'Overview',
+        body: [
+          'NovaVentory is an Etsy-based jewelry shop. This website introduces our products and links visitors to Etsy to view listings or complete purchases.',
+          'This policy explains the limited information handled by this website and how order-related information may be handled through Etsy.',
+        ],
+      },
+      {
+        title: 'Information We May Receive',
+        body: [
+          'When you visit this website, basic technical information such as browser type, device type, referring pages, and general usage activity may be processed by our hosting and analytics providers.',
+          'When you buy from NovaVentory on Etsy, Etsy may provide order details needed to fulfill and support your purchase, such as your name, shipping address, selected item, and order messages.',
+        ],
+      },
+      {
+        title: 'Payments',
+        body: [
+          'Payments are handled through Etsy and its payment partners. NovaVentory does not collect or store full payment card details on this website.',
+        ],
+      },
+      {
+        title: 'How Information Is Used',
+        body: [
+          'Order information is used to process purchases, arrange shipping, answer support questions, manage returns or order issues, and keep records required for business, tax, or legal reasons.',
+          'Website information may be used to maintain site performance, improve product presentation, and understand general visitor interest.',
+        ],
+      },
+      {
+        title: 'Sharing Information',
+        body: [
+          'Information may be shared with Etsy, shipping providers, hosting providers, analytics services, and professional advisers when needed to operate the shop, fulfill orders, or comply with obligations.',
+          'NovaVentory does not sell personal information from this website.',
+        ],
+      },
+      {
+        title: 'Cookies And Third-Party Services',
+        body: [
+          'This website may use essential hosting technologies and third-party services. Etsy may use its own cookies and tracking technologies when you visit Etsy pages from links on this site.',
+        ],
+      },
+      {
+        title: 'Your Choices',
+        body: [
+          'You can contact NovaVentory through the Etsy shop if you need help with an order or want to ask about personal information connected to an Etsy purchase.',
+          'You can also manage Etsy account and privacy settings directly through Etsy.',
+        ],
+      },
+    ],
+  },
+  '/terms-and-conditions': {
+    title: 'Terms And Conditions | NovaVentory',
+    description:
+      'Terms and Conditions for using the NovaVentory website and shopping NovaVentory products through Etsy.',
+    eyebrow: 'Terms And Conditions',
+    heading: 'Terms And Conditions',
+    updated: 'May 26, 2026',
+    sections: [
+      {
+        title: 'Overview',
+        body: [
+          'These terms apply to your use of the NovaVentory website. Product purchases are completed on Etsy and may also be governed by Etsy policies and the terms shown on each Etsy listing.',
+        ],
+      },
+      {
+        title: 'Product Information',
+        body: [
+          'We aim to present product names, images, pricing, availability, and descriptions accurately. Final product details, checkout totals, shipping estimates, and available options are shown on Etsy at the time of purchase.',
+          'Colors and finishes may appear slightly different depending on device screens, lighting, and product photography.',
+        ],
+      },
+      {
+        title: 'Orders And Payments',
+        body: [
+          'Orders are placed through Etsy. Etsy and its payment partners process checkout, taxes, payment authorization, and order confirmations.',
+          'NovaVentory may refuse or cancel an order when required by Etsy policy, payment issues, suspected fraud, inventory errors, or other reasonable business reasons.',
+        ],
+      },
+      {
+        title: 'Shipping',
+        body: [
+          'Shipping details, delivery estimates, and destination availability are shown on Etsy listings and during checkout. Delivery dates are estimates and may be affected by carrier delays, customs processing, holidays, or incorrect shipping information.',
+        ],
+      },
+      {
+        title: 'Returns And Order Issues',
+        body: [
+          'Return, exchange, cancellation, and refund eligibility is shown on the relevant Etsy listing and order page. If there is a problem with an order, contact NovaVentory through Etsy messages so the issue can be reviewed.',
+        ],
+      },
+      {
+        title: 'Website Use',
+        body: [
+          'You may use this website for lawful personal shopping and product discovery. You may not misuse the website, attempt to interfere with its operation, or copy site content for deceptive or competing uses.',
+        ],
+      },
+      {
+        title: 'Limitation Of Liability',
+        body: [
+          'This website is provided as an informational storefront. To the fullest extent allowed by law, NovaVentory is not responsible for indirect, incidental, or consequential losses related to website use, third-party platforms, shipping providers, or external links.',
+        ],
+      },
+      {
+        title: 'Changes To These Terms',
+        body: [
+          'NovaVentory may update these terms from time to time. The updated date on this page shows when the terms were last revised.',
+        ],
+      },
+    ],
+  },
+}
+
 const testimonials = [
   {
     name: 'Aiden Brooks',
@@ -310,12 +430,12 @@ function Header() {
         <span>Free shipping in all states of the USA</span>
       </div>
       <div className="brand-row">
-        <a className="brand" href="#home" aria-label="NovaVentory home">
+        <a className="brand" href="/" aria-label="NovaVentory home">
           NovaVentory
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="#products">Products</a>
-          <a href="#reviews">Reviews</a>
+          <a href="/#products">Products</a>
+          <a href="/#reviews">Reviews</a>
           <a href={shopUrl} target="_blank" rel="noreferrer">
             Etsy
           </a>
@@ -325,18 +445,41 @@ function Header() {
   )
 }
 
-function Seo() {
+function Seo({ page }) {
   useEffect(() => {
-    updateDocumentSeo()
-  }, [])
+    updateDocumentSeo(page)
+  }, [page])
 
-  return (
+  return page?.path ? null : (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(createStructuredData(products)),
       }}
     />
+  )
+}
+
+function LegalPage({ page }) {
+  return (
+    <main className="legal-page">
+      <section className="legal-hero">
+        <p className="eyebrow">{page.eyebrow}</p>
+        <h1>{page.heading}</h1>
+        <p>Last updated: {page.updated}</p>
+      </section>
+
+      <section className="legal-content" aria-label={page.heading}>
+        {page.sections.map((section) => (
+          <article className="legal-section" key={section.title}>
+            <h2>{section.title}</h2>
+            {section.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </article>
+        ))}
+      </section>
+    </main>
   )
 }
 
@@ -470,22 +613,15 @@ function Hero() {
 
 function ProductCard({ product }) {
   return (
-    <article className="product-card" itemScope itemType="https://schema.org/Product">
+    <article className="product-card">
       <div className="product-image">
         <span>{product.badge}</span>
-        <img src={product.image} alt={product.name} itemProp="image" />
+        <img src={product.image} alt={product.name} />
       </div>
       <div className="product-info">
-        <h3 itemProp="name">{product.name}</h3>
+        <h3>{product.name}</h3>
         <p>
-          <span itemProp="offers" itemScope itemType="https://schema.org/Offer">
-            <meta itemProp="priceCurrency" content="USD" />
-            <meta itemProp="availability" content="https://schema.org/InStock" />
-            <meta itemProp="url" content={product.href} />
-            <data itemProp="price" value={product.price.replace('$', '')}>
-              {product.price}
-            </data>
-          </span>
+          <data value={product.price.replace('$', '')}>{product.price}</data>
           <del>{product.oldPrice}</del>
         </p>
         <a
@@ -597,85 +733,101 @@ function TestimonialSlider() {
 }
 
 function App() {
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/'
+  const legalPage = legalPages[currentPath]
+  const pageMeta = legalPage
+    ? {
+        path: currentPath,
+        title: legalPage.title,
+        description: legalPage.description,
+      }
+    : undefined
+
   return (
     <>
-      <Seo />
+      <Seo page={pageMeta} />
       <Header />
-      <main>
-        <Hero />
+      {legalPage ? (
+        <LegalPage page={legalPage} />
+      ) : (
+        <main>
+          <Hero />
 
-        <section className="editorial-split">
-          <div className="editorial-copy">
-            <p className="eyebrow">Viking winter trends</p>
-            <h2>Check Nordic Trends</h2>
-            <p>
-              Raven motifs, black leather, and twisted metal bracelets bring a
-              rugged edge to the season.
-            </p>
-            <a className="inline-link" href="#products">
-              Explore Viking jewelry
-              <ArrowRight size={17} />
+          <section className="editorial-split">
+            <div className="editorial-copy">
+              <p className="eyebrow">Viking winter trends</p>
+              <h2>Check Nordic Trends</h2>
+              <p>
+                Raven motifs, black leather, and twisted metal bracelets bring a
+                rugged edge to the season.
+              </p>
+              <a className="inline-link" href="#products">
+                Explore Viking jewelry
+                <ArrowRight size={17} />
+              </a>
+            </div>
+            <img src={etsyLeatherBracelet} alt="Viking leather bracelet listing photo" />
+            <img src={etsyWolfFang} alt="Wolf fang pendant necklace listing photo" />
+            <img src={etsyNorseRavenCuff} alt="Norse raven cuff bracelet listing photo" />
+          </section>
+
+          <section className="products-section" id="products">
+            <div className="section-title">
+              <p className="eyebrow">NovaVentory Etsy listings</p>
+              <h2>Featured Products</h2>
+              <p>All active shop listings with current sale pricing.</p>
+            </div>
+            <div className="product-grid">
+              {products.map((product) => (
+                <ProductCard product={product} key={product.name} />
+              ))}
+            </div>
+          </section>
+
+          <TestimonialSlider />
+
+          <section className="campaign-band">
+            <div>
+              <span>Super discount for your first purchase</span>
+              <h2>2nd shopping surprise campaign!</h2>
+              <p>Use discount code in checkout page.</p>
+            </div>
+            <a className="button button-dark" href="#products">
+              Check Products
             </a>
-          </div>
-          <img src={etsyLeatherBracelet} alt="Viking leather bracelet listing photo" />
-          <img src={etsyWolfFang} alt="Wolf fang pendant necklace listing photo" />
-          <img src={etsyNorseRavenCuff} alt="Norse raven cuff bracelet listing photo" />
-        </section>
+          </section>
 
-        <section className="products-section" id="products">
-          <div className="section-title">
-            <p className="eyebrow">NovaVentory Etsy listings</p>
-            <h2>Featured Products</h2>
-            <p>All active shop listings with current sale pricing.</p>
-          </div>
-          <div className="product-grid">
-            {products.map((product) => (
-              <ProductCard product={product} key={product.name} />
+          <section className="feature-row">
+            <img src={etsyDragonBracelet} alt="Viking dragon bracelet listing photo" />
+            <div>
+              <p className="eyebrow">This Month's Best Sellers</p>
+              <h2>Viking Products of The Week</h2>
+              <p>
+                Choose a raven bracelet or Nordic necklace that brings character
+                to daily wear.
+              </p>
+              <a className="inline-link" href="#products">
+                Shop the edit
+                <ArrowRight size={17} />
+              </a>
+            </div>
+            <img src={etsyOdinRavenNecklace} alt="Odin raven necklace listing photo" />
+          </section>
+
+          <section className="service-grid" aria-label="Store services">
+            {services.map((service) => (
+              <ServiceItem service={service} key={service.title} />
             ))}
-          </div>
-        </section>
+          </section>
 
-        <TestimonialSlider />
-
-        <section className="campaign-band">
-          <div>
-            <span>Super discount for your first purchase</span>
-            <h2>2nd shopping surprise campaign!</h2>
-            <p>Use discount code in checkout page.</p>
-          </div>
-          <a className="button button-dark" href="#products">
-            Check Products
-          </a>
-        </section>
-
-        <section className="feature-row">
-          <img src={etsyDragonBracelet} alt="Viking dragon bracelet listing photo" />
-          <div>
-            <p className="eyebrow">This Month's Best Sellers</p>
-            <h2>Viking Products of The Week</h2>
-            <p>
-              Choose a raven bracelet or Nordic necklace that brings character
-              to daily wear.
-            </p>
-            <a className="inline-link" href="#products">
-              Shop the edit
-              <ArrowRight size={17} />
-            </a>
-          </div>
-          <img src={etsyOdinRavenNecklace} alt="Odin raven necklace listing photo" />
-        </section>
-
-        <section className="service-grid" aria-label="Store services">
-          {services.map((service) => (
-            <ServiceItem service={service} key={service.title} />
-          ))}
-        </section>
-
-      </main>
+        </main>
+      )}
 
       <footer className="footer">
         <strong>NovaVentory</strong>
         <span>Viking jewelry and accessories available on Etsy.</span>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-and-conditions">Terms</a>
         <ShieldCheck size={20} aria-hidden="true" />
       </footer>
     </>

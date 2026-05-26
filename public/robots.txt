@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://novaventory.vercel.app/sitemap.xml
+Sitemap: https://novaventory.vercel.app/sitemap-index.xml
