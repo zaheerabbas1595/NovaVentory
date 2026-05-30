@@ -655,6 +655,12 @@ function BlogIndex({ page }) {
       <section className="blog-grid" aria-label="Viking jewelry guides">
         {posts.map((post) => (
           <article className="blog-card" key={post.path}>
+            <a className="blog-card-image" href={post.path} aria-label={post.heading}>
+              <img
+                src={getProductByName(post.heroProductName || post.productNames?.[0])?.image}
+                alt=""
+              />
+            </a>
             <p className="eyebrow">{post.eyebrow}</p>
             <h2>{post.heading}</h2>
             <p>{post.intro}</p>
@@ -669,7 +675,31 @@ function BlogIndex({ page }) {
   )
 }
 
+function BlogProductFeature({ page }) {
+  const featureProducts = getProductsForPage(page)
+
+  if (!featureProducts.length) {
+    return null
+  }
+
+  return (
+    <aside className="blog-product-feature" aria-label="Featured NovaVentory products">
+      <h2>Featured NovaVentory Picks</h2>
+      <div>
+        {featureProducts.slice(0, 3).map((product) => (
+          <a href={product.path} key={product.name}>
+            <img src={product.image} alt={product.name} />
+            <span>{product.name}</span>
+          </a>
+        ))}
+      </div>
+    </aside>
+  )
+}
+
 function BlogPost({ page }) {
+  const heroProduct = getProductByName(page.heroProductName || page.productNames?.[0])
+
   return (
     <main className="blog-page">
       <article className="blog-article">
@@ -678,12 +708,19 @@ function BlogPost({ page }) {
           <h1>{page.heading}</h1>
           <p>{page.intro}</p>
         </header>
+        {heroProduct ? (
+          <figure className="blog-article-image">
+            <img src={heroProduct.image} alt={heroProduct.name} />
+            <figcaption>{heroProduct.name}</figcaption>
+          </figure>
+        ) : null}
         {page.sections.map((section) => (
           <section key={section.title}>
             <h2>{section.title}</h2>
             <p>{section.body}</p>
           </section>
         ))}
+        <BlogProductFeature page={page} />
       </article>
       <RelatedLinks links={page.related} />
     </main>
