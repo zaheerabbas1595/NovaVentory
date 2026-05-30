@@ -1,3 +1,230 @@
+export const productPages = {
+  '/products/viking-twisted-cuff-bracelet': {
+    path: '/products/viking-twisted-cuff-bracelet',
+    productName: 'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+    title: 'Viking Twisted Cuff Bracelet | 316L Stainless Steel Norse Bangle',
+    description:
+      'Shop the NovaVentory Viking twisted cuff bracelet, a 316L stainless steel Norse bangle with sculpted ends, dark detail, and free USA shipping through Etsy.',
+    eyebrow: 'Stainless steel cuff',
+    heading: 'Viking Twisted Cuff Bracelet',
+    intro:
+      'A sculptural stainless steel cuff with a twisted Norse profile, made for shoppers who want a bold Viking bracelet that still feels polished enough for daily wear.',
+    bullets: [
+      '316L stainless steel construction for durable everyday styling.',
+      'Twisted cuff shape with carved Viking-inspired end details.',
+      'A strong gift option for men who like Norse, Nordic, or medieval accessories.',
+    ],
+    sections: [
+      {
+        title: 'Why It Fits Viking Bracelet Searches',
+        body: 'This piece targets the classic Viking cuff look: solid metal, twisted form, and old-world shaping. It is the strongest product page for searches around Viking cuff bracelet, Norse bangle, and stainless steel Viking bracelet.',
+      },
+      {
+        title: 'How To Style It',
+        body: 'Wear it alone as the main wrist piece or stack it with a simple leather bracelet. The silver tone works with black, denim, boots, plain tees, and layered necklace looks.',
+      },
+    ],
+    related: ['/viking-bracelet', '/stainless-steel-viking-bracelet', '/viking-cuff-bracelet'],
+    keywords: ['viking twisted cuff bracelet', 'stainless steel viking bracelet', 'norse bangle'],
+  },
+  '/products/viking-leather-bracelet': {
+    path: '/products/viking-leather-bracelet',
+    productName: 'Viking Leather Bracelet, Braided Black Leather Chain',
+    title: 'Viking Leather Bracelet | Braided Black Leather Norse Bracelet',
+    description:
+      'Shop the NovaVentory Viking leather bracelet with braided black leather styling, rugged Norse character, and Etsy checkout.',
+    eyebrow: 'Braided leather bracelet',
+    heading: 'Viking Leather Bracelet',
+    intro:
+      'A braided black leather bracelet with a rugged Viking feel, designed for everyday outfits where metal cuffs may feel too formal or heavy.',
+    bullets: [
+      'Braided black leather look with strong Norse-inspired styling.',
+      'Easy to wear with casual, streetwear, denim, and layered bracelet outfits.',
+      'A practical gift choice for shoppers searching Viking bracelet for men.',
+    ],
+    sections: [
+      {
+        title: 'A Softer Viking Bracelet Option',
+        body: 'Leather bracelets match Viking and Nordic style without the full weight of a metal cuff. This page supports searches around leather Viking bracelet, braided Norse bracelet, and casual Viking wristwear.',
+      },
+      {
+        title: 'Best For Daily Wear',
+        body: 'The black leather tone makes it easy to pair with watches, rings, and darker outfits. It is the most everyday-friendly bracelet in the NovaVentory Viking collection.',
+      },
+    ],
+    related: ['/viking-bracelet', '/mens-viking-bracelet', '/bracelets'],
+    keywords: ['viking leather bracelet', 'braided leather bracelet', 'viking bracelet for men'],
+  },
+  '/products/norse-raven-cuff-bracelet': {
+    path: '/products/norse-raven-cuff-bracelet',
+    productName: 'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+    title: 'Norse Raven Cuff Bracelet | Stainless Steel Viking Bangle',
+    description:
+      'Shop the NovaVentory Norse raven cuff bracelet, a stainless steel Viking bangle with raven-inspired styling and Etsy checkout.',
+    eyebrow: 'Norse raven cuff',
+    heading: 'Norse Raven Cuff Bracelet',
+    intro:
+      'A stainless steel raven cuff for shoppers who want symbolic Norse detail, dark character, and a strong bracelet silhouette.',
+    bullets: [
+      'Raven-inspired styling connected to Norse mythology and Viking symbolism.',
+      'Stainless steel cuff form for a bold wristwear look.',
+      'Focused page for raven bracelet, Norse cuff, and Viking bangle searches.',
+    ],
+    sections: [
+      {
+        title: 'Raven Detail With Norse Meaning',
+        body: 'Raven motifs are closely associated with Odin, memory, thought, and Norse storytelling. This cuff gives those searches a product page with direct keyword relevance and product context.',
+      },
+      {
+        title: 'Who This Bracelet Suits',
+        body: 'Choose this piece when the buyer wants something more symbolic than a plain cuff. It works especially well as a gift for fans of Viking myth, raven jewelry, and dark metal accessories.',
+      },
+    ],
+    related: ['/raven-bracelet', '/raven-jewelry', '/norse-jewelry'],
+    keywords: ['norse raven cuff bracelet', 'raven bracelet', 'viking bangle'],
+  },
+  '/products/viking-raven-bracelet': {
+    path: '/products/viking-raven-bracelet',
+    productName: 'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+    title: 'Viking Raven Bracelet | Stainless Steel Norse Cuff Wristband',
+    description:
+      'Shop the NovaVentory Viking raven bracelet, a stainless steel Norse cuff wristband for raven jewelry and Viking bracelet fans.',
+    eyebrow: 'Viking raven bracelet',
+    heading: 'Viking Raven Bracelet',
+    intro:
+      'A stainless steel Norse cuff wristband built around raven styling, rugged metal detail, and a confident Viking-inspired look.',
+    bullets: [
+      'Directly targets Viking raven bracelet and raven cuff bracelet searches.',
+      'Stainless steel wristband style with dark Norse character.',
+      'Pairs well with Viking necklaces, leather bracelets, and simple rings.',
+    ],
+    sections: [
+      {
+        title: 'The Main Raven Bracelet Page',
+        body: 'This is the strongest product page for shoppers who search specifically for a Viking raven bracelet. The content, title, headings, and internal links all support that search intent.',
+      },
+      {
+        title: 'A Statement Without Being Oversized',
+        body: 'The bracelet has enough detail to stand out, but it still fits daily outfits. It is a good bridge between symbolic jewelry and practical everyday wristwear.',
+      },
+    ],
+    related: ['/raven-bracelet', '/viking-bracelet', '/products/odin-raven-necklace'],
+    keywords: ['viking raven bracelet', 'norse raven bracelet', 'raven cuff bracelet'],
+  },
+  '/products/viking-dragon-bracelet': {
+    path: '/products/viking-dragon-bracelet',
+    productName: "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    title: "Men's Viking Dragon Bracelet | Stainless Steel Nordic Cuff",
+    description:
+      "Shop the NovaVentory men's Viking dragon bracelet, a stainless steel Nordic cuff with dragon-inspired detail and Etsy checkout.",
+    eyebrow: 'Dragon cuff bracelet',
+    heading: "Men's Viking Dragon Bracelet",
+    intro:
+      'A stainless steel Nordic cuff with dragon-inspired styling for shoppers who want a stronger, more dramatic Viking bracelet.',
+    bullets: [
+      'Dragon-inspired design language for Viking and medieval accessory searches.',
+      'Stainless steel cuff styling suited to men and bold daily outfits.',
+      'Relevant for Nordic cuff, Viking dragon bracelet, and gift searches.',
+    ],
+    sections: [
+      {
+        title: 'Dragon Styling For Bolder Looks',
+        body: 'Dragon motifs give this bracelet a sharper personality than raven or leather styles. It fits shoppers looking for something powerful, sculptural, and visibly Viking-inspired.',
+      },
+      {
+        title: 'Gift-Friendly Search Intent',
+        body: 'The page supports gift searches because it clearly explains material, style, and the type of buyer this bracelet suits. That gives Google more context than a product card alone.',
+      },
+    ],
+    related: ['/mens-viking-bracelet', '/nordic-bracelet', '/viking-cuff-bracelet'],
+    keywords: ['viking dragon bracelet', 'mens viking bracelet', 'nordic cuff bracelet'],
+  },
+  '/products/wolf-fang-pendant-necklace': {
+    path: '/products/wolf-fang-pendant-necklace',
+    productName: 'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+    title: 'Wolf Fang Pendant Necklace | Stainless Steel Viking Wolf Tooth',
+    description:
+      'Shop the NovaVentory wolf fang pendant necklace, a stainless steel Viking wolf tooth necklace with Norse-inspired styling.',
+    eyebrow: 'Wolf fang necklace',
+    heading: 'Wolf Fang Pendant Necklace',
+    intro:
+      'A stainless steel wolf fang pendant necklace for shoppers who want Viking-inspired symbolism in a necklace rather than a bracelet.',
+    bullets: [
+      'Wolf tooth shape with rugged Viking-inspired character.',
+      'Stainless steel necklace option for Norse jewelry shoppers.',
+      'Supports searches around wolf fang necklace and Viking wolf pendant.',
+    ],
+    sections: [
+      {
+        title: 'A Viking Necklace With Animal Symbolism',
+        body: 'Wolf motifs are common in Norse-inspired jewelry because they feel protective, wild, and powerful. This page gives those searches a focused necklace destination.',
+      },
+      {
+        title: 'Wear Alone Or Layered',
+        body: 'The pendant can work as a single statement necklace or pair with smaller chains. It also complements black leather bracelets and stainless steel cuffs.',
+      },
+    ],
+    related: ['/wolf-fang-necklace', '/viking-necklaces', '/norse-jewelry'],
+    keywords: ['wolf fang necklace', 'viking wolf tooth necklace', 'stainless steel viking necklace'],
+  },
+  '/products/odin-raven-necklace': {
+    path: '/products/odin-raven-necklace',
+    productName: 'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    title: 'Odin Raven Necklace | Huginn Muninn Viking Pendant',
+    description:
+      'Shop the NovaVentory Odin raven necklace, a Huginn Muninn Viking pendant for Norse mythology jewelry fans.',
+    eyebrow: 'Odin raven pendant',
+    heading: 'Odin Raven Necklace',
+    intro:
+      'A Huginn and Muninn-inspired raven pendant for shoppers who want a Norse mythology necklace with direct Odin symbolism.',
+    bullets: [
+      'Odin raven necklace page for Huginn Muninn and Norse mythology searches.',
+      'Pairs naturally with raven bracelets and Viking cuffs.',
+      'A focused gift page for fans of Viking myth and symbolic jewelry.',
+    ],
+    sections: [
+      {
+        title: 'Huginn And Muninn Search Intent',
+        body: 'People searching Odin raven jewelry often want more than a generic pendant. This page uses the correct symbolic language while still keeping the product easy to shop.',
+      },
+      {
+        title: 'Pair With Raven Wristwear',
+        body: 'The necklace links naturally to raven bracelet pages, creating a stronger internal cluster around raven jewelry, Odin symbolism, and Norse accessories.',
+      },
+    ],
+    related: ['/raven-jewelry', '/viking-necklaces', '/products/viking-raven-bracelet'],
+    keywords: ['odin raven necklace', 'huginn muninn pendant', 'norse raven necklace'],
+  },
+  '/products/satin-bow-hair-clip': {
+    path: '/products/satin-bow-hair-clip',
+    productName: "Oversized Satin Bow Hair Clip, Retro Barrette Women's Accessory",
+    title: 'Oversized Satin Bow Hair Clip | Retro Barrette Accessory',
+    description:
+      'Shop the NovaVentory oversized satin bow hair clip, a retro barrette accessory for polished everyday styling.',
+    eyebrow: 'Satin hair accessory',
+    heading: 'Oversized Satin Bow Hair Clip',
+    intro:
+      'A soft satin bow hair clip for shoppers looking for a feminine accessory outside the Viking jewelry collection.',
+    bullets: [
+      'Oversized satin bow styling with retro barrette character.',
+      'Separate product page so it does not dilute Viking bracelet pages.',
+      'Good for accessory searches and brand breadth.',
+    ],
+    sections: [
+      {
+        title: 'Why This Page Is Separate',
+        body: 'This product does not match Viking bracelet search intent, so it needs its own page rather than competing with Norse jewelry content. That keeps the site cleaner for Google and shoppers.',
+      },
+      {
+        title: 'Simple Styling Use',
+        body: 'The bow works with casual outfits, soft occasion looks, and daily hair styling when shoppers want a visible but easy accessory.',
+      },
+    ],
+    related: ['/products/viking-leather-bracelet', '/bracelets'],
+    keywords: ['oversized satin bow hair clip', 'retro barrette', 'satin bow accessory'],
+  },
+}
+
 export const commercialPages = {
   '/bracelets': {
     path: '/bracelets',
@@ -15,13 +242,7 @@ export const commercialPages = {
       'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
       "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
     ],
-    keywords: [
-      'viking bracelet',
-      'nordic bracelet',
-      'norse bracelet',
-      'raven bracelet',
-      'viking cuff bracelet',
-    ],
+    keywords: ['viking bracelet', 'nordic bracelet', 'norse bracelet', 'raven bracelet', 'viking cuff bracelet'],
     sections: [
       {
         title: 'Bracelets Built Around Norse Style',
@@ -32,6 +253,7 @@ export const commercialPages = {
         body: 'Each featured bracelet links to the active NovaVentory Etsy listing, where shoppers can review current price, checkout options, delivery details, and availability before ordering.',
       },
     ],
+    related: ['/viking-bracelet', '/nordic-bracelet', '/raven-bracelet'],
   },
   '/viking-bracelet': {
     path: '/viking-bracelet',
@@ -48,12 +270,7 @@ export const commercialPages = {
       'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
       "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
     ],
-    keywords: [
-      'viking bracelet',
-      'viking bracelet for men',
-      'stainless steel viking bracelet',
-      'viking cuff bracelet',
-    ],
+    keywords: ['viking bracelet', 'viking bracelet for men', 'stainless steel viking bracelet', 'viking cuff bracelet'],
     sections: [
       {
         title: 'What Makes A Viking Bracelet Stand Out',
@@ -64,6 +281,7 @@ export const commercialPages = {
         body: 'This page highlights active Etsy listings that match the Viking bracelet search intent, so shoppers can move from product discovery to checkout without digging through unrelated items.',
       },
     ],
+    related: ['/mens-viking-bracelet', '/stainless-steel-viking-bracelet', '/viking-cuff-bracelet'],
   },
   '/nordic-bracelet': {
     path: '/nordic-bracelet',
@@ -80,12 +298,7 @@ export const commercialPages = {
       'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
       "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
     ],
-    keywords: [
-      'nordic bracelet',
-      'norse bracelet',
-      'nordic cuff bracelet',
-      'norse cuff',
-    ],
+    keywords: ['nordic bracelet', 'norse bracelet', 'nordic cuff bracelet', 'norse cuff'],
     sections: [
       {
         title: 'Nordic Symbols And Rugged Materials',
@@ -96,6 +309,7 @@ export const commercialPages = {
         body: 'These bracelets work well for shoppers looking for a Norse gift, Viking-inspired accessory, or a durable bracelet with more character than a plain chain or bangle.',
       },
     ],
+    related: ['/norse-jewelry', '/nordic-jewelry', '/bracelets'],
   },
   '/raven-bracelet': {
     path: '/raven-bracelet',
@@ -111,12 +325,7 @@ export const commercialPages = {
       'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
       'Viking Leather Bracelet, Braided Black Leather Chain',
     ],
-    keywords: [
-      'raven bracelet',
-      'norse raven bracelet',
-      'viking raven bracelet',
-      'raven cuff bracelet',
-    ],
+    keywords: ['raven bracelet', 'norse raven bracelet', 'viking raven bracelet', 'raven cuff bracelet'],
     sections: [
       {
         title: 'Raven Motifs With Viking Character',
@@ -127,7 +336,398 @@ export const commercialPages = {
         body: 'The products on this page point to current NovaVentory Etsy listings, where shoppers can view real photos, sale prices, shipping details, and checkout options.',
       },
     ],
+    related: ['/raven-jewelry', '/products/viking-raven-bracelet', '/products/norse-raven-cuff-bracelet'],
+  },
+  '/viking-jewelry': {
+    path: '/viking-jewelry',
+    title: 'Viking Jewelry | Bracelets, Cuffs & Necklaces | NovaVentory',
+    description:
+      'Explore NovaVentory Viking jewelry, including Norse bracelets, raven cuffs, wolf fang necklaces, dragon bracelets, and Odin raven pendants.',
+    eyebrow: 'Viking jewelry collection',
+    heading: 'Viking Jewelry With Norse Character',
+    intro:
+      'A focused guide to NovaVentory Viking jewelry across bracelets, cuffs, raven pieces, wolf fang pendants, and Nordic-inspired accessories.',
+    productNames: [
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    ],
+    keywords: ['viking jewelry', 'norse jewelry', 'viking accessories', 'viking gifts'],
+    sections: [
+      {
+        title: 'A Cluster For Viking Jewelry Searches',
+        body: 'This page connects the strongest bracelet and necklace pages so Google can understand NovaVentory as a Viking-inspired jewelry store rather than only a single landing page.',
+      },
+      {
+        title: 'Bracelets And Pendants Together',
+        body: 'Shoppers can compare cuffs, leather bracelets, raven pendants, and wolf fang necklaces from one hub before moving to the product page that fits their intent.',
+      },
+    ],
+    related: ['/viking-bracelet', '/viking-necklaces', '/norse-jewelry'],
+  },
+  '/norse-jewelry': {
+    path: '/norse-jewelry',
+    title: 'Norse Jewelry | Raven, Wolf & Viking Accessories | NovaVentory',
+    description:
+      'Shop Norse jewelry from NovaVentory, including raven bracelets, Odin pendants, wolf fang necklaces, and stainless steel Viking cuffs.',
+    eyebrow: 'Norse jewelry edit',
+    heading: 'Norse Jewelry With Symbolic Detail',
+    intro:
+      'Browse Norse jewelry inspired by raven symbolism, wolf motifs, twisted metal cuffs, and Viking-style everyday accessories.',
+    productNames: [
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+    ],
+    keywords: ['norse jewelry', 'norse bracelet', 'norse necklace', 'odin raven jewelry'],
+    sections: [
+      {
+        title: 'Symbolic Norse Motifs',
+        body: 'Ravens, wolves, cuffs, and dark stainless steel finishes give this page a clear Norse identity for shoppers who search by mythology and symbolism.',
+      },
+      {
+        title: 'Internal Links For Topical Authority',
+        body: 'The page links into product pages and guides about raven meaning, styling, and stainless steel versus leather bracelets to strengthen the whole Norse jewelry topic cluster.',
+      },
+    ],
+    related: ['/raven-jewelry', '/viking-jewelry', '/blog/raven-symbol-meaning-in-norse-jewelry'],
+  },
+  '/nordic-jewelry': {
+    path: '/nordic-jewelry',
+    title: 'Nordic Jewelry | Viking Bracelets & Norse Necklaces | NovaVentory',
+    description:
+      'Explore Nordic jewelry from NovaVentory, including Viking bracelets, Norse cuffs, raven necklaces, wolf fang pendants, and stainless steel accessories.',
+    eyebrow: 'Nordic jewelry collection',
+    heading: 'Nordic Jewelry For Everyday Styling',
+    intro:
+      'Find Nordic jewelry with clean metal finishes, rugged Norse motifs, and pieces that work for daily outfits or meaningful gifts.',
+    productNames: [
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    ],
+    keywords: ['nordic jewelry', 'nordic bracelet', 'nordic necklace', 'nordic accessories'],
+    sections: [
+      {
+        title: 'Nordic Style Without Costume Energy',
+        body: 'This collection favors wearable pieces with clear Nordic character rather than oversized costume styling. That makes it useful for daily wear searches and gift searches.',
+      },
+      {
+        title: 'Bracelets First, Necklaces Next',
+        body: 'Bracelet pages carry the strongest commercial intent, while necklace and guide pages support the broader Nordic jewelry topic.',
+      },
+    ],
+    related: ['/nordic-bracelet', '/viking-necklaces', '/bracelets'],
+  },
+  '/viking-necklaces': {
+    path: '/viking-necklaces',
+    title: 'Viking Necklaces | Odin Raven & Wolf Fang Pendants | NovaVentory',
+    description:
+      'Shop NovaVentory Viking necklaces, including Odin raven pendants, Huginn Muninn jewelry, and stainless steel wolf fang necklaces.',
+    eyebrow: 'Viking necklace edit',
+    heading: 'Viking Necklaces And Norse Pendants',
+    intro:
+      'Browse Viking necklace styles centered on Odin raven symbolism, wolf fang shapes, stainless steel finishes, and Norse-inspired pendants.',
+    productNames: [
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    ],
+    keywords: ['viking necklaces', 'norse necklace', 'odin raven necklace', 'wolf fang necklace'],
+    sections: [
+      {
+        title: 'Pendant Pages For Necklace Searches',
+        body: 'This hub keeps necklace search intent separate from bracelet pages, helping Google understand which URLs should rank for pendant and necklace queries.',
+      },
+      {
+        title: 'Two Strong Symbol Paths',
+        body: 'The wolf fang page supports animal-tooth pendant searches, while the Odin raven page supports mythology and Huginn Muninn searches.',
+      },
+    ],
+    related: ['/wolf-fang-necklace', '/raven-jewelry', '/products/odin-raven-necklace'],
+  },
+  '/raven-jewelry': {
+    path: '/raven-jewelry',
+    title: 'Raven Jewelry | Odin Raven Bracelets & Necklaces | NovaVentory',
+    description:
+      'Explore raven jewelry from NovaVentory, including Viking raven bracelets, Norse raven cuffs, and Odin raven necklace designs.',
+    eyebrow: 'Raven jewelry hub',
+    heading: 'Raven Jewelry Inspired By Norse Myth',
+    intro:
+      'A focused hub for raven bracelets, raven cuffs, Odin raven necklaces, and Norse mythology jewelry from NovaVentory.',
+    productNames: [
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    ],
+    keywords: ['raven jewelry', 'odin raven jewelry', 'viking raven bracelet', 'norse raven necklace'],
+    sections: [
+      {
+        title: 'Raven Pages Belong Together',
+        body: 'This hub connects raven bracelet and Odin raven necklace pages so the site has a clear topical cluster around raven symbolism instead of isolated product cards.',
+      },
+      {
+        title: 'Best Entry Point For Symbolic Shoppers',
+        body: 'Shoppers who search by symbol can compare bracelets and necklaces before choosing a product page or reading the raven meaning guide.',
+      },
+    ],
+    related: ['/raven-bracelet', '/products/odin-raven-necklace', '/blog/raven-symbol-meaning-in-norse-jewelry'],
+  },
+  '/wolf-fang-necklace': {
+    path: '/wolf-fang-necklace',
+    title: 'Wolf Fang Necklace | Viking Wolf Tooth Pendant | NovaVentory',
+    description:
+      'Shop the NovaVentory wolf fang necklace collection and learn how the stainless steel Viking wolf tooth pendant fits Norse jewelry styling.',
+    eyebrow: 'Wolf fang necklace',
+    heading: 'Wolf Fang Necklace With Viking Character',
+    intro:
+      'A dedicated page for shoppers looking for wolf fang necklaces, Viking wolf tooth pendants, and stainless steel Norse necklace styles.',
+    productNames: ['Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth'],
+    keywords: ['wolf fang necklace', 'viking wolf tooth pendant', 'wolf tooth necklace'],
+    sections: [
+      {
+        title: 'Focused Wolf Pendant Search Intent',
+        body: 'This page gives Google a clear URL for wolf fang necklace searches rather than forcing necklace traffic through a general homepage.',
+      },
+      {
+        title: 'Pairs With Viking Bracelets',
+        body: 'The wolf fang pendant pairs well with black leather bracelets, twisted cuffs, and other rugged accessories in the NovaVentory collection.',
+      },
+    ],
+    related: ['/viking-necklaces', '/products/wolf-fang-pendant-necklace', '/norse-jewelry'],
+  },
+  '/mens-viking-bracelet': {
+    path: '/mens-viking-bracelet',
+    title: "Men's Viking Bracelet | Norse Cuffs & Leather Bracelets",
+    description:
+      "Shop men's Viking bracelet styles from NovaVentory, including stainless steel cuffs, dragon bracelets, raven wristbands, and braided leather bracelets.",
+    eyebrow: "Men's bracelet guide",
+    heading: "Men's Viking Bracelet Collection",
+    intro:
+      'A focused collection for men looking for Viking bracelets, rugged cuffs, leather wristwear, and Norse-inspired everyday accessories.',
+    productNames: [
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    ],
+    keywords: ["men's viking bracelet", 'viking bracelet for men', 'mens norse bracelet'],
+    sections: [
+      {
+        title: 'A Page For Buyer Language',
+        body: 'Many shoppers search for men\'s Viking bracelet rather than a specific symbol. This page gathers the strongest cuff and leather options under that exact buying intent.',
+      },
+      {
+        title: 'Metal Or Leather',
+        body: 'Metal cuffs feel stronger and more sculptural, while black leather bracelets feel easier for everyday wear. Both paths link to their own product pages.',
+      },
+    ],
+    related: ['/viking-bracelet', '/products/viking-leather-bracelet', '/products/viking-dragon-bracelet'],
+  },
+  '/stainless-steel-viking-bracelet': {
+    path: '/stainless-steel-viking-bracelet',
+    title: 'Stainless Steel Viking Bracelet | Norse Cuff Collection',
+    description:
+      'Shop stainless steel Viking bracelet styles from NovaVentory, including twisted cuffs, raven bangles, dragon cuffs, and Nordic wristwear.',
+    eyebrow: 'Stainless steel bracelets',
+    heading: 'Stainless Steel Viking Bracelet Collection',
+    intro:
+      'Compare stainless steel Viking bracelets built around cuff shapes, raven symbolism, dragon detail, and Norse-inspired everyday styling.',
+    productNames: [
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    ],
+    keywords: ['stainless steel viking bracelet', 'viking steel cuff', 'norse stainless bracelet'],
+    sections: [
+      {
+        title: 'Durable Material Search Intent',
+        body: 'Material-focused shoppers often search for stainless steel before they choose a symbol. This page helps capture that practical buying intent.',
+      },
+      {
+        title: 'Best Stainless Steel Picks',
+        body: 'The twisted cuff is the classic metal choice, while raven and dragon cuffs give shoppers a more symbolic or dramatic direction.',
+      },
+    ],
+    related: ['/viking-cuff-bracelet', '/viking-bracelet', '/nordic-bracelet'],
+  },
+  '/viking-cuff-bracelet': {
+    path: '/viking-cuff-bracelet',
+    title: 'Viking Cuff Bracelet | Norse Bangles & Dragon Cuffs',
+    description:
+      'Shop Viking cuff bracelet styles from NovaVentory, including Norse bangles, raven cuffs, twisted bracelets, and dragon cuff designs.',
+    eyebrow: 'Cuff bracelet collection',
+    heading: 'Viking Cuff Bracelet Styles',
+    intro:
+      'A dedicated cuff bracelet page for shoppers who want open bangle shapes, sculptural metal details, and unmistakable Viking-inspired wristwear.',
+    productNames: [
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    ],
+    keywords: ['viking cuff bracelet', 'norse bangle', 'dragon cuff bracelet'],
+    sections: [
+      {
+        title: 'Open Cuff And Bangle Searches',
+        body: 'This page targets shoppers who already know they want a cuff rather than a chain or leather bracelet. That intent is narrower and usually more valuable than generic bracelet traffic.',
+      },
+      {
+        title: 'Choose By Motif',
+        body: 'Twisted cuffs are classic, raven cuffs are symbolic, and dragon cuffs are the boldest option. Each product page expands the search path.',
+      },
+    ],
+    related: ['/stainless-steel-viking-bracelet', '/products/viking-twisted-cuff-bracelet', '/products/norse-raven-cuff-bracelet'],
+  },
+}
+
+export const blogPages = {
+  '/blog': {
+    path: '/blog',
+    title: 'Viking Jewelry Guides | NovaVentory Blog',
+    description:
+      'Read NovaVentory guides about Viking bracelets, Norse raven symbolism, stainless steel jewelry, leather bracelets, and Viking jewelry gifts.',
+    eyebrow: 'Jewelry guides',
+    heading: 'Viking Jewelry Guides',
+    intro:
+      'Practical guides for shoppers comparing Viking bracelets, Norse symbols, leather and steel materials, and meaningful jewelry gifts.',
+  },
+  '/blog/what-does-a-viking-bracelet-mean': {
+    path: '/blog/what-does-a-viking-bracelet-mean',
+    title: 'What Does A Viking Bracelet Mean? | Norse Jewelry Guide',
+    description:
+      'Learn what Viking bracelets can mean today, from Norse symbolism and strength to everyday styling and meaningful jewelry gifts.',
+    eyebrow: 'Meaning guide',
+    heading: 'What Does A Viking Bracelet Mean?',
+    intro:
+      'A Viking bracelet can be a style choice, a symbol of strength, a nod to Norse history, or a meaningful gift. Modern shoppers often choose them for the feeling they carry as much as the look.',
+    sections: [
+      {
+        title: 'Strength, Memory, And Personal Identity',
+        body: 'Modern Viking bracelets often represent resilience, independence, loyalty, or interest in Norse mythology. Some shoppers prefer raven motifs connected to Odin, while others choose wolf, dragon, or twisted cuff designs for a stronger visual statement.',
+      },
+      {
+        title: 'Modern Meaning Matters More Than Costume Accuracy',
+        body: 'Most everyday Viking-inspired jewelry is not trying to recreate museum artifacts. The value comes from symbolic styling, durable materials, and a design language that feels old-world without being hard to wear.',
+      },
+      {
+        title: 'How To Choose One',
+        body: 'Choose a raven bracelet for mythic symbolism, a leather bracelet for daily comfort, a twisted cuff for a classic Viking look, or a dragon cuff for a bolder gift.',
+      },
+    ],
+    related: ['/viking-bracelet', '/raven-bracelet', '/products/viking-twisted-cuff-bracelet'],
+  },
+  '/blog/how-to-style-a-viking-bracelet': {
+    path: '/blog/how-to-style-a-viking-bracelet',
+    title: 'How To Style A Viking Bracelet | NovaVentory',
+    description:
+      'Learn how to style a Viking bracelet with leather, denim, boots, watches, rings, necklaces, and everyday men\'s outfits.',
+    eyebrow: 'Styling guide',
+    heading: 'How To Style A Viking Bracelet',
+    intro:
+      'A Viking bracelet works best when the rest of the outfit gives it room to breathe. The goal is character, not costume.',
+    sections: [
+      {
+        title: 'Start With One Main Wrist Piece',
+        body: 'If the bracelet is a twisted cuff, raven cuff, or dragon bracelet, let it be the main accessory on that wrist. Pair it with a simple ring or plain watch rather than several competing bracelets.',
+      },
+      {
+        title: 'Use Dark Neutrals',
+        body: 'Black, charcoal, denim, olive, white, and steel tones make Viking-inspired jewelry feel grounded. These colors keep the bracelet from looking theatrical.',
+      },
+      {
+        title: 'Match Texture, Not Everything',
+        body: 'A leather bracelet can sit beside boots or a leather jacket. A stainless steel cuff can echo a watch case, necklace chain, or ring. The pieces do not need to match exactly.',
+      },
+    ],
+    related: ['/mens-viking-bracelet', '/products/viking-leather-bracelet', '/products/viking-raven-bracelet'],
+  },
+  '/blog/raven-symbol-meaning-in-norse-jewelry': {
+    path: '/blog/raven-symbol-meaning-in-norse-jewelry',
+    title: 'Raven Symbol Meaning In Norse Jewelry | Odin Raven Guide',
+    description:
+      'Learn why raven symbols appear in Norse jewelry, including Odin, Huginn and Muninn, memory, thought, and Viking-inspired bracelet styling.',
+    eyebrow: 'Raven symbol guide',
+    heading: 'Raven Symbol Meaning In Norse Jewelry',
+    intro:
+      'Raven jewelry is one of the clearest links between modern Viking-inspired accessories and Norse mythology, especially because of Odin and his ravens Huginn and Muninn.',
+    sections: [
+      {
+        title: 'Ravens And Odin',
+        body: 'In Norse mythology, Odin is closely associated with two ravens, Huginn and Muninn. Their names are often connected with thought and memory, which is why raven jewelry can feel symbolic rather than purely decorative.',
+      },
+      {
+        title: 'Why Ravens Work In Jewelry',
+        body: 'Raven motifs create a darker, sharper visual tone. On bracelets and pendants, they can suggest wisdom, watchfulness, mystery, and strength without needing large or loud designs.',
+      },
+      {
+        title: 'Best NovaVentory Raven Pieces',
+        body: 'The Viking raven bracelet, Norse raven cuff, and Odin raven necklace form the core raven jewelry cluster on NovaVentory.',
+      },
+    ],
+    related: ['/raven-jewelry', '/raven-bracelet', '/products/odin-raven-necklace'],
+  },
+  '/blog/stainless-steel-vs-leather-viking-bracelets': {
+    path: '/blog/stainless-steel-vs-leather-viking-bracelets',
+    title: 'Stainless Steel Vs Leather Viking Bracelets | Buying Guide',
+    description:
+      'Compare stainless steel Viking bracelets and leather Viking bracelets, including durability, comfort, styling, and gift use.',
+    eyebrow: 'Buying guide',
+    heading: 'Stainless Steel Vs Leather Viking Bracelets',
+    intro:
+      'The fastest way to choose a Viking bracelet is to decide between stainless steel structure and leather comfort.',
+    sections: [
+      {
+        title: 'Choose Stainless Steel For Structure',
+        body: 'Stainless steel cuffs feel stronger, more sculptural, and more jewelry-forward. They are best for shoppers who want the bracelet to be a visible statement.',
+      },
+      {
+        title: 'Choose Leather For Everyday Comfort',
+        body: 'Leather bracelets feel softer and more casual. They are easy to pair with watches, hoodies, denim, tees, and relaxed daily outfits.',
+      },
+      {
+        title: 'Best Choice For Gifts',
+        body: 'If you are unsure, leather is safer for daily comfort, while a stainless steel cuff feels more premium and dramatic. Raven and dragon designs are best when the recipient already likes Norse symbolism.',
+      },
+    ],
+    related: ['/stainless-steel-viking-bracelet', '/products/viking-leather-bracelet', '/viking-cuff-bracelet'],
+  },
+  '/blog/viking-jewelry-gifts-for-men': {
+    path: '/blog/viking-jewelry-gifts-for-men',
+    title: 'Viking Jewelry Gifts For Men | Bracelet & Necklace Ideas',
+    description:
+      'Find Viking jewelry gifts for men, including Norse bracelets, raven cuffs, dragon bracelets, wolf fang necklaces, and Odin raven pendants.',
+    eyebrow: 'Gift guide',
+    heading: 'Viking Jewelry Gifts For Men',
+    intro:
+      'Viking jewelry gifts work best when the design fits the person: leather for daily wear, steel cuffs for statement style, raven pieces for symbolism, and pendants for layering.',
+    sections: [
+      {
+        title: 'Best Everyday Gift',
+        body: 'A black leather Viking bracelet is the easiest daily gift because it feels casual, wearable, and less size-sensitive than a bold metal cuff.',
+      },
+      {
+        title: 'Best Statement Gift',
+        body: 'A twisted cuff or dragon cuff makes a stronger impression. These work best for someone who already likes rings, bracelets, boots, dark clothing, or medieval-inspired style.',
+      },
+      {
+        title: 'Best Symbolic Gift',
+        body: 'Raven bracelets and Odin raven necklaces are the strongest choices for someone interested in Norse mythology, Odin, Huginn and Muninn, or symbolic jewelry.',
+      },
+    ],
+    related: ['/mens-viking-bracelet', '/viking-necklaces', '/raven-jewelry'],
   },
 }
 
 export const commercialPagePaths = Object.keys(commercialPages)
+export const productPagePaths = Object.keys(productPages)
+export const blogPagePaths = Object.keys(blogPages)
+export const allSeoPages = {
+  ...commercialPages,
+  ...productPages,
+  ...blogPages,
+}
+export const allSeoPagePaths = Object.keys(allSeoPages)

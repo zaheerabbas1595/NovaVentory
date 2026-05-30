@@ -345,6 +345,18 @@
   background: #ffffff;
 }
 
+.button-light {
+  color: #111111;
+  background: #ffffff;
+  border-color: #d8d8d8;
+}
+
+.button-light:hover {
+  color: #ffffff;
+  background: #111111;
+  border-color: #111111;
+}
+
 .hero-controls {
   position: absolute;
   left: 50%;
@@ -582,6 +594,10 @@
   color: #ffffff;
   background: #111111;
   border-color: #111111;
+}
+
+.product-info .product-buy-link {
+  margin-left: 8px;
 }
 
 .testimonial-section {
@@ -944,6 +960,160 @@
   border-color: #111111;
 }
 
+.product-page {
+  background: #ffffff;
+}
+
+.product-detail {
+  width: min(1220px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(58px, 8vw, 108px) 0 clamp(44px, 6vw, 76px);
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1fr);
+  gap: clamp(34px, 6vw, 84px);
+  align-items: center;
+}
+
+.product-detail-image {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #f4f0e8;
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.product-detail-copy h1,
+.blog-hero h1,
+.blog-article h1 {
+  margin: 0;
+  color: #111111;
+  font-size: clamp(36px, 5vw, 66px);
+  line-height: 1.04;
+}
+
+.product-detail-copy p:not(.eyebrow),
+.blog-hero p:not(.eyebrow),
+.blog-article header p {
+  color: #555555;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.8;
+}
+
+.product-detail-price {
+  margin: 24px 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.product-detail-price data {
+  color: #cda323;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.product-detail-price del {
+  color: #8b8b8b;
+  font-weight: 800;
+}
+
+.product-detail-price span {
+  padding: 5px 10px;
+  color: #ffffff;
+  background: #111111;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.product-detail-copy ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #333333;
+  line-height: 1.85;
+}
+
+.product-actions {
+  justify-content: flex-start;
+}
+
+.blog-page {
+  color: #111111;
+  background: #ffffff;
+}
+
+.blog-hero {
+  padding: clamp(64px, 9vw, 118px) 20px clamp(42px, 6vw, 76px);
+  color: #ffffff;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.58)),
+    url('./assets/etsy-listings/odin-raven-necklace.jpg') center / cover;
+  text-align: center;
+}
+
+.blog-hero h1,
+.blog-hero p:not(.eyebrow) {
+  color: #ffffff;
+}
+
+.blog-hero p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.blog-grid {
+  width: min(1220px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(52px, 7vw, 88px) 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.blog-card {
+  padding: clamp(26px, 4vw, 42px);
+  background: #f8f7f4;
+  border: 1px solid #e6dfd3;
+}
+
+.blog-card h2,
+.blog-article h2 {
+  margin: 0 0 14px;
+  color: #111111;
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.18;
+}
+
+.blog-card p:not(.eyebrow),
+.blog-article p {
+  color: #555555;
+  line-height: 1.85;
+}
+
+.blog-article {
+  width: min(880px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(58px, 8vw, 108px) 0 clamp(36px, 5vw, 62px);
+}
+
+.blog-article header {
+  margin-bottom: 44px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid #e8e1d6;
+}
+
+.blog-article section + section {
+  margin-top: 34px;
+}
+
 .legal-hero {
   padding: clamp(58px, 9vw, 104px) 20px clamp(38px, 6vw, 72px);
   color: #ffffff;
@@ -1162,7 +1332,9 @@
   .feature-row,
   .service-grid,
   .testimonial-slider,
-  .collection-copy-grid {
+  .collection-copy-grid,
+  .product-detail,
+  .blog-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1221,7 +1393,15 @@
   }
 
   .collection-content,
-  .collection-links {
+  .collection-links,
+  .product-detail,
+  .blog-grid,
+  .blog-article {
     width: min(100% - 32px, 1120px);
+  }
+
+  .product-info .product-buy-link {
+    margin-left: 0;
+    margin-top: 8px;
   }
 }

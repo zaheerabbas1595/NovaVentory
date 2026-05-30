@@ -3,13 +3,13 @@ import react from '@vitejs/plugin-react'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { getSiteUrl } from './scripts/seo-domain.mjs'
-import { commercialPagePaths } from './src/seo-pages.js'
+import { allSeoPagePaths } from './src/seo-pages.js'
 
 const siteUrl = getSiteUrl()
 const rootDir = dirname(fileURLToPath(import.meta.url))
 const commercialPageInputs = Object.fromEntries(
-  commercialPagePaths.map((path) => [
-    path.replace(/^\//, '').replace(/-/g, ''),
+  allSeoPagePaths.map((path) => [
+    path.replace(/^\//, '').replace(/[^a-z0-9]+/gi, ''),
     resolve(rootDir, `${path.replace(/^\//, '')}.html`),
   ]),
 )

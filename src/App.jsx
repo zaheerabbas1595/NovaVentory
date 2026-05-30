@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 import './App.css'
 import { createStructuredData, shopUrl, updateDocumentSeo } from './seo'
-import { commercialPages } from './seo-pages'
+import { blogPages, commercialPages, productPages } from './seo-pages'
 
 import etsyTwistedCuff from './assets/etsy-listings/viking-twisted-cuff.jpg'
 import etsyWolfFang from './assets/etsy-listings/wolf-fang-pendant.jpg'
@@ -69,6 +69,7 @@ const heroSlides = [
 
 const products = [
   {
+    path: '/products/viking-twisted-cuff-bracelet',
     name: 'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
     price: '$34.20',
     oldPrice: '$38.00',
@@ -77,6 +78,7 @@ const products = [
     href: 'https://www.etsy.com/listing/4472255350/viking-twisted-cuff-bracelet-316l',
   },
   {
+    path: '/products/wolf-fang-pendant-necklace',
     name: 'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
     price: '$32.40',
     oldPrice: '$36.00',
@@ -85,6 +87,7 @@ const products = [
     href: 'https://www.etsy.com/listing/4471749819/wolf-fang-pendant-necklace-men-stainless',
   },
   {
+    path: '/products/viking-leather-bracelet',
     name: 'Viking Leather Bracelet, Braided Black Leather Chain',
     price: '$34.20',
     oldPrice: '$38.00',
@@ -93,6 +96,7 @@ const products = [
     href: 'https://www.etsy.com/listing/4464869860/viking-leather-bracelet-men-braided',
   },
   {
+    path: '/products/norse-raven-cuff-bracelet',
     name: 'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
     price: '$30.60',
     oldPrice: '$34.00',
@@ -101,6 +105,7 @@ const products = [
     href: 'https://www.etsy.com/listing/4481078347/norse-raven-cuff-bracelet-men-stainless',
   },
   {
+    path: '/products/viking-raven-bracelet',
     name: 'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
     price: '$30.60',
     oldPrice: '$34.00',
@@ -109,6 +114,7 @@ const products = [
     href: 'https://www.etsy.com/listing/4433569216/viking-raven-bracelet-for-men-stainless',
   },
   {
+    path: '/products/satin-bow-hair-clip',
     name: "Oversized Satin Bow Hair Clip, Retro Barrette Women's Accessory",
     price: '$23.40',
     oldPrice: '$26.00',
@@ -117,6 +123,7 @@ const products = [
     href: 'https://www.etsy.com/listing/4442382703/satin-bow-hair-clip-for-women-large',
   },
   {
+    path: '/products/viking-dragon-bracelet',
     name: "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
     price: '$34.20',
     oldPrice: '$38.00',
@@ -125,6 +132,7 @@ const products = [
     href: 'https://www.etsy.com/listing/4455935876/mens-viking-dragon-bracelet-stainless',
   },
   {
+    path: '/products/odin-raven-necklace',
     name: 'Odin Raven Necklace, Huginn Muninn Viking Pendant',
     price: '$31.50',
     oldPrice: '$35.00',
@@ -437,7 +445,8 @@ function Header() {
         <nav className="site-nav" aria-label="Primary navigation">
           <a href="/#products">Products</a>
           <a href="/bracelets">Bracelets</a>
-          <a href="/viking-bracelet">Viking Bracelet</a>
+          <a href="/viking-jewelry">Viking Jewelry</a>
+          <a href="/blog">Guides</a>
           <a href="/#reviews">Reviews</a>
           <a href={shopUrl} target="_blank" rel="noreferrer">
             Etsy
@@ -485,6 +494,38 @@ function LegalPage({ page }) {
         ))}
       </section>
     </main>
+  )
+}
+
+const getProductByName = (productName) =>
+  products.find((product) => product.name === productName)
+
+const getProductsForPage = (page) =>
+  page?.productNames?.map(getProductByName).filter(Boolean) || []
+
+const getPageTitle = (path) =>
+  commercialPages[path]?.heading ||
+  productPages[path]?.heading ||
+  blogPages[path]?.heading ||
+  path
+    .replace(/^\/|\/$/g, '')
+    .split('/')
+    .pop()
+    .replace(/-/g, ' ')
+
+function RelatedLinks({ links = [] }) {
+  if (!links.length) {
+    return null
+  }
+
+  return (
+    <nav className="collection-links" aria-label="Related NovaVentory pages">
+      {links.map((path) => (
+        <a href={path} key={path}>
+          {getPageTitle(path)}
+        </a>
+      ))}
+    </nav>
   )
 }
 
@@ -536,12 +577,108 @@ function CollectionPage({ page, collectionProducts }) {
         </div>
       </section>
 
-      <nav className="collection-links" aria-label="Related NovaVentory pages">
-        <a href="/bracelets">All Bracelets</a>
-        <a href="/viking-bracelet">Viking Bracelet</a>
-        <a href="/nordic-bracelet">Nordic Bracelet</a>
-        <a href="/raven-bracelet">Raven Bracelet</a>
-      </nav>
+      <RelatedLinks links={page.related} />
+    </main>
+  )
+}
+
+function ProductPage({ page, product }) {
+  return (
+    <main className="product-page">
+      <section className="product-detail">
+        <div className="product-detail-image">
+          <img src={product.image} alt={product.name} />
+        </div>
+        <div className="product-detail-copy">
+          <p className="eyebrow">{page.eyebrow}</p>
+          <h1>{page.heading}</h1>
+          <p>{page.intro}</p>
+          <div className="product-detail-price">
+            <data value={product.price.replace('$', '')}>{product.price}</data>
+            <del>{product.oldPrice}</del>
+            <span>{product.badge}</span>
+          </div>
+          <ul>
+            {page.bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+          <div className="collection-actions product-actions">
+            <a className="button button-dark" href={product.href} target="_blank" rel="noreferrer">
+              Buy on Etsy
+            </a>
+            <a className="button button-light" href="/bracelets">
+              Browse Bracelets
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="collection-content" aria-label={`${page.heading} details`}>
+        <div className="collection-keywords" aria-label="Related searches">
+          {page.keywords.map((keyword) => (
+            <span key={keyword}>{keyword}</span>
+          ))}
+        </div>
+        <div className="collection-copy-grid">
+          {page.sections.map((section) => (
+            <article key={section.title}>
+              <h2>{section.title}</h2>
+              <p>{section.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <RelatedLinks links={page.related} />
+    </main>
+  )
+}
+
+function BlogIndex({ page }) {
+  const posts = Object.values(blogPages).filter((post) => post.path !== '/blog')
+
+  return (
+    <main className="blog-page">
+      <section className="blog-hero">
+        <p className="eyebrow">{page.eyebrow}</p>
+        <h1>{page.heading}</h1>
+        <p>{page.intro}</p>
+      </section>
+      <section className="blog-grid" aria-label="Viking jewelry guides">
+        {posts.map((post) => (
+          <article className="blog-card" key={post.path}>
+            <p className="eyebrow">{post.eyebrow}</p>
+            <h2>{post.heading}</h2>
+            <p>{post.intro}</p>
+            <a className="inline-link" href={post.path}>
+              Read guide
+              <ArrowRight size={17} />
+            </a>
+          </article>
+        ))}
+      </section>
+    </main>
+  )
+}
+
+function BlogPost({ page }) {
+  return (
+    <main className="blog-page">
+      <article className="blog-article">
+        <header>
+          <p className="eyebrow">{page.eyebrow}</p>
+          <h1>{page.heading}</h1>
+          <p>{page.intro}</p>
+        </header>
+        {page.sections.map((section) => (
+          <section key={section.title}>
+            <h2>{section.title}</h2>
+            <p>{section.body}</p>
+          </section>
+        ))}
+      </article>
+      <RelatedLinks links={page.related} />
     </main>
   )
 }
@@ -709,6 +846,14 @@ function ProductCard({ product }) {
           <del>{product.oldPrice}</del>
         </p>
         <a
+          className="product-details-link"
+          href={product.path}
+          aria-label={`View details for ${product.name}`}
+        >
+          View Details
+        </a>
+        <a
+          className="product-buy-link"
           href={product.href}
           target="_blank"
           rel="noreferrer"
@@ -820,9 +965,10 @@ function App() {
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/'
   const legalPage = legalPages[currentPath]
   const commercialPage = commercialPages[currentPath]
-  const collectionProducts = commercialPage
-    ? products.filter((product) => commercialPage.productNames.includes(product.name))
-    : []
+  const productPage = productPages[currentPath]
+  const blogPage = blogPages[currentPath]
+  const selectedProduct = productPage ? getProductByName(productPage.productName) : undefined
+  const collectionProducts = getProductsForPage(commercialPage)
   const pageMeta = legalPage
     ? {
         path: currentPath,
@@ -838,7 +984,23 @@ function App() {
           heading: commercialPage.heading,
           structuredProducts: collectionProducts,
         }
-      : undefined
+      : productPage
+        ? {
+            path: currentPath,
+            title: productPage.title,
+            description: productPage.description,
+            heading: productPage.heading,
+            structuredProducts: selectedProduct ? [selectedProduct] : [],
+          }
+        : blogPage
+          ? {
+              path: currentPath,
+              title: blogPage.title,
+              description: blogPage.description,
+              heading: blogPage.heading,
+              skipStructuredData: true,
+            }
+          : undefined
 
   return (
     <>
@@ -848,6 +1010,12 @@ function App() {
         <LegalPage page={legalPage} />
       ) : commercialPage ? (
         <CollectionPage page={commercialPage} collectionProducts={collectionProducts} />
+      ) : productPage && selectedProduct ? (
+        <ProductPage page={productPage} product={selectedProduct} />
+      ) : blogPage?.path === '/blog' ? (
+        <BlogIndex page={blogPage} />
+      ) : blogPage ? (
+        <BlogPost page={blogPage} />
       ) : (
         <main>
           <Hero />
@@ -926,7 +1094,9 @@ function App() {
         <strong>NovaVentory</strong>
         <span>Viking jewelry and accessories available on Etsy.</span>
         <a href="/bracelets">Bracelets</a>
+        <a href="/viking-jewelry">Viking Jewelry</a>
         <a href="/nordic-bracelet">Nordic Bracelet</a>
+        <a href="/blog">Guides</a>
         <a href="/privacy-policy">Privacy Policy</a>
         <a href="/terms-and-conditions">Terms</a>
         <ShieldCheck size={20} aria-hidden="true" />
