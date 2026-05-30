@@ -43,6 +43,8 @@
   justify-self: end;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: clamp(14px, 2vw, 26px);
 }
 
@@ -232,12 +234,30 @@
   transform: translateY(-50%) rotate(-3deg);
 }
 
+.hero-video-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  background: #111111;
+}
+
 .hero-video-panel video {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   display: block;
   object-fit: contain;
   background: #050505;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.hero-video-panel video.is-ready {
+  opacity: 1;
 }
 
 .hero-video-panel::after {
@@ -795,6 +815,135 @@
   background: #ffffff;
 }
 
+.collection-page {
+  color: #111111;
+  background: #ffffff;
+}
+
+.collection-hero {
+  min-height: 560px;
+  padding: clamp(72px, 10vw, 132px) 20px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.5)),
+    url('./assets/etsy-listings/viking-raven-bracelet.jpg') center / cover;
+  text-align: center;
+}
+
+.collection-hero > div {
+  width: min(860px, 100%);
+}
+
+.collection-hero h1 {
+  margin: 0;
+  font-size: clamp(36px, 5.4vw, 72px);
+  line-height: 1.02;
+}
+
+.collection-hero p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 24px auto 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.75;
+}
+
+.collection-actions {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.collection-content {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(54px, 7vw, 88px) 0 16px;
+}
+
+.collection-keywords {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.collection-keywords span {
+  padding: 8px 13px;
+  color: #111111;
+  background: #f4f0e8;
+  border: 1px solid #e2d8c9;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.collection-copy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.collection-copy-grid article {
+  padding-top: 26px;
+  border-top: 1px solid #e8e1d6;
+}
+
+.collection-copy-grid h2 {
+  margin: 0 0 14px;
+  color: #111111;
+  font-size: clamp(24px, 2.6vw, 34px);
+  line-height: 1.18;
+}
+
+.collection-copy-grid p {
+  margin: 0;
+  color: #555555;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.collection-products {
+  padding-top: 54px;
+}
+
+.collection-links {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto 84px;
+  padding-top: 28px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid #e8e1d6;
+}
+
+.collection-links a {
+  min-height: 42px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  color: #111111;
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.collection-links a:hover {
+  color: #ffffff;
+  background: #111111;
+  border-color: #111111;
+}
+
 .legal-hero {
   padding: clamp(58px, 9vw, 104px) 20px clamp(38px, 6vw, 72px);
   color: #ffffff;
@@ -1012,7 +1161,8 @@
   .editorial-split,
   .feature-row,
   .service-grid,
-  .testimonial-slider {
+  .testimonial-slider,
+  .collection-copy-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1058,5 +1208,20 @@
 
   .service-item:first-child {
     border-top: 0;
+  }
+
+  .collection-hero {
+    min-height: 520px;
+    padding: 66px 16px;
+  }
+
+  .collection-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .collection-content,
+  .collection-links {
+    width: min(100% - 32px, 1120px);
   }
 }

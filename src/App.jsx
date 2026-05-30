@@ -12,6 +12,7 @@ import {
 } from 'lucide-react'
 import './App.css'
 import { createStructuredData, shopUrl, updateDocumentSeo } from './seo'
+import { commercialPages } from './seo-pages'
 
 import etsyTwistedCuff from './assets/etsy-listings/viking-twisted-cuff.jpg'
 import etsyWolfFang from './assets/etsy-listings/wolf-fang-pendant.jpg'
@@ -435,6 +436,8 @@ function Header() {
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
           <a href="/#products">Products</a>
+          <a href="/bracelets">Bracelets</a>
+          <a href="/viking-bracelet">Viking Bracelet</a>
           <a href="/#reviews">Reviews</a>
           <a href={shopUrl} target="_blank" rel="noreferrer">
             Etsy
@@ -450,11 +453,13 @@ function Seo({ page }) {
     updateDocumentSeo(page)
   }, [page])
 
-  return page?.path ? null : (
+  return page?.skipStructuredData ? null : (
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{
-        __html: JSON.stringify(createStructuredData(products)),
+        __html: JSON.stringify(
+          createStructuredData(page?.structuredProducts || products, page),
+        ),
       }}
     />
   )
@@ -483,10 +488,70 @@ function LegalPage({ page }) {
   )
 }
 
+function CollectionPage({ page, collectionProducts }) {
+  return (
+    <main className="collection-page">
+      <section className="collection-hero">
+        <div>
+          <p className="eyebrow">{page.eyebrow}</p>
+          <h1>{page.heading}</h1>
+          <p>{page.intro}</p>
+          <div className="collection-actions">
+            <a className="button button-dark" href="#products">
+              View Products
+            </a>
+            <a className="button button-ghost" href={shopUrl} target="_blank" rel="noreferrer">
+              Visit Etsy Shop
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="collection-content" aria-label={`${page.heading} details`}>
+        <div className="collection-keywords" aria-label="Related searches">
+          {page.keywords.map((keyword) => (
+            <span key={keyword}>{keyword}</span>
+          ))}
+        </div>
+        <div className="collection-copy-grid">
+          {page.sections.map((section) => (
+            <article key={section.title}>
+              <h2>{section.title}</h2>
+              <p>{section.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="products-section collection-products" id="products">
+        <div className="section-title">
+          <p className="eyebrow">NovaVentory Etsy listings</p>
+          <h2>Shop {page.heading}</h2>
+          <p>Focused picks from the active NovaVentory jewelry collection.</p>
+        </div>
+        <div className="product-grid">
+          {collectionProducts.map((product) => (
+            <ProductCard product={product} key={product.name} />
+          ))}
+        </div>
+      </section>
+
+      <nav className="collection-links" aria-label="Related NovaVentory pages">
+        <a href="/bracelets">All Bracelets</a>
+        <a href="/viking-bracelet">Viking Bracelet</a>
+        <a href="/nordic-bracelet">Nordic Bracelet</a>
+        <a href="/raven-bracelet">Raven Bracelet</a>
+      </nav>
+    </main>
+  )
+}
+
 function Hero() {
   const [activeSlide, setActiveSlide] = useState(0)
+  const [videoReadySlide, setVideoReadySlide] = useState(null)
   const heroVideoRef = useRef(null)
   const slide = heroSlides[activeSlide]
+  const isVideoReady = videoReadySlide === activeSlide
 
   const showNextSlide = useCallback(() => {
     setActiveSlide((currentSlide) => (currentSlide + 1) % heroSlides.length)
@@ -497,7 +562,12 @@ function Hero() {
       const video = heroVideoRef.current
 
       if (video) {
-        video.currentTime = 0
+        try {
+          video.currentTime = 0
+        } catch {
+          // Some browsers reject currentTime changes before video metadata loads.
+        }
+
         video.play().catch(() => {})
       }
 
@@ -530,6 +600,7 @@ function Hero() {
           <img
             className={index === activeSlide ? 'active' : ''}
             src={heroSlide.image}
+            fetchPriority={index === 0 ? 'high' : 'auto'}
             alt=""
             key={heroSlide.eyebrow}
           />
@@ -553,14 +624,27 @@ function Hero() {
         <div className={`hero-showcase ${slide.videoSrc ? 'with-video' : ''}`}>
           {slide.videoSrc ? (
             <div className="hero-video-panel">
+              <img
+                className="hero-video-poster"
+                src={slide.image}
+                fetchPriority="high"
+                alt=""
+                aria-hidden="true"
+              />
               <video
                 ref={heroVideoRef}
+                className={isVideoReady ? 'is-ready' : ''}
                 src={slide.videoSrc}
                 poster={slide.image}
                 autoPlay
                 muted
                 playsInline
-                preload="auto"
+                preload="metadata"
+                onLoadedData={() => setVideoReadySlide(activeSlide)}
+                onCanPlay={() => setVideoReadySlide(activeSlide)}
+                onPlaying={() => setVideoReadySlide(activeSlide)}
+                onError={() => setVideoReadySlide(null)}
+                onStalled={() => setVideoReadySlide(null)}
                 onEnded={showNextSlide}
                 aria-label="Best-selling Viking raven bracelet video"
               />
@@ -735,13 +819,26 @@ function TestimonialSlider() {
 function App() {
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/'
   const legalPage = legalPages[currentPath]
+  const commercialPage = commercialPages[currentPath]
+  const collectionProducts = commercialPage
+    ? products.filter((product) => commercialPage.productNames.includes(product.name))
+    : []
   const pageMeta = legalPage
     ? {
         path: currentPath,
         title: legalPage.title,
         description: legalPage.description,
+        skipStructuredData: true,
       }
-    : undefined
+    : commercialPage
+      ? {
+          path: currentPath,
+          title: commercialPage.title,
+          description: commercialPage.description,
+          heading: commercialPage.heading,
+          structuredProducts: collectionProducts,
+        }
+      : undefined
 
   return (
     <>
@@ -749,6 +846,8 @@ function App() {
       <Header />
       {legalPage ? (
         <LegalPage page={legalPage} />
+      ) : commercialPage ? (
+        <CollectionPage page={commercialPage} collectionProducts={collectionProducts} />
       ) : (
         <main>
           <Hero />
@@ -826,6 +925,8 @@ function App() {
       <footer className="footer">
         <strong>NovaVentory</strong>
         <span>Viking jewelry and accessories available on Etsy.</span>
+        <a href="/bracelets">Bracelets</a>
+        <a href="/nordic-bracelet">Nordic Bracelet</a>
         <a href="/privacy-policy">Privacy Policy</a>
         <a href="/terms-and-conditions">Terms</a>
         <ShieldCheck size={20} aria-hidden="true" />

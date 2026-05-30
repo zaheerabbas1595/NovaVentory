@@ -3,9 +3,16 @@ import react from '@vitejs/plugin-react'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { getSiteUrl } from './scripts/seo-domain.mjs'
+import { commercialPagePaths } from './src/seo-pages.js'
 
 const siteUrl = getSiteUrl()
 const rootDir = dirname(fileURLToPath(import.meta.url))
+const commercialPageInputs = Object.fromEntries(
+  commercialPagePaths.map((path) => [
+    path.replace(/^\//, '').replace(/-/g, ''),
+    resolve(rootDir, `${path.replace(/^\//, '')}.html`),
+  ]),
+)
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,6 +23,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(rootDir, 'index.html'),
+        ...commercialPageInputs,
         privacyPolicy: resolve(rootDir, 'privacy-policy.html'),
         termsAndConditions: resolve(rootDir, 'terms-and-conditions.html'),
       },

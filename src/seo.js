@@ -75,13 +75,16 @@ export function updateDocumentSeo(page = {}) {
   setMeta('meta[name="twitter:image"]', 'content', previewImage)
 }
 
-export function createStructuredData(products) {
+export function createStructuredData(products, page = {}) {
+  const pageUrl = absoluteUrl(page.path || '/')
+  const pageName = page.heading || 'Featured NovaVentory Viking jewelry'
+  const pageDescription = page.description || siteDescription
   const productGraph = products.map((product, index) => {
     const price = parsePrice(product.price)
 
     return {
       '@type': 'Product',
-      '@id': `${siteUrl}/#product-${index + 1}`,
+      '@id': `${pageUrl}#product-${index + 1}`,
       name: product.name,
       image: absoluteUrl(product.image),
       description: `${product.name} from NovaVentory's Viking-inspired Etsy jewelry collection.`,
@@ -127,6 +130,23 @@ export function createStructuredData(products) {
           '@id': `${siteUrl}/#organization`,
         },
       },
+      ...(page.path
+        ? [
+            {
+              '@type': 'CollectionPage',
+              '@id': `${pageUrl}#webpage`,
+              name: pageName,
+              url: pageUrl,
+              description: pageDescription,
+              isPartOf: {
+                '@id': `${siteUrl}/#website`,
+              },
+              publisher: {
+                '@id': `${siteUrl}/#organization`,
+              },
+            },
+          ]
+        : []),
       {
         '@type': 'Store',
         '@id': `${siteUrl}/#store`,
@@ -153,15 +173,15 @@ export function createStructuredData(products) {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Featured Products',
-            item: `${siteUrl}/#products`,
+            name: page.path ? pageName : 'Featured Products',
+            item: page.path ? pageUrl : `${siteUrl}/#products`,
           },
         ],
       },
       {
         '@type': 'ItemList',
-        '@id': `${siteUrl}/#featured-products`,
-        name: 'Featured NovaVentory Viking jewelry',
+        '@id': `${pageUrl}#featured-products`,
+        name: pageName,
         itemListElement: products.map((product, index) => ({
           '@type': 'ListItem',
           position: index + 1,
