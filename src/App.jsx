@@ -11,6 +11,11 @@ import {
   Truck,
 } from 'lucide-react'
 import './App.css'
+import {
+  createProductEventParameters,
+  trackMetaPixel,
+  trackMetaPixelCustom,
+} from './meta-pixel'
 import { createStructuredData, shopUrl, updateDocumentSeo } from './seo'
 import { blogPages, commercialPages, productPages } from './seo-pages'
 
@@ -211,7 +216,8 @@ const legalPages = {
       {
         title: 'Cookies And Third-Party Services',
         body: [
-          'This website may use essential hosting technologies and third-party services. Etsy may use its own cookies and tracking technologies when you visit Etsy pages from links on this site.',
+          'This website may use essential hosting technologies and third-party services, including Meta Pixel, to understand page visits, product interest, and clicks from this website to NovaVentory Etsy listings.',
+          'Meta Pixel may use cookies or similar technologies to help measure ad performance and build advertising audiences. Etsy may use its own cookies and tracking technologies when you visit Etsy pages from links on this site.',
         ],
       },
       {
@@ -590,6 +596,14 @@ function CollectionPage({ page, collectionProducts }) {
 }
 
 function ProductPage({ page, product }) {
+  useEffect(() => {
+    trackMetaPixel('ViewContent', createProductEventParameters(product))
+  }, [product])
+
+  const trackEtsyClick = () => {
+    trackMetaPixelCustom('EtsyOutboundClick', createProductEventParameters(product))
+  }
+
   return (
     <main className="product-page">
       <section className="product-detail">
@@ -611,7 +625,13 @@ function ProductPage({ page, product }) {
             ))}
           </ul>
           <div className="collection-actions product-actions">
-            <a className="button button-dark" href={product.href} target="_blank" rel="noreferrer">
+            <a
+              className="button button-dark"
+              href={product.href}
+              target="_blank"
+              rel="noreferrer"
+              onClick={trackEtsyClick}
+            >
               Buy on Etsy
             </a>
             <a className="button button-light" href="/bracelets">
@@ -877,6 +897,10 @@ function Hero() {
 }
 
 function ProductCard({ product }) {
+  const trackEtsyClick = () => {
+    trackMetaPixelCustom('EtsyOutboundClick', createProductEventParameters(product))
+  }
+
   return (
     <article className="product-card">
       <div className="product-image">
@@ -901,6 +925,7 @@ function ProductCard({ product }) {
           href={product.href}
           target="_blank"
           rel="noreferrer"
+          onClick={trackEtsyClick}
           aria-label={`Buy ${product.name} on Etsy`}
         >
           Buy on Etsy
