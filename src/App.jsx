@@ -443,9 +443,16 @@ function Header() {
           NovaVentory
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="/#products">Products</a>
-          <a href="/bracelets">Bracelets</a>
-          <a href="/viking-jewelry">Viking Jewelry</a>
+          <details className="nav-menu">
+            <summary>Shop</summary>
+            <div className="nav-menu-panel">
+              <a href="/#products">Featured Products</a>
+              <a href="/bracelets">Bracelets</a>
+              <a href="/viking-jewelry">Viking Jewelry</a>
+              <a href="/viking-necklaces">Viking Necklaces</a>
+              <a href="/raven-jewelry">Raven Jewelry</a>
+            </div>
+          </details>
           <a href="/blog">Guides</a>
           <a href="/#reviews">Reviews</a>
           <a href={shopUrl} target="_blank" rel="noreferrer">
