@@ -34,7 +34,9 @@ export default defineConfig({
     {
       name: 'novaventory-seo-domain',
       transformIndexHtml(html) {
-        return html.replaceAll('https://novaventory.vercel.app', siteUrl)
+        return html
+          .replaceAll('https://novaventory.vercel.app', siteUrl)
+          .replaceAll('https://novaventory.com', siteUrl)
       },
     },
   ],

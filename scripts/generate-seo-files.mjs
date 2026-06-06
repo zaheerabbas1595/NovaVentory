@@ -84,8 +84,8 @@ const createHtml = (page) => `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+    <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href="${siteUrl}${page.path}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

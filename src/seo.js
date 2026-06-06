@@ -1,6 +1,6 @@
 export const siteUrl =
   import.meta.env.VITE_SITE_URL?.replace(/\/$/, '') ||
-  'https://novaventory.vercel.app'
+  'https://novaventory.com'
 
 export const siteTitle =
   'NovaVentory | Viking Jewelry, Raven Bracelets & Norse Necklaces'
