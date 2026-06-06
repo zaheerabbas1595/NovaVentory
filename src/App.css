@@ -1349,7 +1349,11 @@
   }
 
   .site-nav {
+    position: relative;
+    width: 100%;
     justify-self: center;
+    justify-content: center;
+    flex-wrap: nowrap;
     gap: 14px;
   }
 
@@ -1357,19 +1361,27 @@
   .nav-menu summary {
     font-size: 11px;
     letter-spacing: 1.2px;
+    white-space: nowrap;
+  }
+
+  .nav-menu {
+    position: static;
   }
 
   .nav-menu-panel {
-    left: 50%;
-    right: auto;
-    width: min(260px, calc(100vw - 32px));
-    transform: translate(-50%, -6px);
+    top: calc(100% + 14px);
+    left: 0;
+    right: 0;
+    width: auto;
+    max-height: calc(100svh - 170px);
+    overflow-y: auto;
+    transform: translateY(-6px);
   }
 
   .nav-menu[open] .nav-menu-panel,
   .nav-menu:hover .nav-menu-panel,
   .nav-menu:focus-within .nav-menu-panel {
-    transform: translate(-50%, 0);
+    transform: translateY(0);
   }
 
   .hero {
