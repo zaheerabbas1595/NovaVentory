@@ -61,25 +61,6 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 </sitemapindex>
 `
 
-const metaPixelHead = `    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1721526562622331');
-      fbq('track', 'PageView');
-    </script>
-    <!-- End Meta Pixel Code -->`
-
-const metaPixelNoScript = `    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1721526562622331&ev=PageView&noscript=1"
-      alt="" /></noscript>`
-
 const createHtml = (page) => `<!doctype html>
 <html lang="en">
   <head>
@@ -107,11 +88,9 @@ const createHtml = (page) => `<!doctype html>
     <meta name="twitter:description" content="${page.description}" />
     <meta name="twitter:image" content="${siteUrl}/og-novaventory.jpg" />
     <meta name="google-site-verification" content="bfVFvSd2-GiDeRZMRsjeT9RSeL9kQtxtsHjluEgemJg" />
-${metaPixelHead}
     <title>${page.title}</title>
   </head>
   <body>
-${metaPixelNoScript}
     <div id="root"></div>
     <noscript>${page.heading || page.title} from NovaVentory.</noscript>
     <script type="module" src="/src/main.jsx"></script>

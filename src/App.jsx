@@ -13,11 +13,11 @@ import {
 import './App.css'
 import {
   createProductEventParameters,
+  initMetaPixel,
   trackMetaPixel,
   trackMetaPixelCustom,
 } from './meta-pixel'
 import { createStructuredData, shopUrl, updateDocumentSeo } from './seo'
-import { blogPages, commercialPages, productPages } from './seo-pages'
 
 import etsyTwistedCuff from './assets/etsy-listings/viking-twisted-cuff.jpg'
 import etsyWolfFang from './assets/etsy-listings/wolf-fang-pendant.jpg'
@@ -472,6 +472,7 @@ function Header() {
 
 function Seo({ page }) {
   useEffect(() => {
+    initMetaPixel()
     updateDocumentSeo(page)
   }, [page])
 
@@ -516,17 +517,92 @@ const getProductByName = (productName) =>
 const getProductsForPage = (page) =>
   page?.productNames?.map(getProductByName).filter(Boolean) || []
 
-const getPageTitle = (path) =>
-  commercialPages[path]?.heading ||
-  productPages[path]?.heading ||
-  blogPages[path]?.heading ||
+const getPageTitle = (path, seoPages = {}) =>
+  seoPages.commercialPages?.[path]?.heading ||
+  seoPages.productPages?.[path]?.heading ||
+  seoPages.blogPages?.[path]?.heading ||
   path
     .replace(/^\/|\/$/g, '')
     .split('/')
     .pop()
     .replace(/-/g, ' ')
 
-function RelatedLinks({ links = [] }) {
+function SeoRouteLoader({ currentPath }) {
+  const [seoPages, setSeoPages] = useState(null)
+
+  useEffect(() => {
+    let isMounted = true
+
+    import('./seo-pages').then((pages) => {
+      if (isMounted) {
+        setSeoPages(pages)
+      }
+    })
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
+
+  if (!seoPages) {
+    return <main className="route-loading" aria-label="Loading page" />
+  }
+
+  const { blogPages, commercialPages, productPages } = seoPages
+  const commercialPage = commercialPages[currentPath]
+  const productPage = productPages[currentPath]
+  const blogPage = blogPages[currentPath]
+  const selectedProduct = productPage ? getProductByName(productPage.productName) : undefined
+  const collectionProducts = getProductsForPage(commercialPage)
+  const pageMeta = commercialPage
+    ? {
+        path: currentPath,
+        title: commercialPage.title,
+        description: commercialPage.description,
+        heading: commercialPage.heading,
+        structuredProducts: collectionProducts,
+      }
+    : productPage
+      ? {
+          path: currentPath,
+          title: productPage.title,
+          description: productPage.description,
+          heading: productPage.heading,
+          structuredProducts: selectedProduct ? [selectedProduct] : [],
+        }
+      : blogPage
+        ? {
+            path: currentPath,
+            title: blogPage.title,
+            description: blogPage.description,
+            heading: blogPage.heading,
+            skipStructuredData: true,
+          }
+        : undefined
+
+  return (
+    <>
+      <Seo page={pageMeta} />
+      {commercialPage ? (
+        <CollectionPage
+          page={commercialPage}
+          collectionProducts={collectionProducts}
+          seoPages={seoPages}
+        />
+      ) : productPage && selectedProduct ? (
+        <ProductPage page={productPage} product={selectedProduct} seoPages={seoPages} />
+      ) : blogPage?.path === '/blog' ? (
+        <BlogIndex page={blogPage} blogPages={blogPages} />
+      ) : blogPage ? (
+        <BlogPost page={blogPage} seoPages={seoPages} />
+      ) : (
+        <HomePage />
+      )}
+    </>
+  )
+}
+
+function RelatedLinks({ links = [], seoPages }) {
   if (!links.length) {
     return null
   }
@@ -535,14 +611,14 @@ function RelatedLinks({ links = [] }) {
     <nav className="collection-links" aria-label="Related NovaVentory pages">
       {links.map((path) => (
         <a href={path} key={path}>
-          {getPageTitle(path)}
+          {getPageTitle(path, seoPages)}
         </a>
       ))}
     </nav>
   )
 }
 
-function CollectionPage({ page, collectionProducts }) {
+function CollectionPage({ page, collectionProducts, seoPages }) {
   return (
     <main className="collection-page">
       <section className="collection-hero">
@@ -590,12 +666,12 @@ function CollectionPage({ page, collectionProducts }) {
         </div>
       </section>
 
-      <RelatedLinks links={page.related} />
+      <RelatedLinks links={page.related} seoPages={seoPages} />
     </main>
   )
 }
 
-function ProductPage({ page, product }) {
+function ProductPage({ page, product, seoPages }) {
   useEffect(() => {
     trackMetaPixel('ViewContent', createProductEventParameters(product))
   }, [product])
@@ -657,12 +733,12 @@ function ProductPage({ page, product }) {
         </div>
       </section>
 
-      <RelatedLinks links={page.related} />
+      <RelatedLinks links={page.related} seoPages={seoPages} />
     </main>
   )
 }
 
-function BlogIndex({ page }) {
+function BlogIndex({ page, blogPages }) {
   const posts = Object.values(blogPages).filter((post) => post.path !== '/blog')
 
   return (
@@ -717,7 +793,7 @@ function BlogProductFeature({ page }) {
   )
 }
 
-function BlogPost({ page }) {
+function BlogPost({ page, seoPages }) {
   const heroProduct = getProductByName(page.heroProductName || page.productNames?.[0])
 
   return (
@@ -742,7 +818,7 @@ function BlogPost({ page }) {
         ))}
         <BlogProductFeature page={page} />
       </article>
-      <RelatedLinks links={page.related} />
+      <RelatedLinks links={page.related} seoPages={seoPages} />
     </main>
   )
 }
@@ -1030,65 +1106,39 @@ function TestimonialSlider() {
   )
 }
 
-function App() {
-  const currentPath = window.location.pathname.replace(/\/$/, '') || '/'
-  const legalPage = legalPages[currentPath]
-  const commercialPage = commercialPages[currentPath]
-  const productPage = productPages[currentPath]
-  const blogPage = blogPages[currentPath]
-  const selectedProduct = productPage ? getProductByName(productPage.productName) : undefined
-  const collectionProducts = getProductsForPage(commercialPage)
-  const pageMeta = legalPage
-    ? {
-        path: currentPath,
-        title: legalPage.title,
-        description: legalPage.description,
-        skipStructuredData: true,
-      }
-    : commercialPage
-      ? {
-          path: currentPath,
-          title: commercialPage.title,
-          description: commercialPage.description,
-          heading: commercialPage.heading,
-          structuredProducts: collectionProducts,
+function HomePage() {
+  const [showDeferredContent, setShowDeferredContent] = useState(
+    () => window.location.hash === '#products' || window.location.hash === '#reviews',
+  )
+
+  useEffect(() => {
+    if (showDeferredContent) {
+      return undefined
+    }
+
+    const revealContent = () => setShowDeferredContent(true)
+
+    if ('requestIdleCallback' in window) {
+      const idleId = window.requestIdleCallback(revealContent, { timeout: 1400 })
+
+      return () => {
+        if ('cancelIdleCallback' in window) {
+          window.cancelIdleCallback(idleId)
         }
-      : productPage
-        ? {
-            path: currentPath,
-            title: productPage.title,
-            description: productPage.description,
-            heading: productPage.heading,
-            structuredProducts: selectedProduct ? [selectedProduct] : [],
-          }
-        : blogPage
-          ? {
-              path: currentPath,
-              title: blogPage.title,
-              description: blogPage.description,
-              heading: blogPage.heading,
-              skipStructuredData: true,
-            }
-          : undefined
+      }
+    }
+
+    const timer = window.setTimeout(revealContent, 900)
+
+    return () => window.clearTimeout(timer)
+  }, [showDeferredContent])
 
   return (
-    <>
-      <Seo page={pageMeta} />
-      <Header />
-      {legalPage ? (
-        <LegalPage page={legalPage} />
-      ) : commercialPage ? (
-        <CollectionPage page={commercialPage} collectionProducts={collectionProducts} />
-      ) : productPage && selectedProduct ? (
-        <ProductPage page={productPage} product={selectedProduct} />
-      ) : blogPage?.path === '/blog' ? (
-        <BlogIndex page={blogPage} />
-      ) : blogPage ? (
-        <BlogPost page={blogPage} />
-      ) : (
-        <main>
-          <Hero />
+    <main>
+      <Hero />
 
+      {showDeferredContent ? (
+        <>
           <section className="editorial-split">
             <div className="editorial-copy">
               <p className="eyebrow">Viking winter trends</p>
@@ -1102,9 +1152,9 @@ function App() {
                 <ArrowRight size={17} />
               </a>
             </div>
-            <img src={etsyLeatherBracelet} alt="Viking leather bracelet listing photo" />
-            <img src={etsyWolfFang} alt="Wolf fang pendant necklace listing photo" />
-            <img src={etsyNorseRavenCuff} alt="Norse raven cuff bracelet listing photo" />
+            <img src={etsyLeatherBracelet} alt="Viking leather bracelet listing photo" loading="lazy" />
+            <img src={etsyWolfFang} alt="Wolf fang pendant necklace listing photo" loading="lazy" />
+            <img src={etsyNorseRavenCuff} alt="Norse raven cuff bracelet listing photo" loading="lazy" />
           </section>
 
           <section className="products-section" id="products">
@@ -1134,7 +1184,7 @@ function App() {
           </section>
 
           <section className="feature-row">
-            <img src={etsyDragonBracelet} alt="Viking dragon bracelet listing photo" />
+            <img src={etsyDragonBracelet} alt="Viking dragon bracelet listing photo" loading="lazy" />
             <div>
               <p className="eyebrow">This Month's Best Sellers</p>
               <h2>Viking Products of The Week</h2>
@@ -1147,7 +1197,7 @@ function App() {
                 <ArrowRight size={17} />
               </a>
             </div>
-            <img src={etsyOdinRavenNecklace} alt="Odin raven necklace listing photo" />
+            <img src={etsyOdinRavenNecklace} alt="Odin raven necklace listing photo" loading="lazy" />
           </section>
 
           <section className="service-grid" aria-label="Store services">
@@ -1155,8 +1205,34 @@ function App() {
               <ServiceItem service={service} key={service.title} />
             ))}
           </section>
+        </>
+      ) : null}
+    </main>
+  )
+}
 
-        </main>
+function App() {
+  const currentPath = window.location.pathname.replace(/\/$/, '') || '/'
+  const legalPage = legalPages[currentPath]
+  const pageMeta = legalPage
+    ? {
+        path: currentPath,
+        title: legalPage.title,
+        description: legalPage.description,
+        skipStructuredData: true,
+      }
+    : undefined
+
+  return (
+    <>
+      <Seo page={pageMeta} />
+      <Header />
+      {legalPage ? (
+        <LegalPage page={legalPage} />
+      ) : currentPath === '/' ? (
+        <HomePage />
+      ) : (
+        <SeoRouteLoader currentPath={currentPath} />
       )}
 
       <footer className="footer">
