@@ -6,6 +6,26 @@
   box-shadow: 0 1px 0 rgba(16, 16, 16, 0.08);
 }
 
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+  padding: 10px 14px;
+  color: #050505;
+  background: #ffffff;
+  border: 2px solid #8a6400;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transform: translateY(-140%);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .top-strip {
   min-height: 44px;
   display: grid;
@@ -60,7 +80,7 @@
 
 .site-nav a:hover,
 .nav-menu summary:hover {
-  color: #cda323;
+  color: #8a6400;
 }
 
 .nav-menu {
@@ -196,7 +216,7 @@
 
 .eyebrow {
   margin: 0 0 16px;
-  color: #cda323;
+  color: #8a6400;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2.8px;
@@ -233,6 +253,14 @@
   color: rgba(255, 255, 255, 0.92);
   font-size: clamp(16px, 1.5vw, 20px);
   line-height: 1.8;
+}
+
+.hero .eyebrow,
+.editorial-copy .eyebrow,
+.collection-hero .eyebrow,
+.blog-hero .eyebrow,
+.legal-hero .eyebrow {
+  color: #dfc45b;
 }
 
 .hero-showcase {
@@ -631,7 +659,7 @@
 
 .product-info p span,
 .product-info p data {
-  color: #cda323;
+  color: #8a6400;
   font-weight: 900;
 }
 
@@ -701,7 +729,7 @@
 .testimonial-stars {
   display: flex;
   gap: 5px;
-  color: #cda323;
+  color: #8a6400;
 }
 
 .testimonial-card p {
@@ -724,7 +752,7 @@
 
 .testimonial-card span {
   margin-top: 6px;
-  color: #777777;
+  color: #555555;
   font-size: 13px;
 }
 
@@ -850,7 +878,7 @@
 }
 
 .service-item svg {
-  color: #cda323;
+  color: #8a6400;
 }
 
 .service-item h3 {
@@ -882,11 +910,11 @@
 }
 
 .footer span {
-  color: rgba(255, 255, 255, 0.68);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .footer a {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 1.2px;
@@ -1085,7 +1113,7 @@
 }
 
 .product-detail-price data {
-  color: #cda323;
+  color: #8a6400;
   font-size: 26px;
   font-weight: 900;
 }
@@ -1269,10 +1297,18 @@
   line-height: 1.05;
 }
 
-.legal-hero p:last-child {
+.legal-hero > p {
   margin: 18px 0 0;
   color: rgba(255, 255, 255, 0.82);
   font-weight: 700;
+}
+
+.legal-actions {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
 }
 
 .legal-content {
@@ -1302,6 +1338,15 @@
 
 .legal-section p + p {
   margin-top: 12px;
+}
+
+.legal-section a {
+  color: #6f5000;
+  font-weight: 700;
+}
+
+.legal-section a:hover {
+  color: #111111;
 }
 
 @media (max-width: 1080px) {
@@ -1584,5 +1629,16 @@
   .product-info .product-buy-link {
     margin-left: 0;
     margin-top: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

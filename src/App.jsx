@@ -171,13 +171,82 @@ const services = [
 ]
 
 const legalPages = {
+  '/about': {
+    title: 'About NovaVentory | Viking Jewelry On Etsy',
+    description:
+      'Learn about NovaVentory, an Etsy-based jewelry shop focused on Viking bracelets, Norse necklaces, raven jewelry, and Nordic accessories.',
+    eyebrow: 'About NovaVentory',
+    heading: 'About NovaVentory',
+    updatedLabel: 'Last reviewed',
+    updated: 'June 9, 2026',
+    sections: [
+      {
+        title: 'Who We Are',
+        body: [
+          'NovaVentory is an Etsy-based jewelry shop focused on Viking-inspired bracelets, Norse necklaces, raven jewelry, stainless steel cuffs, and Nordic accessories.',
+          'This website is built as a product guide and storefront preview. It helps visitors compare styles, read buying guides, and reach the active NovaVentory Etsy listings for checkout.',
+        ],
+      },
+      {
+        title: 'What We Sell',
+        body: [
+          'The collection highlights everyday jewelry with Norse character: raven bracelets, dragon cuffs, wolf fang pendants, Odin raven necklaces, braided leather bracelets, and stainless steel Viking pieces.',
+          'Each product page links to the matching Etsy listing so shoppers can review current availability, shipping details, pricing, and checkout options before buying.',
+        ],
+      },
+      {
+        title: 'Our Content',
+        body: [
+          'NovaVentory publishes original product descriptions and style guides for shoppers interested in Viking jewelry, bracelet styling, Norse symbolism, gift ideas, and material comparisons.',
+          'Our goal is to make the site useful before a purchase, not only to send visitors to a product page.',
+        ],
+      },
+    ],
+    actions: [
+      { label: 'Browse Products', href: '/#products' },
+      { label: 'Visit Etsy Shop', href: shopUrl, external: true },
+    ],
+  },
+  '/contact': {
+    title: 'Contact NovaVentory | Etsy Shop Support',
+    description:
+      'Contact NovaVentory for product questions, order support, shipping questions, and Etsy listing help.',
+    eyebrow: 'Contact NovaVentory',
+    heading: 'Contact NovaVentory',
+    updatedLabel: 'Last reviewed',
+    updated: 'June 9, 2026',
+    sections: [
+      {
+        title: 'Best Way To Contact Us',
+        body: [
+          'For the fastest help with an order, product question, return, sizing question, or shipping issue, contact NovaVentory through Etsy messages.',
+          'Using Etsy messages keeps your question connected to the relevant listing or order and helps us review the correct purchase details.',
+        ],
+      },
+      {
+        title: 'Product And Order Questions',
+        body: [
+          'You can ask about Viking bracelet sizing, necklace materials, shipping availability, current discounts, product photos, or order status before or after checkout.',
+          'Final checkout, payment, tax, and order confirmation details are handled through Etsy.',
+        ],
+      },
+      {
+        title: 'Response Notes',
+        body: [
+          'We aim to respond to genuine customer and product questions as soon as possible through Etsy. Response times may vary during weekends, holidays, or high-volume sales periods.',
+          'Please do not send sensitive payment information through this website. Payments are handled securely on Etsy.',
+        ],
+      },
+    ],
+    actions: [{ label: 'Message On Etsy', href: shopUrl, external: true }],
+  },
   '/privacy-policy': {
     title: 'Privacy Policy | NovaVentory',
     description:
-      'Privacy Policy for NovaVentory, including how this website and Etsy checkout may handle customer information.',
+      'Privacy Policy for NovaVentory, including website cookies, Google advertising disclosures, Meta Pixel, and Etsy checkout information.',
     eyebrow: 'Privacy Policy',
     heading: 'Privacy Policy',
-    updated: 'May 26, 2026',
+    updated: 'June 9, 2026',
     sections: [
       {
         title: 'Overview',
@@ -217,6 +286,8 @@ const legalPages = {
         title: 'Cookies And Third-Party Services',
         body: [
           'This website may use essential hosting technologies and third-party services, including Meta Pixel, to understand page visits, product interest, and clicks from this website to NovaVentory Etsy listings.',
+          'If Google advertising services are added to this website, Google and its partners may use cookies, web beacons, IP addresses, or other identifiers to serve ads, measure ad performance, prevent fraud, and understand visits to this website.',
+          'Third parties, including Google, may place and read cookies on your browser or use web beacons or IP addresses as a result of ad serving on this website. You can learn more at https://policies.google.com/technologies/partner-sites.',
           'Meta Pixel may use cookies or similar technologies to help measure ad performance and build advertising audiences. Etsy may use its own cookies and tracking technologies when you visit Etsy pages from links on this site.',
         ],
       },
@@ -225,6 +296,7 @@ const legalPages = {
         body: [
           'You can contact NovaVentory through the Etsy shop if you need help with an order or want to ask about personal information connected to an Etsy purchase.',
           'You can also manage Etsy account and privacy settings directly through Etsy.',
+          'You can manage browser cookies through your browser settings and review Google advertising controls through Google account and ad settings where available.',
         ],
       },
     ],
@@ -441,6 +513,9 @@ const testimonials = [
 function Header() {
   return (
     <header className="site-header">
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <div className="top-strip">
         <span>Free shipping in all states of the USA</span>
       </div>
@@ -488,13 +563,53 @@ function Seo({ page }) {
   )
 }
 
+const renderLegalText = (text) =>
+  text.split(/(https?:\/\/[^\s]+)/g).map((part, index) => {
+    if (part.startsWith('https://') || part.startsWith('http://')) {
+      const punctuation = part.match(/[.,;:!?]+$/)?.[0] || ''
+      const url = punctuation ? part.slice(0, -punctuation.length) : part
+
+      return (
+        <span key={`${url}-${index}`}>
+          <a href={url} target="_blank" rel="noreferrer">
+            {url}
+          </a>
+          {punctuation}
+        </span>
+      )
+    }
+
+    return (
+      <span key={`${part}-${index}`}>
+        {part}
+      </span>
+    )
+  })
+
 function LegalPage({ page }) {
   return (
-    <main className="legal-page">
+    <main className="legal-page" id="main-content">
       <section className="legal-hero">
         <p className="eyebrow">{page.eyebrow}</p>
         <h1>{page.heading}</h1>
-        <p>Last updated: {page.updated}</p>
+        <p>
+          {page.updatedLabel || 'Last updated'}: {page.updated}
+        </p>
+        {page.actions?.length ? (
+          <div className="legal-actions">
+            {page.actions.map((action) => (
+              <a
+                className="button button-dark"
+                href={action.href}
+                key={action.label}
+                target={action.external ? '_blank' : undefined}
+                rel={action.external ? 'noreferrer' : undefined}
+              >
+                {action.label}
+              </a>
+            ))}
+          </div>
+        ) : null}
       </section>
 
       <section className="legal-content" aria-label={page.heading}>
@@ -502,7 +617,7 @@ function LegalPage({ page }) {
           <article className="legal-section" key={section.title}>
             <h2>{section.title}</h2>
             {section.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>{renderLegalText(paragraph)}</p>
             ))}
           </article>
         ))}
@@ -545,7 +660,7 @@ function SeoRouteLoader({ currentPath }) {
   }, [])
 
   if (!seoPages) {
-    return <main className="route-loading" aria-label="Loading page" />
+    return <main className="route-loading" id="main-content" aria-label="Loading page" />
   }
 
   const { blogPages, commercialPages, productPages } = seoPages
@@ -620,7 +735,7 @@ function RelatedLinks({ links = [], seoPages }) {
 
 function CollectionPage({ page, collectionProducts, seoPages }) {
   return (
-    <main className="collection-page">
+    <main className="collection-page" id="main-content">
       <section className="collection-hero">
         <div>
           <p className="eyebrow">{page.eyebrow}</p>
@@ -681,7 +796,7 @@ function ProductPage({ page, product, seoPages }) {
   }
 
   return (
-    <main className="product-page">
+    <main className="product-page" id="main-content">
       <section className="product-detail">
         <div className="product-detail-image">
           <img src={product.image} alt={product.name} />
@@ -742,7 +857,7 @@ function BlogIndex({ page, blogPages }) {
   const posts = Object.values(blogPages).filter((post) => post.path !== '/blog')
 
   return (
-    <main className="blog-page">
+    <main className="blog-page" id="main-content">
       <section className="blog-hero">
         <p className="eyebrow">{page.eyebrow}</p>
         <h1>{page.heading}</h1>
@@ -797,7 +912,7 @@ function BlogPost({ page, seoPages }) {
   const heroProduct = getProductByName(page.heroProductName || page.productNames?.[0])
 
   return (
-    <main className="blog-page">
+    <main className="blog-page" id="main-content">
       <article className="blog-article">
         <header>
           <p className="eyebrow">{page.eyebrow}</p>
@@ -1016,7 +1131,7 @@ function ServiceItem({ service }) {
 
   return (
     <article className="service-item">
-      <Icon size={31} strokeWidth={1.6} />
+      <Icon size={31} strokeWidth={1.6} aria-hidden="true" />
       <h3>{service.title}</h3>
       <p>{service.text}</p>
     </article>
@@ -1070,7 +1185,7 @@ function TestimonialSlider() {
             <article className="testimonial-card" key={testimonial.name}>
               <div className="testimonial-stars" aria-label="Five star review">
                 {Array.from({ length: 5 }).map((_, index) => (
-                  <Star size={16} fill="currentColor" key={index} />
+                  <Star size={16} fill="currentColor" key={index} aria-hidden="true" />
                 ))}
               </div>
               <p>{testimonial.review}</p>
@@ -1134,7 +1249,7 @@ function HomePage() {
   }, [showDeferredContent])
 
   return (
-    <main>
+    <main id="main-content">
       <Hero />
 
       {showDeferredContent ? (
@@ -1242,6 +1357,8 @@ function App() {
         <a href="/viking-jewelry">Viking Jewelry</a>
         <a href="/nordic-bracelet">Nordic Bracelet</a>
         <a href="/blog">Guides</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
         <a href="/privacy-policy">Privacy Policy</a>
         <a href="/terms-and-conditions">Terms</a>
         <ShieldCheck size={20} aria-hidden="true" />

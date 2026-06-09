@@ -24,6 +24,8 @@ export default defineConfig({
       input: {
         main: resolve(rootDir, 'index.html'),
         ...commercialPageInputs,
+        about: resolve(rootDir, 'about.html'),
+        contact: resolve(rootDir, 'contact.html'),
         privacyPolicy: resolve(rootDir, 'privacy-policy.html'),
         termsAndConditions: resolve(rootDir, 'terms-and-conditions.html'),
       },

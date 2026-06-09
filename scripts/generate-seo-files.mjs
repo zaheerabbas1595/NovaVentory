@@ -8,11 +8,40 @@ const rootDir = dirname(fileURLToPath(new URL('../package.json', import.meta.url
 const publicDir = join(rootDir, 'public')
 const siteUrl = getSiteUrl()
 const today = new Date().toISOString().slice(0, 10)
+const supportPages = {
+  '/about': {
+    path: '/about',
+    title: 'About NovaVentory | Viking Jewelry On Etsy',
+    description:
+      'Learn about NovaVentory, an Etsy-based jewelry shop focused on Viking bracelets, Norse necklaces, raven jewelry, and Nordic accessories.',
+    heading: 'About NovaVentory',
+  },
+  '/contact': {
+    path: '/contact',
+    title: 'Contact NovaVentory | Etsy Shop Support',
+    description:
+      'Contact NovaVentory for product questions, order support, shipping questions, and Etsy listing help.',
+    heading: 'Contact NovaVentory',
+  },
+  '/privacy-policy': {
+    path: '/privacy-policy',
+    title: 'Privacy Policy | NovaVentory',
+    description:
+      'Privacy Policy for NovaVentory, including website cookies, Google advertising disclosures, Meta Pixel, and Etsy checkout information.',
+    heading: 'Privacy Policy',
+  },
+  '/terms-and-conditions': {
+    path: '/terms-and-conditions',
+    title: 'Terms And Conditions | NovaVentory',
+    description:
+      'Terms and Conditions for using the NovaVentory website and shopping NovaVentory products through Etsy.',
+    heading: 'Terms And Conditions',
+  },
+}
 const urls = [
   '/',
   ...allSeoPagePaths,
-  '/privacy-policy',
-  '/terms-and-conditions',
+  ...Object.keys(supportPages),
 ]
 
 const getUrlMeta = (path) => {
@@ -104,7 +133,7 @@ await writeFile(join(publicDir, 'sitemap.xml'), sitemap)
 await writeFile(join(publicDir, 'sitemap-index.xml'), sitemapIndex)
 
 await Promise.all(
-  Object.values(allSeoPages).map(async (page) => {
+  [...Object.values(allSeoPages), ...Object.values(supportPages)].map(async (page) => {
     const htmlPath = join(rootDir, `${page.path.replace(/^\//, '')}.html`)
 
     await mkdir(dirname(htmlPath), { recursive: true })
