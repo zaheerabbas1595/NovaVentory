@@ -8,6 +8,8 @@ const rootDir = dirname(fileURLToPath(new URL('../package.json', import.meta.url
 const publicDir = join(rootDir, 'public')
 const siteUrl = getSiteUrl()
 const today = new Date().toISOString().slice(0, 10)
+const adsensePublisherId = 'ca-pub-8273338730781765'
+const adsTxt = 'google.com, pub-8273338730781765, DIRECT, f08c47fec0942fa0\n'
 const supportPages = {
   '/about': {
     path: '/about',
@@ -117,6 +119,8 @@ const createHtml = (page) => `<!doctype html>
     <meta name="twitter:description" content="${page.description}" />
     <meta name="twitter:image" content="${siteUrl}/og-novaventory.jpg" />
     <meta name="google-site-verification" content="bfVFvSd2-GiDeRZMRsjeT9RSeL9kQtxtsHjluEgemJg" />
+    <meta name="google-adsense-account" content="${adsensePublisherId}" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisherId}" crossorigin="anonymous"></script>
     <title>${page.title}</title>
   </head>
   <body>
@@ -129,6 +133,7 @@ const createHtml = (page) => `<!doctype html>
 
 await mkdir(publicDir, { recursive: true })
 await writeFile(join(publicDir, 'robots.txt'), robots)
+await writeFile(join(publicDir, 'ads.txt'), adsTxt)
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap)
 await writeFile(join(publicDir, 'sitemap-index.xml'), sitemapIndex)
 
