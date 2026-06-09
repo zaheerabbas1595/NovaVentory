@@ -570,6 +570,7 @@
 
 .editorial-copy p {
   margin: 22px 0 26px;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .editorial-split img {
@@ -664,7 +665,7 @@
 }
 
 .product-info del {
-  color: #8b8b8b;
+  color: #666666;
   font-size: 14px;
   font-weight: 700;
 }
@@ -1119,7 +1120,7 @@
 }
 
 .product-detail-price del {
-  color: #8b8b8b;
+  color: #666666;
   font-weight: 800;
 }
 

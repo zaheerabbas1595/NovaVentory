@@ -1039,7 +1039,15 @@ function Hero() {
                 onStalled={() => setVideoReadySlide(null)}
                 onEnded={showNextSlide}
                 aria-label="Best-selling Viking raven bracelet video"
-              />
+              >
+                <track
+                  kind="captions"
+                  src="/videos/bestseller-raven-bracelet.vtt"
+                  srcLang="en"
+                  label="English captions"
+                  default
+                />
+              </video>
             </div>
           ) : (
             <div className="hero-wrist-panel" aria-hidden="true">
@@ -1183,7 +1191,7 @@ function TestimonialSlider() {
         <div className="testimonial-track">
           {visibleReviews.map((testimonial) => (
             <article className="testimonial-card" key={testimonial.name}>
-              <div className="testimonial-stars" aria-label="Five star review">
+              <div className="testimonial-stars" role="img" aria-label="Five star review">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star size={16} fill="currentColor" key={index} aria-hidden="true" />
                 ))}
