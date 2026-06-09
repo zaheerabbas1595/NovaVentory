@@ -1359,17 +1359,21 @@ function App() {
       )}
 
       <footer className="footer">
-        <strong>NovaVentory</strong>
-        <span>Viking jewelry and accessories available on Etsy.</span>
-        <a href="/bracelets">Bracelets</a>
-        <a href="/viking-jewelry">Viking Jewelry</a>
-        <a href="/nordic-bracelet">Nordic Bracelet</a>
-        <a href="/blog">Guides</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/privacy-policy">Privacy Policy</a>
-        <a href="/terms-and-conditions">Terms</a>
-        <ShieldCheck size={20} aria-hidden="true" />
+        <div className="footer-brand">
+          <strong>NovaVentory</strong>
+          <span>Viking jewelry and accessories available on Etsy.</span>
+        </div>
+        <nav className="footer-links" aria-label="Footer navigation">
+          <a href="/bracelets">Bracelets</a>
+          <a href="/viking-jewelry">Viking Jewelry</a>
+          <a href="/nordic-bracelet">Nordic Bracelet</a>
+          <a href="/blog">Guides</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms</a>
+        </nav>
+        <ShieldCheck className="footer-badge" size={20} aria-hidden="true" />
       </footer>
     </>
   )
