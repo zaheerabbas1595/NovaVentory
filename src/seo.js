@@ -3,10 +3,10 @@ export const siteUrl =
   'https://novaventory.com'
 
 export const siteTitle =
-  'NovaVentory | Viking Jewelry, Raven Bracelets & Norse Necklaces'
+  'Viking Jewelry & Viking Bracelets | Norse Necklaces | NovaVentory'
 
 export const siteDescription =
-  "Shop NovaVentory Viking jewelry on Etsy, including raven bracelets, Norse cuffs, wolf fang necklaces, and Nordic stainless steel accessories with free USA shipping."
+  "Shop NovaVentory Viking jewelry on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories."
 
 export const shopUrl = 'https://www.etsy.com/shop/NovaVentory'
 
@@ -189,6 +189,22 @@ export function createStructuredData(products, page = {}) {
           name: product.name,
         })),
       },
+      ...(page.faq?.length
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${pageUrl}#faq`,
+              mainEntity: page.faq.map((item) => ({
+                '@type': 'Question',
+                name: item.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: item.answer,
+                },
+              })),
+            },
+          ]
+        : []),
       ...productGraph,
     ],
   }

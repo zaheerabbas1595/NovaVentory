@@ -170,6 +170,79 @@ const services = [
   },
 ]
 
+const homePageMeta = {
+  path: '/',
+  title: 'Viking Jewelry & Viking Bracelets | Norse Necklaces | NovaVentory',
+  description:
+    'Shop NovaVentory Viking jewelry on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories.',
+  heading: 'Viking Jewelry And Viking Bracelets',
+  faq: [
+    {
+      question: 'What Viking jewelry does NovaVentory sell?',
+      answer:
+        'NovaVentory focuses on Viking-inspired bracelets, Norse cuffs, raven jewelry, Odin raven necklaces, wolf fang pendants, dragon bracelets, and Nordic stainless steel accessories sold through Etsy.',
+    },
+    {
+      question: 'Which NovaVentory page is best for Viking bracelet searches?',
+      answer:
+        'The Viking Bracelet page is the main hub for Viking bracelet searches, while the leather bracelet, cuff bracelet, raven bracelet, and stainless steel bracelet pages support more specific buying intent.',
+    },
+    {
+      question: 'Are NovaVentory products purchased on this website?',
+      answer:
+        'NovaVentory product pages link to active Etsy listings, where shoppers can review current pricing, shipping details, availability, and checkout options.',
+    },
+  ],
+}
+
+const homeCollections = [
+  {
+    title: 'Viking Bracelets',
+    href: '/viking-bracelet',
+    text: 'Cuffs, raven bracelets, leather wristwear, and dragon designs for the strongest bracelet search intent.',
+  },
+  {
+    title: 'Viking Leather Bracelets',
+    href: '/viking-leather-bracelets',
+    text: 'Braided black leather styles for shoppers who want daily comfort with rugged Norse character.',
+  },
+  {
+    title: 'Viking Arm Rings',
+    href: '/viking-arm-ring',
+    text: 'Open cuff and bangle styles with twisted metal, raven motifs, and stainless steel structure.',
+  },
+  {
+    title: 'Raven Jewelry',
+    href: '/raven-jewelry',
+    text: 'Raven bracelets, Norse raven cuffs, and Odin raven necklaces connected by mythology and symbolism.',
+  },
+  {
+    title: 'Viking Necklaces',
+    href: '/viking-necklaces',
+    text: 'Wolf fang pendants and Odin raven necklaces for shoppers who prefer symbolic necklace pieces.',
+  },
+  {
+    title: 'Viking Gifts For Men',
+    href: '/blog/viking-jewelry-gifts-for-men',
+    text: 'A buying guide for matching leather, steel, raven, dragon, and necklace designs to the right person.',
+  },
+]
+
+const homeSeoBlocks = [
+  {
+    title: 'A Focused Viking Jewelry Storefront',
+    body: 'NovaVentory is built around a tighter Viking jewelry collection rather than a broad fashion catalog. The strongest categories are Viking bracelets, Norse cuffs, raven jewelry, stainless steel wristwear, wolf fang pendants, and Odin raven necklaces. That focus helps shoppers compare related pieces without moving through unrelated jewelry styles.',
+  },
+  {
+    title: 'Bracelet Search Intent Comes First',
+    body: 'Most shoppers who search for Viking jewelry are looking for a clear product shape: a bracelet, cuff, arm ring, necklace, or pendant. NovaVentory separates those paths into dedicated category pages so a search for Viking leather bracelet, Viking cuff bracelet, raven bracelet, or stainless steel Viking bracelet can land on the most relevant URL.',
+  },
+  {
+    title: 'Guides Support The Product Pages',
+    body: 'The guide section explains Viking bracelet meaning, raven symbolism, stainless steel versus leather, styling advice, and gift choices. These articles strengthen the product pages because they answer questions shoppers ask before buying, while internal links point back to the most relevant bracelet and necklace pages.',
+  },
+]
+
 const legalPages = {
   '/about': {
     title: 'About NovaVentory | Viking Jewelry On Etsy',
@@ -1229,6 +1302,68 @@ function TestimonialSlider() {
   )
 }
 
+function HomeCollectionHub() {
+  return (
+    <section className="home-collection-hub" aria-labelledby="home-collections-title">
+      <div className="section-title">
+        <p className="eyebrow">Viking jewelry categories</p>
+        <h2 id="home-collections-title">Shop By Viking Jewelry Style</h2>
+        <p>
+          Clear paths for Viking bracelets, leather bracelets, arm rings, raven
+          jewelry, necklaces, and gift guides.
+        </p>
+      </div>
+      <div className="collection-hub-grid">
+        {homeCollections.map((collection) => (
+          <a className="collection-hub-card" href={collection.href} key={collection.href}>
+            <span>{collection.title}</span>
+            <p>{collection.text}</p>
+            <ArrowRight size={18} aria-hidden="true" />
+          </a>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function HomeSeoStory() {
+  return (
+    <section className="home-seo-story" aria-labelledby="home-seo-title">
+      <div>
+        <p className="eyebrow">Viking store guide</p>
+        <h2 id="home-seo-title">Viking Jewelry, Norse Cuffs, And Raven Bracelets</h2>
+      </div>
+      <div className="seo-story-grid">
+        {homeSeoBlocks.map((block) => (
+          <article key={block.title}>
+            <h3>{block.title}</h3>
+            <p>{block.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}
+
+function HomeFaq() {
+  return (
+    <section className="home-faq" aria-labelledby="home-faq-title">
+      <div className="section-title">
+        <p className="eyebrow">Shopping questions</p>
+        <h2 id="home-faq-title">Viking Jewelry FAQ</h2>
+      </div>
+      <div className="faq-list">
+        {homePageMeta.faq.map((item) => (
+          <details key={item.question}>
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  )
+}
+
 function HomePage() {
   const [showDeferredContent, setShowDeferredContent] = useState(
     () => window.location.hash === '#products' || window.location.hash === '#reviews',
@@ -1280,6 +1415,8 @@ function HomePage() {
             <img src={etsyNorseRavenCuff} alt="Norse raven cuff bracelet listing photo" loading="lazy" />
           </section>
 
+          <HomeCollectionHub />
+
           <section className="products-section" id="products">
             <div className="section-title">
               <p className="eyebrow">NovaVentory Etsy listings</p>
@@ -1294,6 +1431,8 @@ function HomePage() {
           </section>
 
           <TestimonialSlider />
+
+          <HomeSeoStory />
 
           <section className="campaign-band">
             <div>
@@ -1328,6 +1467,8 @@ function HomePage() {
               <ServiceItem service={service} key={service.title} />
             ))}
           </section>
+
+          <HomeFaq />
         </>
       ) : null}
     </main>
@@ -1344,6 +1485,8 @@ function App() {
         description: legalPage.description,
         skipStructuredData: true,
       }
+    : currentPath === '/'
+      ? homePageMeta
     : undefined
 
   return (

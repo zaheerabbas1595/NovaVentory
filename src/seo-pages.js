@@ -253,7 +253,7 @@ export const commercialPages = {
         body: 'Each featured bracelet links to the active NovaVentory Etsy listing, where shoppers can review current price, checkout options, delivery details, and availability before ordering.',
       },
     ],
-    related: ['/viking-bracelet', '/nordic-bracelet', '/raven-bracelet'],
+    related: ['/viking-bracelet', '/viking-leather-bracelets', '/viking-arm-ring'],
   },
   '/viking-bracelet': {
     path: '/viking-bracelet',
@@ -281,7 +281,7 @@ export const commercialPages = {
         body: 'This page highlights active Etsy listings that match the Viking bracelet search intent, so shoppers can move from product discovery to checkout without digging through unrelated items.',
       },
     ],
-    related: ['/mens-viking-bracelet', '/stainless-steel-viking-bracelet', '/viking-cuff-bracelet'],
+    related: ['/mens-viking-bracelet', '/viking-leather-bracelets', '/viking-arm-ring'],
   },
   '/nordic-bracelet': {
     path: '/nordic-bracelet',
@@ -309,7 +309,7 @@ export const commercialPages = {
         body: 'These bracelets work well for shoppers looking for a Norse gift, Viking-inspired accessory, or a durable bracelet with more character than a plain chain or bangle.',
       },
     ],
-    related: ['/norse-jewelry', '/nordic-jewelry', '/bracelets'],
+    related: ['/norse-bracelets', '/norse-jewelry', '/bracelets'],
   },
   '/raven-bracelet': {
     path: '/raven-bracelet',
@@ -553,7 +553,7 @@ export const commercialPages = {
         body: 'The twisted cuff is the classic metal choice, while raven and dragon cuffs give shoppers a more symbolic or dramatic direction.',
       },
     ],
-    related: ['/viking-cuff-bracelet', '/viking-bracelet', '/nordic-bracelet'],
+    related: ['/viking-cuff-bracelet', '/viking-arm-ring', '/norse-bracelets'],
   },
   '/viking-cuff-bracelet': {
     path: '/viking-cuff-bracelet',
@@ -580,7 +580,116 @@ export const commercialPages = {
         body: 'Twisted cuffs are classic, raven cuffs are symbolic, and dragon cuffs are the boldest option. Each product page expands the search path.',
       },
     ],
-    related: ['/stainless-steel-viking-bracelet', '/products/viking-twisted-cuff-bracelet', '/products/norse-raven-cuff-bracelet'],
+    related: ['/stainless-steel-viking-bracelet', '/viking-arm-ring', '/products/viking-twisted-cuff-bracelet'],
+  },
+  '/viking-leather-bracelets': {
+    path: '/viking-leather-bracelets',
+    title: 'Viking Leather Bracelets | Braided Norse Bracelet Styles',
+    description:
+      'Shop Viking leather bracelets from NovaVentory, including braided black leather Norse wristwear with rugged everyday styling and Etsy checkout.',
+    eyebrow: 'Leather bracelet collection',
+    heading: 'Viking Leather Bracelets',
+    intro:
+      'A focused page for shoppers who want black leather Viking bracelets, braided Norse wristwear, and casual bracelet styles with rugged character.',
+    productNames: [
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+    ],
+    keywords: ['viking leather bracelets', 'leather viking bracelet', 'braided norse bracelet'],
+    sections: [
+      {
+        title: 'Why Leather Bracelet Searches Need Their Own Page',
+        body: 'Leather Viking bracelet shoppers usually want daily comfort and rugged styling rather than a heavy metal cuff. This page keeps that search intent separate from stainless steel and bangle pages.',
+      },
+      {
+        title: 'How Leather Fits Norse Styling',
+        body: 'Black braided leather pairs naturally with boots, denim, dark tees, watches, and wolf fang pendants. It gives a Viking-inspired outfit texture without making the look feel too formal.',
+      },
+    ],
+    related: ['/products/viking-leather-bracelet', '/mens-viking-bracelet', '/viking-bracelet'],
+  },
+  '/viking-arm-ring': {
+    path: '/viking-arm-ring',
+    title: 'Viking Arm Ring | Norse Cuff & Bangle Bracelet Styles',
+    description:
+      'Explore Viking arm ring styles from NovaVentory, including twisted cuffs, Norse bangles, raven cuffs, and stainless steel Viking bracelets.',
+    eyebrow: 'Arm ring collection',
+    heading: 'Viking Arm Ring And Norse Cuff Styles',
+    intro:
+      'A dedicated page for shoppers who search for Viking arm rings, open cuffs, Norse bangles, and sculptural stainless steel bracelet shapes.',
+    productNames: [
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    ],
+    keywords: ['viking arm ring', 'norse arm ring', 'viking bangle', 'viking cuff bracelet'],
+    sections: [
+      {
+        title: 'Arm Ring Intent Is Different From Generic Bracelet Intent',
+        body: 'A Viking arm ring search usually points to an open cuff or bangle shape. This page groups the NovaVentory products that best match that silhouette instead of mixing them with leather bracelet searches.',
+      },
+      {
+        title: 'Best NovaVentory Arm Ring Alternatives',
+        body: 'The twisted cuff is the closest classic arm ring style, while raven and dragon cuffs add symbolic detail for shoppers who want a bolder Norse look.',
+      },
+    ],
+    related: ['/viking-cuff-bracelet', '/stainless-steel-viking-bracelet', '/norse-bracelets'],
+  },
+  '/norse-bracelets': {
+    path: '/norse-bracelets',
+    title: 'Norse Bracelets | Raven Cuffs & Viking Bangle Styles',
+    description:
+      'Shop Norse bracelets from NovaVentory, including raven cuffs, Viking bangles, stainless steel bracelets, and Nordic wristwear.',
+    eyebrow: 'Norse bracelet collection',
+    heading: 'Norse Bracelets With Raven And Viking Detail',
+    intro:
+      'A focused hub for Norse bracelet searches, connecting raven cuffs, Viking bangles, stainless steel wristwear, and Nordic styling pages.',
+    productNames: [
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+    ],
+    keywords: ['norse bracelets', 'norse bracelet', 'viking bangle', 'raven cuff bracelet'],
+    sections: [
+      {
+        title: 'Norse Bracelet Search Cluster',
+        body: 'Norse bracelet searches often overlap with raven jewelry, Viking bangle, Nordic bracelet, and stainless steel cuff searches. This page connects those paths into one clear cluster.',
+      },
+      {
+        title: 'Choose By Symbol Or Material',
+        body: 'Choose raven cuffs for mythology, twisted steel for classic Viking styling, dragon cuffs for a bolder design, and leather bracelets for casual daily wear.',
+      },
+    ],
+    related: ['/nordic-bracelet', '/raven-bracelet', '/viking-arm-ring'],
+  },
+  '/viking-dragon-bracelet': {
+    path: '/viking-dragon-bracelet',
+    title: 'Viking Dragon Bracelet | Nordic Dragon Cuff Styles',
+    description:
+      'Shop Viking dragon bracelet styles from NovaVentory, including stainless steel Nordic cuffs and bold dragon-inspired wristwear.',
+    eyebrow: 'Dragon bracelet collection',
+    heading: 'Viking Dragon Bracelet Styles',
+    intro:
+      'A dedicated search page for Viking dragon bracelets, Nordic dragon cuffs, and bold stainless steel bracelet styling.',
+    productNames: [
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+    ],
+    keywords: ['viking dragon bracelet', 'dragon cuff bracelet', 'nordic dragon bracelet'],
+    sections: [
+      {
+        title: 'Dragon Motifs For Stronger Styling',
+        body: 'Dragon bracelet searches usually come from shoppers who want a more dramatic design than a plain cuff. This page gives that symbol its own focused URL.',
+      },
+      {
+        title: 'How It Fits The Collection',
+        body: 'The dragon cuff sits beside raven bracelets and twisted cuffs as one of the strongest statement pieces in the NovaVentory Viking bracelet collection.',
+      },
+    ],
+    related: ['/products/viking-dragon-bracelet', '/mens-viking-bracelet', '/viking-cuff-bracelet'],
   },
 }
 
