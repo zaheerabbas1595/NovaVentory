@@ -198,32 +198,44 @@ const homePageMeta = {
 const homeCollections = [
   {
     title: 'Viking Bracelets',
+    kicker: 'Best sellers',
     href: '/viking-bracelet',
+    image: etsyVikingRavenBracelet,
     text: 'Cuffs, raven bracelets, leather wristwear, and dragon designs for the strongest bracelet search intent.',
   },
   {
     title: 'Viking Leather Bracelets',
+    kicker: 'Black leather',
     href: '/viking-leather-bracelets',
+    image: etsyLeatherBracelet,
     text: 'Braided black leather styles for shoppers who want daily comfort with rugged Norse character.',
   },
   {
     title: 'Viking Arm Rings',
+    kicker: 'Forged cuffs',
     href: '/viking-arm-ring',
+    image: etsyTwistedCuff,
     text: 'Open cuff and bangle styles with twisted metal, raven motifs, and stainless steel structure.',
   },
   {
     title: 'Raven Jewelry',
+    kicker: 'Odin symbols',
     href: '/raven-jewelry',
+    image: etsyNorseRavenCuff,
     text: 'Raven bracelets, Norse raven cuffs, and Odin raven necklaces connected by mythology and symbolism.',
   },
   {
     title: 'Viking Necklaces',
+    kicker: 'Pendants',
     href: '/viking-necklaces',
+    image: etsyOdinRavenNecklace,
     text: 'Wolf fang pendants and Odin raven necklaces for shoppers who prefer symbolic necklace pieces.',
   },
   {
     title: 'Viking Gifts For Men',
+    kicker: 'Gift guide',
     href: '/blog/viking-jewelry-gifts-for-men',
+    image: etsyDragonBracelet,
     text: 'A buying guide for matching leather, steel, raven, dragon, and necklace designs to the right person.',
   },
 ]
@@ -1316,9 +1328,16 @@ function HomeCollectionHub() {
       <div className="collection-hub-grid">
         {homeCollections.map((collection) => (
           <a className="collection-hub-card" href={collection.href} key={collection.href}>
-            <span>{collection.title}</span>
-            <p>{collection.text}</p>
-            <ArrowRight size={18} aria-hidden="true" />
+            <img src={collection.image} alt="" loading="lazy" />
+            <div>
+              <small>{collection.kicker}</small>
+              <span>{collection.title}</span>
+              <p>{collection.text}</p>
+            </div>
+            <strong>
+              Shop now
+              <ArrowRight size={18} aria-hidden="true" />
+            </strong>
           </a>
         ))}
       </div>
@@ -1392,7 +1411,7 @@ function HomePage() {
   }, [showDeferredContent])
 
   return (
-    <main id="main-content">
+    <main className="home-page" id="main-content">
       <Hero />
 
       {showDeferredContent ? (
