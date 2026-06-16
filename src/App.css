@@ -660,12 +660,36 @@
   overflow-wrap: anywhere;
 }
 
+.editorial-product-link {
+  min-width: 0;
+  display: block;
+  overflow: hidden;
+  background: #14120d;
+  border: 1px solid rgba(223, 196, 91, 0.18);
+  text-decoration: none;
+}
+
 .editorial-split img {
   width: 100%;
   min-height: 350px;
+  height: 100%;
+  display: block;
   object-fit: cover;
   background: #14120d;
-  border: 1px solid rgba(223, 196, 91, 0.18);
+  transition:
+    filter 180ms ease,
+    transform 260ms ease;
+}
+
+.editorial-product-link:hover,
+.editorial-product-link:focus-visible {
+  border-color: rgba(242, 200, 75, 0.72);
+}
+
+.editorial-product-link:hover img,
+.editorial-product-link:focus-visible img {
+  filter: saturate(1.05) brightness(1.05);
+  transform: scale(1.04);
 }
 
 .home-collection-hub,

@@ -1575,9 +1575,39 @@ function HomePage() {
                 <ArrowRight size={17} />
               </a>
             </div>
-            <img src={etsyLeatherBracelet} alt="Viking leather bracelet listing photo" loading="lazy" />
-            <img src={etsyWolfFang} alt="Wolf fang pendant necklace listing photo" loading="lazy" />
-            <img src={etsyNorseRavenCuff} alt="Norse raven cuff bracelet listing photo" loading="lazy" />
+            <a
+              className="editorial-product-link"
+              href="/products/viking-leather-bracelet"
+              aria-label="View Viking leather bracelet product page"
+            >
+              <img
+                src={etsyLeatherBracelet}
+                alt="Viking leather bracelet listing photo"
+                loading="lazy"
+              />
+            </a>
+            <a
+              className="editorial-product-link"
+              href="/products/wolf-fang-pendant-necklace"
+              aria-label="View wolf fang pendant necklace product page"
+            >
+              <img
+                src={etsyWolfFang}
+                alt="Wolf fang pendant necklace listing photo"
+                loading="lazy"
+              />
+            </a>
+            <a
+              className="editorial-product-link"
+              href="/products/norse-raven-cuff-bracelet"
+              aria-label="View Norse raven cuff bracelet product page"
+            >
+              <img
+                src={etsyNorseRavenCuff}
+                alt="Norse raven cuff bracelet listing photo"
+                loading="lazy"
+              />
+            </a>
           </section>
 
           <HomeCollectionHub />
