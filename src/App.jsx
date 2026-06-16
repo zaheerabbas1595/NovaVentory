@@ -255,6 +255,39 @@ const homeSeoBlocks = [
   },
 ]
 
+const scrollRevealSelector = [
+  '.editorial-split > *',
+  '.home-collection-hub .section-title',
+  '.collection-hub-card',
+  '.products-section .section-title',
+  '.product-card',
+  '.testimonial-section .section-title',
+  '.testimonial-card',
+  '.home-seo-story > div',
+  '.seo-story-grid article',
+  '.campaign-band',
+  '.feature-row > *',
+  '.service-item',
+  '.home-faq .section-title',
+  '.faq-list details',
+  '.collection-content',
+  '.collection-keywords span',
+  '.collection-copy-grid article',
+  '.collection-products .section-title',
+  '.collection-links a',
+  '.product-detail-image',
+  '.product-detail-copy',
+  '.blog-grid',
+  '.blog-card',
+  '.blog-article header',
+  '.blog-article-image',
+  '.blog-article section',
+  '.blog-product-feature',
+  '.blog-product-feature a',
+  '.legal-content',
+  '.legal-section',
+].join(', ')
+
 const legalPages = {
   '/about': {
     title: 'About NovaVentory | Viking Jewelry On Etsy',
@@ -646,6 +679,119 @@ function Seo({ page }) {
       }}
     />
   )
+}
+
+function useScrollReveal(routeKey) {
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches
+    const revealedElements = new WeakSet()
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      document.querySelectorAll(scrollRevealSelector).forEach((element) => {
+        element.classList.add('scroll-reveal', 'is-visible')
+      })
+
+      return undefined
+    }
+
+    const markVisible = (element) => {
+      element.classList.add('is-visible')
+    }
+
+    const revealVisibleElements = () => {
+      document.querySelectorAll('.scroll-reveal:not(.is-visible)').forEach((element) => {
+        const rect = element.getBoundingClientRect()
+
+        if (rect.top <= window.innerHeight * 1.05 && rect.bottom >= 0) {
+          markVisible(element)
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return
+          }
+
+          markVisible(entry.target)
+          observer.unobserve(entry.target)
+        })
+      },
+      {
+        rootMargin: '0px 0px 8% 0px',
+        threshold: 0.08,
+      },
+    )
+
+    const revealElements = () => {
+      document.querySelectorAll(scrollRevealSelector).forEach((element, index) => {
+        if (revealedElements.has(element)) {
+          return
+        }
+
+        element.classList.add('scroll-reveal')
+        element.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 55}ms`)
+        observer.observe(element)
+        revealedElements.add(element)
+      })
+
+      window.requestAnimationFrame(revealVisibleElements)
+    }
+
+    revealElements()
+
+    const mutationObserver = new MutationObserver(revealElements)
+    mutationObserver.observe(document.getElementById('root'), {
+      childList: true,
+      subtree: true,
+    })
+    window.addEventListener('scroll', revealVisibleElements, { passive: true })
+    window.addEventListener('resize', revealVisibleElements)
+
+    return () => {
+      observer.disconnect()
+      mutationObserver.disconnect()
+      window.removeEventListener('scroll', revealVisibleElements)
+      window.removeEventListener('resize', revealVisibleElements)
+    }
+  }, [routeKey])
+}
+
+function useHashScroll(routeKey) {
+  useEffect(() => {
+    const scrollToHash = () => {
+      if (!window.location.hash) {
+        return
+      }
+
+      const target = document.getElementById(
+        window.location.hash.replace('#', ''),
+      )
+
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+
+    window.requestAnimationFrame(scrollToHash)
+    const retryTimer = window.setTimeout(scrollToHash, 1400)
+    const mutationObserver = new MutationObserver(scrollToHash)
+    mutationObserver.observe(document.getElementById('root'), {
+      childList: true,
+      subtree: true,
+    })
+    window.addEventListener('hashchange', scrollToHash)
+
+    return () => {
+      window.clearTimeout(retryTimer)
+      mutationObserver.disconnect()
+      window.removeEventListener('hashchange', scrollToHash)
+    }
+  }, [routeKey])
 }
 
 const renderLegalText = (text) =>
@@ -1496,6 +1642,9 @@ function HomePage() {
 
 function App() {
   const currentPath = window.location.pathname.replace(/\/$/, '') || '/'
+  useScrollReveal(currentPath)
+  useHashScroll(currentPath)
+
   const legalPage = legalPages[currentPath]
   const pageMeta = legalPage
     ? {

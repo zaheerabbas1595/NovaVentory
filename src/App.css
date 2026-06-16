@@ -519,6 +519,51 @@
   transform: translateY(-2px);
 }
 
+.scroll-reveal {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translate3d(0, 30px, 0) scale(0.985);
+  transition:
+    opacity 720ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 720ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 720ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, filter, transform;
+}
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.collection-hub-card.scroll-reveal,
+.product-card.scroll-reveal,
+.testimonial-card.scroll-reveal,
+.service-item.scroll-reveal,
+.blog-card.scroll-reveal,
+.collection-copy-grid article.scroll-reveal,
+.legal-section.scroll-reveal,
+.faq-list details.scroll-reveal {
+  transform: translate3d(0, 34px, 0) scale(0.97);
+}
+
+.collection-hub-card.scroll-reveal.is-visible,
+.product-card.scroll-reveal.is-visible,
+.testimonial-card.scroll-reveal.is-visible,
+.service-item.scroll-reveal.is-visible,
+.blog-card.scroll-reveal.is-visible,
+.collection-copy-grid article.scroll-reveal.is-visible,
+.legal-section.scroll-reveal.is-visible,
+.faq-list details.scroll-reveal.is-visible {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.collection-hub-card.scroll-reveal.is-visible:hover,
+.product-card.scroll-reveal.is-visible:hover {
+  transform: translateY(-3px) scale(1);
+}
+
 .home-page {
   color: #f8f4ea;
   background:
@@ -1989,5 +2034,13 @@
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+
+  .scroll-reveal,
+  .scroll-reveal.is-visible {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
