@@ -567,7 +567,8 @@
 .home-page {
   color: #f8f4ea;
   background:
-    linear-gradient(180deg, #050505 0%, #0b0a08 46%, #050505 100%);
+    linear-gradient(180deg, #050505 0%, #0b0a08 46%, #050505 100%)
+    #050505;
 }
 
 .home-page .editorial-split {
