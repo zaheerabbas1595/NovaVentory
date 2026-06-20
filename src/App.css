@@ -330,6 +330,7 @@ body.mobile-menu-open {
 
 .site-nav a:hover,
 .site-nav a:focus-visible,
+.nav-dropdown.is-open .nav-trigger,
 .nav-dropdown:hover .nav-trigger,
 .nav-dropdown:focus-within .nav-trigger {
   color: #dfc45b;
@@ -337,6 +338,7 @@ body.mobile-menu-open {
 
 .site-nav a:hover::after,
 .site-nav a:focus-visible::after,
+.nav-dropdown.is-open .nav-trigger::after,
 .nav-dropdown:hover .nav-trigger::after,
 .nav-dropdown:focus-within .nav-trigger::after {
   opacity: 1;
@@ -347,6 +349,16 @@ body.mobile-menu-open {
   position: relative;
 }
 
+.nav-dropdown::before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  right: -16px;
+  top: 100%;
+  height: 18px;
+}
+
+.nav-dropdown.is-open .nav-trigger svg,
 .nav-dropdown:hover .nav-trigger svg,
 .nav-dropdown:focus-within .nav-trigger svg {
   transform: rotate(180deg);
@@ -383,6 +395,7 @@ body.mobile-menu-open {
   grid-template-columns: 1fr;
 }
 
+.nav-dropdown.is-open .nav-menu-panel,
 .nav-dropdown:hover .nav-menu-panel,
 .nav-dropdown:focus-within .nav-menu-panel {
   opacity: 1;

@@ -688,6 +688,8 @@ const testimonials = [
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 8)
+  const [activeDropdown, setActiveDropdown] = useState(null)
+  const closeDropdownTimerRef = useRef(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -698,6 +700,15 @@ function Header() {
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(
+    () => () => {
+      if (closeDropdownTimerRef.current) {
+        window.clearTimeout(closeDropdownTimerRef.current)
+      }
+    },
+    [],
+  )
 
   useEffect(() => {
     document.body.classList.toggle('mobile-menu-open', isMobileMenuOpen)
@@ -717,6 +728,30 @@ function Header() {
   }, [isMobileMenuOpen])
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false)
+
+  const openDropdown = (dropdownName) => {
+    if (closeDropdownTimerRef.current) {
+      window.clearTimeout(closeDropdownTimerRef.current)
+    }
+
+    setActiveDropdown(dropdownName)
+  }
+
+  const scheduleDropdownClose = () => {
+    if (closeDropdownTimerRef.current) {
+      window.clearTimeout(closeDropdownTimerRef.current)
+    }
+
+    closeDropdownTimerRef.current = window.setTimeout(() => {
+      setActiveDropdown(null)
+    }, 320)
+  }
+
+  const handleDropdownBlur = (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      scheduleDropdownClose()
+    }
+  }
 
   const handleSearchSubmit = (event) => {
     event.preventDefault()
@@ -811,8 +846,19 @@ function Header() {
         </div>
 
         <nav className="site-nav" aria-label="Primary navigation">
-          <div className="nav-dropdown">
-            <button type="button" className="nav-trigger" aria-haspopup="true">
+          <div
+            className={`nav-dropdown ${activeDropdown === 'shop' ? 'is-open' : ''}`}
+            onMouseEnter={() => openDropdown('shop')}
+            onMouseLeave={scheduleDropdownClose}
+            onFocus={() => openDropdown('shop')}
+            onBlur={handleDropdownBlur}
+          >
+            <button
+              type="button"
+              className="nav-trigger"
+              aria-haspopup="true"
+              aria-expanded={activeDropdown === 'shop'}
+            >
               Shop
               <ChevronDown size={14} />
             </button>
@@ -825,8 +871,19 @@ function Header() {
               ))}
             </div>
           </div>
-          <div className="nav-dropdown">
-            <button type="button" className="nav-trigger" aria-haspopup="true">
+          <div
+            className={`nav-dropdown ${activeDropdown === 'guides' ? 'is-open' : ''}`}
+            onMouseEnter={() => openDropdown('guides')}
+            onMouseLeave={scheduleDropdownClose}
+            onFocus={() => openDropdown('guides')}
+            onBlur={handleDropdownBlur}
+          >
+            <button
+              type="button"
+              className="nav-trigger"
+              aria-haspopup="true"
+              aria-expanded={activeDropdown === 'guides'}
+            >
               Guides
               <ChevronDown size={14} />
             </button>
