@@ -18,6 +18,7 @@ import {
   trackMetaPixelCustom,
 } from './meta-pixel'
 import { createStructuredData, shopUrl, updateDocumentSeo } from './seo'
+import { defaultSeoImage, getPageSeoImage, getProductSeoImage } from './product-seo-images'
 
 import etsyTwistedCuff from './assets/etsy-listings/viking-twisted-cuff.jpg'
 import etsyWolfFang from './assets/etsy-listings/wolf-fang-pendant.jpg'
@@ -176,6 +177,8 @@ const homePageMeta = {
   description:
     'Shop NovaVentory Viking jewelry on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories.',
   heading: 'Viking Jewelry And Viking Bracelets',
+  image: defaultSeoImage.path,
+  imageAlt: defaultSeoImage.alt,
   faq: [
     {
       question: 'What Viking jewelry does NovaVentory sell?',
@@ -906,6 +909,8 @@ function SeoRouteLoader({ currentPath }) {
         title: commercialPage.title,
         description: commercialPage.description,
         heading: commercialPage.heading,
+        image: getPageSeoImage(commercialPage).path,
+        imageAlt: getPageSeoImage(commercialPage).alt,
         structuredProducts: collectionProducts,
       }
     : productPage
@@ -914,6 +919,8 @@ function SeoRouteLoader({ currentPath }) {
           title: productPage.title,
           description: productPage.description,
           heading: productPage.heading,
+          image: getProductSeoImage(productPage.productName).path,
+          imageAlt: getProductSeoImage(productPage.productName).alt,
           structuredProducts: selectedProduct ? [selectedProduct] : [],
         }
       : blogPage
@@ -922,6 +929,8 @@ function SeoRouteLoader({ currentPath }) {
             title: blogPage.title,
             description: blogPage.description,
             heading: blogPage.heading,
+            image: getPageSeoImage(blogPage).path,
+            imageAlt: getPageSeoImage(blogPage).alt,
             skipStructuredData: true,
           }
         : undefined
@@ -1681,6 +1690,8 @@ function App() {
         path: currentPath,
         title: legalPage.title,
         description: legalPage.description,
+        image: defaultSeoImage.path,
+        imageAlt: defaultSeoImage.alt,
         skipStructuredData: true,
       }
     : currentPath === '/'

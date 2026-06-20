@@ -1,3 +1,5 @@
+import { defaultSeoImage, getProductSeoImage } from './product-seo-images'
+
 export const siteUrl =
   import.meta.env.VITE_SITE_URL?.replace(/\/$/, '') ||
   'https://novaventory.com'
@@ -61,7 +63,8 @@ export function updateDocumentSeo(page = {}) {
   const canonicalUrl = absoluteUrl(page.path || '/')
   const title = page.title || siteTitle
   const description = page.description || siteDescription
-  const previewImage = absoluteUrl('/og-novaventory.jpg')
+  const previewImage = absoluteUrl(page.image || defaultSeoImage.path)
+  const previewImageAlt = page.imageAlt || defaultSeoImage.alt
 
   document.title = title
   setMeta('link[rel="canonical"]', 'href', canonicalUrl)
@@ -70,6 +73,7 @@ export function updateDocumentSeo(page = {}) {
   setMeta('meta[property="og:title"]', 'content', title)
   setMeta('meta[property="og:description"]', 'content', description)
   setMeta('meta[property="og:image"]', 'content', previewImage)
+  setMeta('meta[property="og:image:alt"]', 'content', previewImageAlt)
   setMeta('meta[name="twitter:title"]', 'content', title)
   setMeta('meta[name="twitter:description"]', 'content', description)
   setMeta('meta[name="twitter:image"]', 'content', previewImage)
@@ -79,14 +83,16 @@ export function createStructuredData(products, page = {}) {
   const pageUrl = absoluteUrl(page.path || '/')
   const pageName = page.heading || 'Featured NovaVentory Viking jewelry'
   const pageDescription = page.description || siteDescription
+  const pageImage = absoluteUrl(page.image || defaultSeoImage.path)
   const productGraph = products.map((product, index) => {
     const price = parsePrice(product.price)
+    const productImage = getProductSeoImage(product.name)
 
     return {
       '@type': 'Product',
       '@id': `${pageUrl}#product-${index + 1}`,
       name: product.name,
-      image: absoluteUrl(product.image),
+      image: absoluteUrl(productImage.path),
       description: `${product.name} from NovaVentory's Viking-inspired Etsy jewelry collection.`,
       sku: createSku(product, index),
       brand: {
@@ -138,6 +144,7 @@ export function createStructuredData(products, page = {}) {
               name: pageName,
               url: pageUrl,
               description: pageDescription,
+              primaryImageOfPage: pageImage,
               isPartOf: {
                 '@id': `${siteUrl}/#website`,
               },

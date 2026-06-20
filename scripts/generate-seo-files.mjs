@@ -1,11 +1,18 @@
-import { mkdir, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { getSiteUrl } from './seo-domain.mjs'
 import { allSeoPagePaths, allSeoPages } from '../src/seo-pages.js'
+import {
+  defaultSeoImage,
+  getPageSeoImage,
+  productSeoImages,
+} from '../src/product-seo-images.js'
 
 const rootDir = dirname(fileURLToPath(new URL('../package.json', import.meta.url)))
 const publicDir = join(rootDir, 'public')
+const publicImageDir = join(publicDir, 'images')
+const sourceImageDir = join(rootDir, 'src', 'assets', 'etsy-listings')
 const siteUrl = getSiteUrl()
 const today = new Date().toISOString().slice(0, 10)
 const adsensePublisherId = 'ca-pub-8273338730781765'
@@ -58,6 +65,48 @@ const getUrlMeta = (path) => {
   return { changefreq: 'monthly', priority: '0.3' }
 }
 
+const escapeXml = (value = '') =>
+  String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;')
+
+const getPageImages = (path) => {
+  if (path === '/') {
+    return Object.values(productSeoImages)
+  }
+
+  const page = allSeoPages[path] || supportPages[path]
+
+  if (!page) {
+    return [defaultSeoImage]
+  }
+
+  const productNames = [
+    page.productName,
+    page.heroProductName,
+    ...(page.productNames || []),
+  ].filter(Boolean)
+  const uniqueImages = new Map()
+
+  productNames.forEach((productName) => {
+    const image = productSeoImages[productName]
+
+    if (image) {
+      uniqueImages.set(image.path, image)
+    }
+  })
+
+  if (!uniqueImages.size) {
+    const fallbackImage = getPageSeoImage(page)
+    uniqueImages.set(fallbackImage.path, fallbackImage)
+  }
+
+  return [...uniqueImages.values()]
+}
+
 const robots = `User-agent: *
 Allow: /
 
@@ -65,17 +114,26 @@ Sitemap: ${siteUrl}/sitemap-index.xml
 `
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${urls
   .map(
     (path) => {
       const { changefreq, priority } = getUrlMeta(path)
+      const imageEntries = getPageImages(path)
+        .map(
+          (image) => `    <image:image>
+      <image:loc>${siteUrl}${escapeXml(image.path)}</image:loc>
+      <image:title>${escapeXml(image.alt)}</image:title>
+    </image:image>`,
+        )
+        .join('\n')
 
       return `  <url>
     <loc>${siteUrl}${path === '/' ? '/' : path}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
+${imageEntries}
   </url>`
     },
   )
@@ -92,7 +150,11 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 </sitemapindex>
 `
 
-const createHtml = (page) => `<!doctype html>
+const createHtml = (page) => {
+  const seoImage = getPageSeoImage(page)
+  const seoImageUrl = `${siteUrl}${seoImage.path}`
+
+  return `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -112,12 +174,12 @@ const createHtml = (page) => `<!doctype html>
     <meta property="og:url" content="${siteUrl}${page.path}" />
     <meta property="og:title" content="${page.title}" />
     <meta property="og:description" content="${page.description}" />
-    <meta property="og:image" content="${siteUrl}/og-novaventory.jpg" />
-    <meta property="og:image:alt" content="NovaVentory Viking leather bracelet product photo" />
+    <meta property="og:image" content="${seoImageUrl}" />
+    <meta property="og:image:alt" content="${seoImage.alt}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${page.title}" />
     <meta name="twitter:description" content="${page.description}" />
-    <meta name="twitter:image" content="${siteUrl}/og-novaventory.jpg" />
+    <meta name="twitter:image" content="${seoImageUrl}" />
     <meta name="google-site-verification" content="bfVFvSd2-GiDeRZMRsjeT9RSeL9kQtxtsHjluEgemJg" />
     <meta name="google-adsense-account" content="${adsensePublisherId}" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisherId}" crossorigin="anonymous"></script>
@@ -130,8 +192,18 @@ const createHtml = (page) => `<!doctype html>
   </body>
 </html>
 `
+}
 
 await mkdir(publicDir, { recursive: true })
+await mkdir(publicImageDir, { recursive: true })
+await Promise.all(
+  Object.values(productSeoImages).map((image) =>
+    copyFile(
+      join(sourceImageDir, image.fileName),
+      join(publicImageDir, image.path.replace('/images/', '')),
+    ),
+  ),
+)
 await writeFile(join(publicDir, 'robots.txt'), robots)
 await writeFile(join(publicDir, 'ads.txt'), adsTxt)
 await writeFile(join(publicDir, 'sitemap.xml'), sitemap)

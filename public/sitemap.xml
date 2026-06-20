@@ -1,219 +1,607 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://novaventory.com/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/satin-bow-hair-clip.jpg</image:loc>
+      <image:title>Oversized satin bow hair clip product photo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/bracelets</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/viking-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/nordic-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/raven-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/viking-jewelry</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/norse-jewelry</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/nordic-jewelry</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/viking-necklaces</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/raven-jewelry</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/wolf-fang-necklace</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/mens-viking-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/stainless-steel-viking-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/viking-cuff-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/viking-leather-bracelets</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/viking-arm-ring</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/norse-bracelets</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/viking-dragon-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/products/viking-twisted-cuff-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/products/viking-leather-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/products/norse-raven-cuff-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/products/viking-raven-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/products/viking-dragon-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/products/wolf-fang-pendant-necklace</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/products/odin-raven-necklace</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/products/satin-bow-hair-clip</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/satin-bow-hair-clip.jpg</image:loc>
+      <image:title>Oversized satin bow hair clip product photo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/blog</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/blog/what-does-a-viking-bracelet-mean</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/blog/how-to-style-a-viking-bracelet</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/blog/raven-symbol-meaning-in-norse-jewelry</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/blog/stainless-steel-vs-leather-viking-bracelets</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/blog/viking-jewelry-gifts-for-men</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/about</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>NovaVentory Viking raven bracelet product photo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/contact</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>NovaVentory Viking raven bracelet product photo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/privacy-policy</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>NovaVentory Viking raven bracelet product photo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://novaventory.com/terms-and-conditions</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>NovaVentory Viking raven bracelet product photo</image:title>
+    </image:image>
   </url>
 </urlset>
