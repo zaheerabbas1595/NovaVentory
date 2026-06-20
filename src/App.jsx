@@ -1097,7 +1097,7 @@ function useScrollReveal(routeKey) {
 
 function useHashScroll(routeKey) {
   useEffect(() => {
-    const scrollToHash = () => {
+    const scrollToHash = (behavior = 'smooth') => {
       if (!window.location.hash) {
         return
       }
@@ -1107,23 +1107,19 @@ function useHashScroll(routeKey) {
       )
 
       if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        target.scrollIntoView({ behavior, block: 'start' })
       }
     }
 
-    window.requestAnimationFrame(scrollToHash)
-    const retryTimer = window.setTimeout(scrollToHash, 1400)
-    const mutationObserver = new MutationObserver(scrollToHash)
-    mutationObserver.observe(document.getElementById('root'), {
-      childList: true,
-      subtree: true,
-    })
-    window.addEventListener('hashchange', scrollToHash)
+    const handleHashChange = () => scrollToHash('smooth')
+
+    window.requestAnimationFrame(() => scrollToHash('auto'))
+    const retryTimer = window.setTimeout(() => scrollToHash('auto'), 900)
+    window.addEventListener('hashchange', handleHashChange)
 
     return () => {
       window.clearTimeout(retryTimer)
-      mutationObserver.disconnect()
-      window.removeEventListener('hashchange', scrollToHash)
+      window.removeEventListener('hashchange', handleHashChange)
     }
   }, [routeKey])
 }
