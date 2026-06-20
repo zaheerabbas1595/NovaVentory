@@ -6,6 +6,7 @@ import {
   CreditCard,
   Gem,
   Headphones,
+  Play,
   Star,
   ShieldCheck,
   Truck,
@@ -1180,29 +1181,20 @@ function BlogPost({ page, seoPages }) {
 
 function Hero() {
   const [activeSlide, setActiveSlide] = useState(0)
+  const [isHeroVideoPlaying, setIsHeroVideoPlaying] = useState(false)
   const [videoReadySlide, setVideoReadySlide] = useState(null)
   const heroVideoRef = useRef(null)
   const slide = heroSlides[activeSlide]
   const isVideoReady = videoReadySlide === activeSlide
 
   const showNextSlide = useCallback(() => {
+    setIsHeroVideoPlaying(false)
+    setVideoReadySlide(null)
     setActiveSlide((currentSlide) => (currentSlide + 1) % heroSlides.length)
   }, [])
 
   useEffect(() => {
-    if (slide.videoSrc) {
-      const video = heroVideoRef.current
-
-      if (video) {
-        try {
-          video.currentTime = 0
-        } catch {
-          // Some browsers reject currentTime changes before video metadata loads.
-        }
-
-        video.play().catch(() => {})
-      }
-
+    if (!slide.videoSrc || isHeroVideoPlaying) {
       return undefined
     }
 
@@ -1211,13 +1203,48 @@ function Hero() {
     }, 5500)
 
     return () => window.clearInterval(timer)
-  }, [activeSlide, slide.videoSrc, showNextSlide])
+  }, [isHeroVideoPlaying, slide.videoSrc, showNextSlide])
+
+  useEffect(() => {
+    if (!slide.videoSrc || !isHeroVideoPlaying) {
+      return undefined
+    }
+
+    const video = heroVideoRef.current
+
+    if (video) {
+      try {
+        video.currentTime = 0
+      } catch {
+        // Some browsers reject currentTime changes before video metadata loads.
+      }
+
+      video.play().catch(() => {
+        setIsHeroVideoPlaying(false)
+      })
+    }
+
+    return undefined
+  }, [activeSlide, isHeroVideoPlaying, slide.videoSrc])
 
   const showPreviousSlide = () => {
+    setIsHeroVideoPlaying(false)
+    setVideoReadySlide(null)
     setActiveSlide(
       (currentSlide) =>
         (currentSlide - 1 + heroSlides.length) % heroSlides.length,
     )
+  }
+
+  const showSelectedSlide = (index) => {
+    setIsHeroVideoPlaying(false)
+    setVideoReadySlide(null)
+    setActiveSlide(index)
+  }
+
+  const playHeroVideo = () => {
+    setVideoReadySlide(null)
+    setIsHeroVideoPlaying(true)
   }
 
   return (
@@ -1263,31 +1290,44 @@ function Hero() {
                 alt=""
                 aria-hidden="true"
               />
-              <video
-                ref={heroVideoRef}
-                className={isVideoReady ? 'is-ready' : ''}
-                src={slide.videoSrc}
-                poster={slide.image}
-                autoPlay
-                muted
-                playsInline
-                preload="metadata"
-                onLoadedData={() => setVideoReadySlide(activeSlide)}
-                onCanPlay={() => setVideoReadySlide(activeSlide)}
-                onPlaying={() => setVideoReadySlide(activeSlide)}
-                onError={() => setVideoReadySlide(null)}
-                onStalled={() => setVideoReadySlide(null)}
-                onEnded={showNextSlide}
-                aria-label="Best-selling Viking raven bracelet video"
-              >
-                <track
-                  kind="captions"
-                  src="/videos/bestseller-raven-bracelet.vtt"
-                  srcLang="en"
-                  label="English captions"
-                  default
-                />
-              </video>
+              {isHeroVideoPlaying ? (
+                <video
+                  ref={heroVideoRef}
+                  className={isVideoReady ? 'is-ready' : ''}
+                  src={slide.videoSrc}
+                  poster={slide.image}
+                  muted
+                  playsInline
+                  preload="metadata"
+                  onLoadedData={() => setVideoReadySlide(activeSlide)}
+                  onCanPlay={() => setVideoReadySlide(activeSlide)}
+                  onPlaying={() => setVideoReadySlide(activeSlide)}
+                  onError={() => {
+                    setVideoReadySlide(null)
+                    setIsHeroVideoPlaying(false)
+                  }}
+                  onStalled={() => setVideoReadySlide(null)}
+                  onEnded={showNextSlide}
+                  aria-label="Best-selling Viking raven bracelet video"
+                >
+                  <track
+                    kind="captions"
+                    src="/videos/bestseller-raven-bracelet.vtt"
+                    srcLang="en"
+                    label="English captions"
+                    default
+                  />
+                </video>
+              ) : (
+                <button
+                  className="hero-video-play"
+                  type="button"
+                  onClick={playHeroVideo}
+                  aria-label="Play best-selling Viking raven bracelet reel"
+                >
+                  <Play size={28} fill="currentColor" />
+                </button>
+              )}
             </div>
           ) : (
             <div className="hero-wrist-panel" aria-hidden="true">
@@ -1314,7 +1354,7 @@ function Hero() {
             <button
               className={index === activeSlide ? 'active' : ''}
               type="button"
-              onClick={() => setActiveSlide(index)}
+              onClick={() => showSelectedSlide(index)}
               aria-label={`Show slide ${index + 1}: ${heroSlide.title.join(' ')}`}
               aria-selected={index === activeSlide}
               role="tab"
