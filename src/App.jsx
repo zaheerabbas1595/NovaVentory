@@ -1,15 +1,20 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import {
   ArrowRight,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
   CreditCard,
   Gem,
   Headphones,
+  Menu,
   Play,
+  Search,
+  ShoppingBag,
   Star,
   ShieldCheck,
   Truck,
+  X,
 } from 'lucide-react'
 import './App.css'
 import {
@@ -291,6 +296,54 @@ const scrollRevealSelector = [
   '.legal-content',
   '.legal-section',
 ].join(', ')
+
+const shopMenuItems = [
+  {
+    label: 'Featured Products',
+    href: '/#products',
+    text: 'Customer-favorite Viking pieces',
+  },
+  {
+    label: 'Bracelets',
+    href: '/bracelets',
+    text: 'Cuffs, leather, raven and dragon designs',
+  },
+  {
+    label: 'Viking Jewelry',
+    href: '/viking-jewelry',
+    text: 'Full Norse-inspired collection',
+  },
+  {
+    label: 'Viking Necklaces',
+    href: '/viking-necklaces',
+    text: 'Raven, wolf fang and Odin pendants',
+  },
+  {
+    label: 'Raven Jewelry',
+    href: '/raven-jewelry',
+    text: 'Symbolic raven bracelets and necklaces',
+  },
+]
+
+const guideMenuItems = [
+  {
+    label: 'Viking Bracelet Meaning',
+    href: '/blog/what-does-a-viking-bracelet-mean',
+  },
+  {
+    label: 'Raven Symbol Guide',
+    href: '/blog/raven-symbol-meaning-in-norse-jewelry',
+  },
+  {
+    label: 'Bracelet Styling',
+    href: '/blog/how-to-style-a-viking-bracelet',
+  },
+]
+
+const headerQuickLinks = [
+  { label: 'Reviews', href: '/#reviews' },
+  { label: 'About', href: '/about' },
+]
 
 const legalPages = {
   '/about': {
@@ -633,36 +686,256 @@ const testimonials = [
 ]
 
 function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 8)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 8)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    document.body.classList.toggle('mobile-menu-open', isMobileMenuOpen)
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.classList.remove('mobile-menu-open')
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isMobileMenuOpen])
+
+  const closeMobileMenu = () => setIsMobileMenuOpen(false)
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault()
+
+    const formData = new FormData(event.currentTarget)
+    const query = String(formData.get('site-search') || '').trim().toLowerCase()
+
+    if (query.includes('necklace') || query.includes('pendant')) {
+      window.location.href = '/viking-necklaces'
+      return
+    }
+
+    if (query.includes('raven')) {
+      window.location.href = '/raven-jewelry'
+      return
+    }
+
+    if (query.includes('bracelet') || query.includes('cuff') || query.includes('arm ring')) {
+      window.location.href = '/bracelets'
+      return
+    }
+
+    if (query.includes('norse') || query.includes('nordic') || query.includes('viking')) {
+      window.location.href = '/viking-jewelry'
+      return
+    }
+
+    window.location.href = '/#products'
+  }
+
   return (
-    <header className="site-header">
+    <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
       <div className="top-strip">
-        <span>Free shipping in all states of the USA</span>
+        <span>Free USA shipping</span>
+        <span>Viking-inspired jewelry</span>
+        <span>Secure Etsy checkout</span>
       </div>
-      <div className="brand-row">
-        <a className="brand" href="/" aria-label="NovaVentory home">
-          NovaVentory
-        </a>
+      <div className="header-shell">
+        <div className="brand-row">
+          <button
+            className="mobile-menu-toggle"
+            type="button"
+            onClick={() => setIsMobileMenuOpen(true)}
+            aria-label="Open navigation menu"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
+          >
+            <Menu size={22} />
+          </button>
+
+          <a className="brand" href="/" aria-label="NovaVentory home">
+            <span className="brand-mark">NV</span>
+            <span className="brand-text">
+              <span>NovaVentory</span>
+              <small>Viking Jewelry</small>
+            </span>
+          </a>
+
+          <form className="header-search" role="search" onSubmit={handleSearchSubmit}>
+            <Search size={17} aria-hidden="true" />
+            <label className="sr-only" htmlFor="site-search">
+              Search NovaVentory products
+            </label>
+            <input
+              id="site-search"
+              name="site-search"
+              type="search"
+              placeholder="Search bracelets, raven, necklaces"
+              autoComplete="off"
+            />
+            <button type="submit">Search</button>
+          </form>
+
+          <div className="header-actions" aria-label="Header actions">
+            <a className="icon-action search-action" href="/#products" aria-label="Browse products">
+              <Search size={19} />
+            </a>
+            <a
+              className="icon-action bag-action"
+              href={shopUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Shop NovaVentory on Etsy"
+            >
+              <ShoppingBag size={20} />
+              <span>0</span>
+            </a>
+          </div>
+        </div>
+
         <nav className="site-nav" aria-label="Primary navigation">
-          <details className="nav-menu">
-            <summary>Shop</summary>
+          <div className="nav-dropdown">
+            <button type="button" className="nav-trigger" aria-haspopup="true">
+              Shop
+              <ChevronDown size={14} />
+            </button>
             <div className="nav-menu-panel">
-              <a href="/#products">Featured Products</a>
-              <a href="/bracelets">Bracelets</a>
-              <a href="/viking-jewelry">Viking Jewelry</a>
-              <a href="/viking-necklaces">Viking Necklaces</a>
-              <a href="/raven-jewelry">Raven Jewelry</a>
+              {shopMenuItems.map((item) => (
+                <a href={item.href} key={item.href}>
+                  <strong>{item.label}</strong>
+                  <span>{item.text}</span>
+                </a>
+              ))}
             </div>
-          </details>
-          <a href="/blog">Guides</a>
-          <a href="/#reviews">Reviews</a>
+          </div>
+          <div className="nav-dropdown">
+            <button type="button" className="nav-trigger" aria-haspopup="true">
+              Guides
+              <ChevronDown size={14} />
+            </button>
+            <div className="nav-menu-panel compact">
+              <a href="/blog">
+                <strong>All Guides</strong>
+                <span>Jewelry styling and symbolism</span>
+              </a>
+              {guideMenuItems.map((item) => (
+                <a href={item.href} key={item.href}>
+                  <strong>{item.label}</strong>
+                </a>
+              ))}
+            </div>
+          </div>
+          {headerQuickLinks.map((item) => (
+            <a href={item.href} key={item.href}>
+              {item.label}
+            </a>
+          ))}
           <a href={shopUrl} target="_blank" rel="noreferrer">
             Etsy
           </a>
         </nav>
       </div>
+
+      <div
+        className={`mobile-menu-backdrop ${isMobileMenuOpen ? 'is-open' : ''}`}
+        onClick={closeMobileMenu}
+        aria-hidden="true"
+      />
+      <aside
+        className={`mobile-menu ${isMobileMenuOpen ? 'is-open' : ''}`}
+        id="mobile-navigation"
+        aria-label="Mobile navigation"
+        aria-hidden={!isMobileMenuOpen}
+      >
+        <div className="mobile-menu-head">
+          <a className="brand" href="/" onClick={closeMobileMenu} aria-label="NovaVentory home">
+            <span className="brand-mark">NV</span>
+            <span className="brand-text">
+              <span>NovaVentory</span>
+              <small>Viking Jewelry</small>
+            </span>
+          </a>
+          <button
+            className="mobile-menu-close"
+            type="button"
+            onClick={closeMobileMenu}
+            aria-label="Close navigation menu"
+          >
+            <X size={22} />
+          </button>
+        </div>
+
+        <form className="mobile-search" role="search" onSubmit={handleSearchSubmit}>
+          <Search size={17} aria-hidden="true" />
+          <label className="sr-only" htmlFor="mobile-site-search">
+            Search NovaVentory products
+          </label>
+          <input
+            id="mobile-site-search"
+            name="site-search"
+            type="search"
+            placeholder="Search Viking jewelry"
+            autoComplete="off"
+          />
+        </form>
+
+        <nav className="mobile-nav-links" aria-label="Mobile primary navigation">
+          <details open>
+            <summary>
+              Shop
+              <ChevronDown size={15} />
+            </summary>
+            <div>
+              {shopMenuItems.map((item) => (
+                <a href={item.href} onClick={closeMobileMenu} key={item.href}>
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </details>
+          <details>
+            <summary>
+              Guides
+              <ChevronDown size={15} />
+            </summary>
+            <div>
+              <a href="/blog" onClick={closeMobileMenu}>
+                All Guides
+              </a>
+              {guideMenuItems.map((item) => (
+                <a href={item.href} onClick={closeMobileMenu} key={item.href}>
+                  {item.label}
+                </a>
+              ))}
+            </div>
+          </details>
+          {headerQuickLinks.map((item) => (
+            <a href={item.href} onClick={closeMobileMenu} key={item.href}>
+              {item.label}
+            </a>
+          ))}
+          <a href={shopUrl} target="_blank" rel="noreferrer" onClick={closeMobileMenu}>
+            Shop On Etsy
+          </a>
+        </nav>
+      </aside>
     </header>
   )
 }
