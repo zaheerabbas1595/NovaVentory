@@ -8,7 +8,12 @@ export const siteTitle =
   'Viking Jewelry & Viking Bracelets | Norse Necklaces | NovaVentory'
 
 export const siteDescription =
-  "Shop NovaVentory Viking jewelry on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories."
+  'Shop NovaVentory Viking jewelry for US shoppers on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories with USD pricing and free USA shipping.'
+
+export const siteLanguage = 'en-US'
+export const siteLocale = 'en_US'
+export const targetCountryCode = 'US'
+export const targetCountryName = 'United States'
 
 export const shopUrl = 'https://www.etsy.com/shop/NovaVentory'
 
@@ -72,11 +77,16 @@ export function updateDocumentSeo(page = {}) {
   setMeta('meta[property="og:url"]', 'content', canonicalUrl)
   setMeta('meta[property="og:title"]', 'content', title)
   setMeta('meta[property="og:description"]', 'content', description)
+  setMeta('meta[property="og:locale"]', 'content', siteLocale)
   setMeta('meta[property="og:image"]', 'content', previewImage)
   setMeta('meta[property="og:image:alt"]', 'content', previewImageAlt)
+  setMeta('meta[name="geo.region"]', 'content', targetCountryCode)
+  setMeta('meta[name="geo.placename"]', 'content', targetCountryName)
   setMeta('meta[name="twitter:title"]', 'content', title)
   setMeta('meta[name="twitter:description"]', 'content', description)
   setMeta('meta[name="twitter:image"]', 'content', previewImage)
+
+  document.documentElement.lang = siteLanguage
 }
 
 export function createStructuredData(products, page = {}) {
@@ -84,6 +94,14 @@ export function createStructuredData(products, page = {}) {
   const pageName = page.heading || 'Featured NovaVentory Viking jewelry'
   const pageDescription = page.description || siteDescription
   const pageImage = absoluteUrl(page.image || defaultSeoImage.path)
+  const usCountry = {
+    '@type': 'Country',
+    name: targetCountryName,
+  }
+  const usAudience = {
+    '@type': 'Audience',
+    geographicArea: usCountry,
+  }
   const productGraph = products.map((product, index) => {
     const price = parsePrice(product.price)
     const productImage = getProductSeoImage(product.name)
@@ -95,6 +113,7 @@ export function createStructuredData(products, page = {}) {
       image: absoluteUrl(productImage.path),
       description: `${product.name} from NovaVentory's Viking-inspired Etsy jewelry collection.`,
       sku: createSku(product, index),
+      audience: usAudience,
       brand: {
         '@type': 'Brand',
         name: 'NovaVentory',
@@ -108,6 +127,7 @@ export function createStructuredData(products, page = {}) {
         availability: 'https://schema.org/InStock',
         itemCondition: 'https://schema.org/NewCondition',
         shippingDetails: createShippingDetails(),
+        eligibleRegion: usCountry,
         seller: {
           '@id': `${siteUrl}/#organization`,
         },
@@ -124,6 +144,7 @@ export function createStructuredData(products, page = {}) {
         name: 'NovaVentory',
         url: siteUrl,
         logo: absoluteUrl('/apple-touch-icon.svg'),
+        areaServed: usCountry,
         sameAs: [shopUrl],
       },
       {
@@ -132,6 +153,7 @@ export function createStructuredData(products, page = {}) {
         name: 'NovaVentory',
         url: siteUrl,
         description: siteDescription,
+        inLanguage: siteLanguage,
         publisher: {
           '@id': `${siteUrl}/#organization`,
         },
@@ -145,6 +167,8 @@ export function createStructuredData(products, page = {}) {
               url: pageUrl,
               description: pageDescription,
               primaryImageOfPage: pageImage,
+              inLanguage: siteLanguage,
+              audience: usAudience,
               isPartOf: {
                 '@id': `${siteUrl}/#website`,
               },
@@ -162,6 +186,11 @@ export function createStructuredData(products, page = {}) {
         image: absoluteUrl('/og-novaventory.jpg'),
         description: siteDescription,
         priceRange: '$$',
+        areaServed: usCountry,
+        availableLanguage: {
+          '@type': 'Language',
+          name: 'English',
+        },
         parentOrganization: {
           '@id': `${siteUrl}/#organization`,
         },
@@ -189,6 +218,7 @@ export function createStructuredData(products, page = {}) {
         '@type': 'ItemList',
         '@id': `${pageUrl}#featured-products`,
         name: pageName,
+        audience: usAudience,
         itemListElement: products.map((product, index) => ({
           '@type': 'ListItem',
           position: index + 1,

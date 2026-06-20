@@ -17,6 +17,10 @@ const siteUrl = getSiteUrl()
 const today = new Date().toISOString().slice(0, 10)
 const adsensePublisherId = 'ca-pub-8273338730781765'
 const adsTxt = 'google.com, pub-8273338730781765, DIRECT, f08c47fec0942fa0\n'
+const siteLanguage = 'en-US'
+const siteLocale = 'en_US'
+const targetCountryCode = 'US'
+const targetCountryName = 'United States'
 const supportPages = {
   '/about': {
     path: '/about',
@@ -114,11 +118,12 @@ Sitemap: ${siteUrl}/sitemap-index.xml
 `
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls
   .map(
     (path) => {
       const { changefreq, priority } = getUrlMeta(path)
+      const pageUrl = `${siteUrl}${path === '/' ? '/' : path}`
       const imageEntries = getPageImages(path)
         .map(
           (image) => `    <image:image>
@@ -129,7 +134,9 @@ ${urls
         .join('\n')
 
       return `  <url>
-    <loc>${siteUrl}${path === '/' ? '/' : path}</loc>
+    <loc>${pageUrl}</loc>
+    <xhtml:link rel="alternate" hreflang="${siteLanguage}" href="${pageUrl}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl}" />
     <lastmod>${today}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
@@ -153,15 +160,18 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 const createHtml = (page) => {
   const seoImage = getPageSeoImage(page)
   const seoImageUrl = `${siteUrl}${seoImage.path}`
+  const pageUrl = `${siteUrl}${page.path}`
 
   return `<!doctype html>
-<html lang="en">
+<html lang="${siteLanguage}">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="canonical" href="${siteUrl}${page.path}" />
+    <link rel="canonical" href="${pageUrl}" />
+    <link rel="alternate" hreflang="${siteLanguage}" href="${pageUrl}" />
+    <link rel="alternate" hreflang="x-default" href="${pageUrl}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -169,9 +179,12 @@ const createHtml = (page) => {
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="description" content="${page.description}" />
     <meta name="author" content="NovaVentory" />
+    <meta name="geo.region" content="${targetCountryCode}" />
+    <meta name="geo.placename" content="${targetCountryName}" />
     <meta property="og:site_name" content="NovaVentory" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="${siteUrl}${page.path}" />
+    <meta property="og:url" content="${pageUrl}" />
+    <meta property="og:locale" content="${siteLocale}" />
     <meta property="og:title" content="${page.title}" />
     <meta property="og:description" content="${page.description}" />
     <meta property="og:image" content="${seoImageUrl}" />

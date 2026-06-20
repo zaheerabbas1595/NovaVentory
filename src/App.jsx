@@ -175,7 +175,7 @@ const homePageMeta = {
   path: '/',
   title: 'Viking Jewelry & Viking Bracelets | Norse Necklaces | NovaVentory',
   description:
-    'Shop NovaVentory Viking jewelry on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories.',
+    'Shop NovaVentory Viking jewelry for US shoppers on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories with USD pricing and free USA shipping.',
   heading: 'Viking Jewelry And Viking Bracelets',
   image: defaultSeoImage.path,
   imageAlt: defaultSeoImage.alt,

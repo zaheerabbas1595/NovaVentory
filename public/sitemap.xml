@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://novaventory.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -40,6 +42,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/bracelets</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/bracelets" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/bracelets" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -66,6 +70,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/viking-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -88,6 +94,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/nordic-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/nordic-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/nordic-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -110,6 +118,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/raven-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/raven-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/raven-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -128,6 +138,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/viking-jewelry</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-jewelry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-jewelry" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -154,6 +166,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/norse-jewelry</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/norse-jewelry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/norse-jewelry" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -176,6 +190,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/nordic-jewelry</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/nordic-jewelry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/nordic-jewelry" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -198,6 +214,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/viking-necklaces</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-necklaces" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-necklaces" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -212,6 +230,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/raven-jewelry</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/raven-jewelry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/raven-jewelry" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -230,6 +250,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/wolf-fang-necklace</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/wolf-fang-necklace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/wolf-fang-necklace" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -240,6 +262,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/mens-viking-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/mens-viking-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/mens-viking-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -262,6 +286,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/stainless-steel-viking-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/stainless-steel-viking-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/stainless-steel-viking-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -284,6 +310,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/viking-cuff-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-cuff-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-cuff-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -302,6 +330,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/viking-leather-bracelets</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-leather-bracelets" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-leather-bracelets" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -320,6 +350,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/viking-arm-ring</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-arm-ring" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-arm-ring" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -338,6 +370,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/norse-bracelets</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/norse-bracelets" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/norse-bracelets" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -360,6 +394,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/viking-dragon-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-dragon-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-dragon-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -378,6 +414,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/products/viking-twisted-cuff-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/viking-twisted-cuff-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/viking-twisted-cuff-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -388,6 +426,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/products/viking-leather-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/viking-leather-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/viking-leather-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -398,6 +438,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/products/norse-raven-cuff-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/norse-raven-cuff-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/norse-raven-cuff-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -408,6 +450,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/products/viking-raven-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/viking-raven-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/viking-raven-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -418,6 +462,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/products/viking-dragon-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/viking-dragon-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/viking-dragon-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -428,6 +474,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/products/wolf-fang-pendant-necklace</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/wolf-fang-pendant-necklace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/wolf-fang-pendant-necklace" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -438,6 +486,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/products/odin-raven-necklace</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/odin-raven-necklace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/odin-raven-necklace" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -448,6 +498,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/products/satin-bow-hair-clip</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/satin-bow-hair-clip" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/satin-bow-hair-clip" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -458,6 +510,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -476,6 +530,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/blog/what-does-a-viking-bracelet-mean</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/what-does-a-viking-bracelet-mean" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/what-does-a-viking-bracelet-mean" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -494,6 +550,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/blog/how-to-style-a-viking-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/how-to-style-a-viking-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/how-to-style-a-viking-bracelet" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -512,6 +570,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/blog/raven-symbol-meaning-in-norse-jewelry</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/raven-symbol-meaning-in-norse-jewelry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/raven-symbol-meaning-in-norse-jewelry" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -530,6 +590,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/blog/stainless-steel-vs-leather-viking-bracelets</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/stainless-steel-vs-leather-viking-bracelets" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/stainless-steel-vs-leather-viking-bracelets" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -548,6 +610,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/blog/viking-jewelry-gifts-for-men</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/viking-jewelry-gifts-for-men" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/viking-jewelry-gifts-for-men" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -566,6 +630,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/about" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -576,6 +642,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/contact" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -586,6 +654,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/privacy-policy</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/privacy-policy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/privacy-policy" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -596,6 +666,8 @@
   </url>
   <url>
     <loc>https://novaventory.com/terms-and-conditions</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/terms-and-conditions" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/terms-and-conditions" />
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
