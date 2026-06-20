@@ -345,6 +345,60 @@ const headerQuickLinks = [
   { label: 'About', href: '/about' },
 ]
 
+const headerSearchEntries = [
+  ...products.map((product) => ({
+    label: product.name,
+    href: product.path,
+    type: 'Product',
+    meta: product.price,
+    keywords: product.name,
+  })),
+  { label: 'Viking Bracelets', href: '/bracelets', type: 'Collection', keywords: 'bracelet bracelets cuff cuffs arm ring stainless steel leather raven dragon' },
+  { label: 'Viking Jewelry', href: '/viking-jewelry', type: 'Collection', keywords: 'viking jewelry norse nordic accessories' },
+  { label: 'Raven Jewelry', href: '/raven-jewelry', type: 'Collection', keywords: 'raven odin huginn muninn bracelet necklace' },
+  { label: 'Viking Necklaces', href: '/viking-necklaces', type: 'Collection', keywords: 'necklace necklaces pendant pendants wolf fang odin raven' },
+  { label: 'Norse Jewelry Guides', href: '/blog', type: 'Guide', keywords: 'guide blog meaning styling viking bracelet raven symbol' },
+]
+
+const popularSearchEntries = headerSearchEntries.slice(0, 5)
+
+const normalizeSearchText = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+
+const getHeaderSearchResults = (query) => {
+  const terms = normalizeSearchText(query).split(' ').filter(Boolean)
+
+  if (!terms.length) {
+    return popularSearchEntries
+  }
+
+  return headerSearchEntries
+    .map((entry) => {
+      const haystack = normalizeSearchText(
+        `${entry.label} ${entry.type} ${entry.keywords}`,
+      )
+      const score = terms.reduce((total, term) => {
+        if (normalizeSearchText(entry.label).includes(term)) {
+          return total + 3
+        }
+
+        if (haystack.includes(term)) {
+          return total + 1
+        }
+
+        return total
+      }, 0)
+
+      return { ...entry, score }
+    })
+    .filter((entry) => entry.score > 0)
+    .sort((firstEntry, secondEntry) => secondEntry.score - firstEntry.score)
+    .slice(0, 6)
+}
+
 const legalPages = {
   '/about': {
     title: 'About NovaVentory | Viking Jewelry On Etsy',
@@ -689,7 +743,10 @@ function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 8)
   const [activeDropdown, setActiveDropdown] = useState(null)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const closeDropdownTimerRef = useRef(null)
+  const searchResults = getHeaderSearchResults(searchQuery)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -757,29 +814,26 @@ function Header() {
     event.preventDefault()
 
     const formData = new FormData(event.currentTarget)
-    const query = String(formData.get('site-search') || '').trim().toLowerCase()
+    const query = String(formData.get('site-search') || searchQuery).trim()
+    const [firstResult] = getHeaderSearchResults(query)
 
-    if (query.includes('necklace') || query.includes('pendant')) {
-      window.location.href = '/viking-necklaces'
-      return
+    window.location.href = firstResult?.href || '/#products'
+  }
+
+  const handleSearchBlur = (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      setIsSearchOpen(false)
     }
+  }
 
-    if (query.includes('raven')) {
-      window.location.href = '/raven-jewelry'
-      return
-    }
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value)
+    setIsSearchOpen(true)
+  }
 
-    if (query.includes('bracelet') || query.includes('cuff') || query.includes('arm ring')) {
-      window.location.href = '/bracelets'
-      return
-    }
-
-    if (query.includes('norse') || query.includes('nordic') || query.includes('viking')) {
-      window.location.href = '/viking-jewelry'
-      return
-    }
-
-    window.location.href = '/#products'
+  const handleSearchResultClick = () => {
+    setIsSearchOpen(false)
+    closeMobileMenu()
   }
 
   return (
@@ -813,7 +867,13 @@ function Header() {
             </span>
           </a>
 
-          <form className="header-search" role="search" onSubmit={handleSearchSubmit}>
+          <form
+            className="header-search"
+            role="search"
+            onSubmit={handleSearchSubmit}
+            onFocus={() => setIsSearchOpen(true)}
+            onBlur={handleSearchBlur}
+          >
             <Search size={17} aria-hidden="true" />
             <label className="sr-only" htmlFor="site-search">
               Search NovaVentory products
@@ -824,14 +884,34 @@ function Header() {
               type="search"
               placeholder="Search bracelets, raven, necklaces"
               autoComplete="off"
+              value={searchQuery}
+              onChange={handleSearchChange}
+              aria-controls="header-search-results"
+              aria-expanded={isSearchOpen}
             />
             <button type="submit">Search</button>
+            {isSearchOpen ? (
+              <div className="search-results" id="header-search-results">
+                {searchResults.length ? (
+                  searchResults.map((result) => (
+                    <a
+                      href={result.href}
+                      onClick={handleSearchResultClick}
+                      key={`${result.type}-${result.href}`}
+                    >
+                      <span>{result.type}</span>
+                      <strong>{result.label}</strong>
+                      {result.meta ? <small>{result.meta}</small> : null}
+                    </a>
+                  ))
+                ) : (
+                  <div className="search-empty">No matching products found</div>
+                )}
+              </div>
+            ) : null}
           </form>
 
           <div className="header-actions" aria-label="Header actions">
-            <a className="icon-action search-action" href="/#products" aria-label="Browse products">
-              <Search size={19} />
-            </a>
             <a
               className="icon-action bag-action"
               href={shopUrl}
@@ -950,6 +1030,8 @@ function Header() {
             type="search"
             placeholder="Search Viking jewelry"
             autoComplete="off"
+            value={searchQuery}
+            onChange={handleSearchChange}
           />
         </form>
 
