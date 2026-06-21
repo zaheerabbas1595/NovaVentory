@@ -1382,7 +1382,7 @@ function TallyFormFrame({ form, title }) {
         loading="lazy"
         title={title}
         width="100%"
-        height="980"
+        height="620"
         frameBorder="0"
         marginHeight="0"
         marginWidth="0"

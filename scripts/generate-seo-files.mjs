@@ -527,7 +527,7 @@ const renderStaticContent = (page) => {
   const formMarkup = page.formUrl
     ? `<section>
         <h2>Contact Form</h2>
-        <iframe src="${escapeHtml(page.formUrl)}" title="${escapeHtml(page.heading)} form" width="100%" height="980" scrolling="no" style="border:0;display:block;overflow:hidden"></iframe>
+        <iframe src="${escapeHtml(page.formUrl)}" title="${escapeHtml(page.heading)} form" width="100%" height="620" scrolling="no" style="border:0;display:block;overflow:hidden"></iframe>
         <p><a href="https://tally.so/r/aQkE5v">Open the NovaVentory contact form directly</a>.</p>
       </section>`
     : ''
