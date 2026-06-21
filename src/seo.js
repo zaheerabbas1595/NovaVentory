@@ -8,7 +8,7 @@ export const siteTitle =
   'Viking Jewelry & Viking Bracelets | Norse Necklaces | NovaVentory'
 
 export const siteDescription =
-  'Shop NovaVentory Viking jewelry for US shoppers on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories with USD pricing and free USA shipping.'
+  'Shop NovaVentory Viking jewelry on Etsy: bracelets, Norse cuffs, raven pendants, wolf fang necklaces, Odin jewelry, and stainless steel accessories for US shoppers.'
 
 export const siteLanguage = 'en-US'
 export const siteLocale = 'en_US'

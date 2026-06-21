@@ -185,7 +185,7 @@ const homePageMeta = {
   path: '/',
   title: 'Viking Jewelry & Viking Bracelets | Norse Necklaces | NovaVentory',
   description:
-    'Shop NovaVentory Viking jewelry for US shoppers on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories with USD pricing and free USA shipping.',
+    'Shop NovaVentory Viking jewelry on Etsy: bracelets, Norse cuffs, raven pendants, wolf fang necklaces, Odin jewelry, and stainless steel accessories for US shoppers.',
   heading: 'Viking Jewelry And Viking Bracelets',
   image: defaultSeoImage.path,
   imageAlt: defaultSeoImage.alt,
@@ -1453,10 +1453,17 @@ const getProductByName = (productName) =>
 const getProductsForPage = (page) =>
   page?.productNames?.map(getProductByName).filter(Boolean) || []
 
+const getSeoPageByPath = (path, seoPages = {}) =>
+  seoPages.commercialPages?.[path] ||
+  seoPages.productPages?.[path] ||
+  seoPages.blogPages?.[path]
+
+const getCanonicalRelatedPath = (path, seoPages = {}) =>
+  getSeoPageByPath(path, seoPages)?.canonicalPath || path
+
 const getPageTitle = (path, seoPages = {}) =>
-  seoPages.commercialPages?.[path]?.heading ||
-  seoPages.productPages?.[path]?.heading ||
-  seoPages.blogPages?.[path]?.heading ||
+  getSeoPageByPath(path, seoPages)?.heading ||
+  getSeoPageByPath(getCanonicalRelatedPath(path, seoPages), seoPages)?.heading ||
   path
     .replace(/^\/|\/$/g, '')
     .split('/')
@@ -1545,13 +1552,15 @@ function SeoRouteLoader({ currentPath }) {
 }
 
 function RelatedLinks({ links = [], seoPages }) {
-  if (!links.length) {
+  const canonicalLinks = [...new Set(links.map((path) => getCanonicalRelatedPath(path, seoPages)))]
+
+  if (!canonicalLinks.length) {
     return null
   }
 
   return (
     <nav className="collection-links" aria-label="Related NovaVentory pages">
-      {links.map((path) => (
+      {canonicalLinks.map((path) => (
         <a href={path} key={path}>
           {getPageTitle(path, seoPages)}
         </a>

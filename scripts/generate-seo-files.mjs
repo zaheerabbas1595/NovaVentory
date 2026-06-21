@@ -2,7 +2,13 @@ import { copyFile, mkdir, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { getSiteUrl } from './seo-domain.mjs'
-import { allSeoPagePaths, allSeoPages, indexableSeoPagePaths } from '../src/seo-pages.js'
+import {
+  allSeoPagePaths,
+  allSeoPages,
+  blogPagePaths,
+  indexableSeoPagePaths,
+  productPagePaths,
+} from '../src/seo-pages.js'
 import {
   defaultSeoImage,
   getPageSeoImage,
@@ -281,6 +287,205 @@ const escapeHtml = (value = '') =>
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;')
 
+const escapeJsonScript = (value = '') =>
+  String(value).replace(/</g, '\\u003c')
+
+const absoluteUrl = (path = '/') => new URL(path, `${siteUrl}/`).href
+
+const getCanonicalRelatedPath = (path) => allSeoPages[path]?.canonicalPath || path
+
+const getStaticPageLabel = (path) => {
+  const page = allSeoPages[path] || supportPages[path]
+
+  if (page?.heading) {
+    return page.heading
+  }
+
+  return path
+    .replace(/^\/|\/$/g, '')
+    .split('/')
+    .filter(Boolean)
+    .pop()
+    ?.replace(/-/g, ' ') || 'Home'
+}
+
+const getSchemaPageType = (page) => {
+  if (page.path === '/about') return 'AboutPage'
+  if (page.path === '/contact') return 'ContactPage'
+  if (page.path === '/blog') return 'Blog'
+  if (blogPagePaths.includes(page.path)) return 'Article'
+  if (productPagePaths.includes(page.path)) return 'ItemPage'
+  if (page.productNames?.length || page.productName) return 'CollectionPage'
+
+  return 'WebPage'
+}
+
+const getPageProductNames = (page) =>
+  [
+    page.productName,
+    page.heroProductName,
+    ...(page.productNames || []),
+  ].filter(Boolean)
+
+const createBreadcrumbSchema = (page, pageUrl) => ({
+  '@type': 'BreadcrumbList',
+  '@id': `${pageUrl}#breadcrumb`,
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: absoluteUrl('/'),
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: page.heading || page.title,
+      item: pageUrl,
+    },
+  ],
+})
+
+const createItemListSchema = (page, pageUrl) => {
+  const productNames = getPageProductNames(page)
+
+  if (!productNames.length) {
+    return null
+  }
+
+  return {
+    '@type': 'ItemList',
+    '@id': `${pageUrl}#item-list`,
+    name: `${page.heading || page.title} product highlights`,
+    itemListElement: productNames.map((productName, index) => {
+      const image = productSeoImages[productName] || getPageSeoImage(page)
+
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Product',
+          name: productName,
+          image: absoluteUrl(image.path),
+          description: `${productName} from NovaVentory's Viking-inspired jewelry collection.`,
+          brand: {
+            '@type': 'Brand',
+            name: 'NovaVentory',
+          },
+          category: 'Viking-inspired jewelry',
+        },
+      }
+    }),
+  }
+}
+
+const createStaticSchema = (page) => {
+  const pageUrl = absoluteUrl(page.path)
+  const canonicalUrl = absoluteUrl(page.canonicalPath || page.path)
+  const seoImage = getPageSeoImage(page)
+  const itemListSchema = createItemListSchema(page, pageUrl)
+  const graph = [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'NovaVentory',
+      url: absoluteUrl('/'),
+      logo: absoluteUrl('/apple-touch-icon.svg'),
+      email: supportEmail,
+      areaServed: targetCountryName,
+      description:
+        'NovaVentory is a United States-focused Viking-inspired jewelry storefront and buying guide with Etsy checkout.',
+      sameAs: ['https://www.etsy.com/shop/NovaVentory'],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer support',
+        email: supportEmail,
+        availableLanguage: 'English',
+        areaServed: targetCountryCode,
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: absoluteUrl('/'),
+      name: 'NovaVentory',
+      inLanguage: siteLanguage,
+      publisher: {
+        '@id': `${siteUrl}/#organization`,
+      },
+    },
+    createBreadcrumbSchema(page, pageUrl),
+  ]
+
+  const webPageSchema = {
+    '@type': getSchemaPageType(page),
+    '@id': `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: page.title,
+    headline: page.heading || page.title,
+    description: page.description,
+    inLanguage: siteLanguage,
+    isPartOf: {
+      '@id': `${siteUrl}/#website`,
+    },
+    publisher: {
+      '@id': `${siteUrl}/#organization`,
+    },
+    primaryImageOfPage: {
+      '@type': 'ImageObject',
+      url: absoluteUrl(seoImage.path),
+      caption: seoImage.alt,
+    },
+    breadcrumb: {
+      '@id': `${pageUrl}#breadcrumb`,
+    },
+  }
+
+  if (canonicalUrl !== pageUrl) {
+    webPageSchema.isBasedOn = canonicalUrl
+  }
+
+  if (itemListSchema) {
+    graph.push(itemListSchema)
+    webPageSchema.mainEntity = {
+      '@id': `${pageUrl}#item-list`,
+    }
+  }
+
+  if (blogPagePaths.includes(page.path)) {
+    const articleSchema = {
+      '@type': 'BlogPosting',
+      '@id': `${pageUrl}#article`,
+      mainEntityOfPage: {
+        '@id': `${pageUrl}#webpage`,
+      },
+      headline: page.heading || page.title,
+      description: page.description,
+      image: absoluteUrl(seoImage.path),
+      dateModified: today,
+      author: {
+        '@id': `${siteUrl}/#organization`,
+      },
+      publisher: {
+        '@id': `${siteUrl}/#organization`,
+      },
+      inLanguage: siteLanguage,
+    }
+
+    graph.push(articleSchema)
+    webPageSchema.mainEntity = {
+      '@id': `${pageUrl}#article`,
+    }
+  }
+
+  graph.push(webPageSchema)
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': graph,
+  }
+}
+
 const getPageImages = (path) => {
   if (path === '/') {
     return Object.values(productSeoImages)
@@ -317,12 +522,8 @@ const getPageImages = (path) => {
 
 const renderStaticContent = (page) => {
   const sections = page.sections || []
-  const productNames = [
-    page.productName,
-    page.heroProductName,
-    ...(page.productNames || []),
-  ].filter(Boolean)
-  const relatedLinks = page.related || []
+  const productNames = getPageProductNames(page)
+  const relatedLinks = [...new Set((page.related || []).map(getCanonicalRelatedPath))]
   const formMarkup = page.formUrl
     ? `<section>
         <h2>Contact Form</h2>
@@ -356,7 +557,7 @@ const renderStaticContent = (page) => {
       ${
         relatedLinks.length
           ? `<nav aria-label="Related pages">
-        ${relatedLinks.map((path) => `<a href="${escapeHtml(path)}">${escapeHtml(path.replace(/^\/|\/$/g, '').replace(/-/g, ' ') || 'Home')}</a>`).join(' ')}
+        ${relatedLinks.map((path) => `<a href="${escapeHtml(path)}">${escapeHtml(getStaticPageLabel(path))}</a>`).join(' ')}
       </nav>`
           : ''
       }
@@ -414,6 +615,7 @@ const createHtml = (page) => {
   const seoImageUrl = `${siteUrl}${seoImage.path}`
   const pageUrl = `${siteUrl}${page.path}`
   const canonicalUrl = `${siteUrl}${page.canonicalPath || page.path}`
+  const staticSchema = createStaticSchema(page)
   const robotsContent = page.noindex
     ? 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
     : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
@@ -454,6 +656,7 @@ const createHtml = (page) => {
     <meta name="twitter:image" content="${seoImageUrl}" />
     <meta name="google-site-verification" content="bfVFvSd2-GiDeRZMRsjeT9RSeL9kQtxtsHjluEgemJg" />
     <meta name="google-adsense-account" content="${adsensePublisherId}" />
+    <script type="application/ld+json">${escapeJsonScript(JSON.stringify(staticSchema))}</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisherId}" crossorigin="anonymous"></script>
 ${tallyScript}    <style>
       .static-fallback{max-width:940px;margin:0 auto;padding:48px 20px;font-family:Arial,sans-serif;line-height:1.7;color:#1a1a1a;background:#fff}
