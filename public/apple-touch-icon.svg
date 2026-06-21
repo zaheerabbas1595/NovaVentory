@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-labelledby="title">
-  <title id="title">NovaVentory icon</title>
-  <rect width="180" height="180" rx="24" fill="#050505"/>
-  <circle cx="90" cy="90" r="62" fill="none" stroke="#f2c84b" stroke-width="9"/>
-  <path d="M49 48h24l19 47 19-47h24l-33 84H81L49 48Z" fill="#f2c84b"/>
+  <title id="title">NovaVentory jewelry icon</title>
+  <rect width="180" height="180" rx="34" fill="#050505"/>
+  <circle cx="90" cy="98" r="56" fill="none" stroke="#d8a82e" stroke-width="11"/>
+  <circle cx="90" cy="98" r="43" fill="none" stroke="#6f5000" stroke-width="4" opacity=".72"/>
+  <path d="M53 64 76 36h28l23 28-37 52L53 64Z" fill="#f2c84b"/>
+  <path d="M76 36h28L90 64 76 36Z" fill="#fff0a6" opacity=".94"/>
+  <path d="M53 64h74M76 36l14 80m14-80-14 80" fill="none" stroke="#8a6400" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M64 134c14 10 38 10 52 0" fill="none" stroke="#fff0a6" stroke-width="8" stroke-linecap="round" opacity=".9"/>
+  <circle cx="45" cy="45" r="5" fill="#fff0a6"/>
+  <circle cx="137" cy="50" r="4" fill="#fff0a6" opacity=".8"/>
 </svg>

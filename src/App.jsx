@@ -961,7 +961,9 @@ function Header() {
           </button>
 
           <a className="brand" href="/" aria-label="NovaVentory home">
-            <span className="brand-mark">NV</span>
+            <span className="brand-mark" aria-hidden="true">
+              <Gem size={23} strokeWidth={2.4} />
+            </span>
             <span className="brand-text">
               <span>NovaVentory</span>
               <small>Viking Jewelry</small>
@@ -1104,7 +1106,9 @@ function Header() {
       >
         <div className="mobile-menu-head">
           <a className="brand" href="/" onClick={closeMobileMenu} aria-label="NovaVentory home">
-            <span className="brand-mark">NV</span>
+            <span className="brand-mark" aria-hidden="true">
+              <Gem size={23} strokeWidth={2.4} />
+            </span>
             <span className="brand-text">
               <span>NovaVentory</span>
               <small>Viking Jewelry</small>
