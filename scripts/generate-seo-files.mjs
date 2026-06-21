@@ -27,7 +27,7 @@ const siteLanguage = 'en-US'
 const siteLocale = 'en_US'
 const targetCountryCode = 'US'
 const targetCountryName = 'United States'
-const supportEmail = 'support@novaventory.com'
+const supportEmail = 'wpdeveloper1595@gmail.com'
 const businessIdentity = 'United States-focused online jewelry storefront'
 const supportPages = {
   '/about': {
@@ -527,7 +527,7 @@ const renderStaticContent = (page) => {
   const formMarkup = page.formUrl
     ? `<section>
         <h2>Contact Form</h2>
-        <iframe src="${escapeHtml(page.formUrl)}" title="${escapeHtml(page.heading)} form" width="100%" style="border:0"></iframe>
+        <iframe src="${escapeHtml(page.formUrl)}" title="${escapeHtml(page.heading)} form" width="100%" height="980" scrolling="no" style="border:0;display:block;overflow:hidden"></iframe>
         <p><a href="https://tally.so/r/aQkE5v">Open the NovaVentory contact form directly</a>.</p>
       </section>`
     : ''

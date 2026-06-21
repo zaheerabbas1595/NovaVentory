@@ -2187,12 +2187,15 @@ body.mobile-menu-open {
   overflow: hidden;
   border: 1px solid #e8e1d6;
   background: #f8f7f4;
+  min-height: 980px;
 }
 
 .tally-form-frame iframe {
   display: block;
   width: 100%;
+  min-height: 980px;
   border: 0;
+  overflow: hidden;
 }
 
 .contact-form-fallback {

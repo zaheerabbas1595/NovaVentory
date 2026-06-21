@@ -35,7 +35,7 @@ import etsySatinBowClip from './assets/etsy-listings/satin-bow-hair-clip.jpg'
 import etsyDragonBracelet from './assets/etsy-listings/viking-dragon-bracelet.jpg'
 import etsyOdinRavenNecklace from './assets/etsy-listings/odin-raven-necklace.jpg'
 
-const supportEmail = 'support@novaventory.com'
+const supportEmail = 'wpdeveloper1595@gmail.com'
 const supportEmailHref = `mailto:${supportEmail}`
 const businessIdentity = 'United States-focused online jewelry storefront'
 
@@ -1378,12 +1378,15 @@ function TallyFormFrame({ form, title }) {
     <div className="tally-form-frame">
       <iframe
         data-tally-src={form.src}
+        src={form.src}
         loading="lazy"
         title={title}
         width="100%"
+        height="980"
         frameBorder="0"
         marginHeight="0"
         marginWidth="0"
+        scrolling="no"
       />
     </div>
   )
