@@ -1247,6 +1247,355 @@ export const blogPages = {
     ],
     related: ['/blog/how-to-style-a-viking-bracelet', '/raven-jewelry', '/viking-necklaces'],
   },
+  '/blog/how-to-choose-a-viking-bracelet-for-men': {
+    path: '/blog/how-to-choose-a-viking-bracelet-for-men',
+    title: 'How To Choose A Viking Bracelet For Men',
+    description:
+      'A practical guide to choosing Viking bracelets for men by material, wrist size, symbol, outfit style, and gift intent.',
+    eyebrow: 'Men\'s bracelet guide',
+    heading: 'How To Choose A Viking Bracelet For Men',
+    intro:
+      'The best men\'s Viking bracelet is the one that fits the wearer\'s normal style, not only the one with the boldest symbol.',
+    heroProductName: 'Viking Leather Bracelet, Braided Black Leather Chain',
+    productNames: [
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    ],
+    sections: [
+      {
+        title: 'Start With Daily Style',
+        body: 'A man who wears watches, boots, denim, and darker casual outfits will usually adapt quickly to a black leather bracelet or stainless steel cuff. Someone who dresses very minimally may prefer one clean bracelet instead of a heavily symbolic design.',
+      },
+      {
+        title: 'Choose Leather For A First Bracelet',
+        body: 'Leather is often the safer first choice because it feels familiar and flexible. It works beside watches and casual sleeves without the weight of a cuff, which makes it useful for buyers who are not used to wearing jewelry every day.',
+      },
+      {
+        title: 'Choose Steel For A Statement',
+        body: 'Stainless steel cuffs are better when the bracelet is meant to be noticed. Twisted cuffs feel classic, raven cuffs feel symbolic, and dragon cuffs feel bolder. The stronger the motif, the simpler the rest of the outfit should be.',
+      },
+      {
+        title: 'Check Sizing Before Checkout',
+        body: 'For gifts, check whether the wearer already uses bracelets or watches. If wrist size is unknown and the bracelet is rigid, review the Etsy listing carefully before ordering or choose a necklace instead.',
+      },
+    ],
+    related: ['/mens-viking-bracelet', '/viking-bracelet', '/blog/how-to-measure-for-a-viking-bracelet'],
+  },
+  '/blog/viking-bracelet-size-mistakes': {
+    path: '/blog/viking-bracelet-size-mistakes',
+    title: 'Viking Bracelet Size Mistakes To Avoid',
+    description:
+      'Avoid common sizing mistakes when buying Viking cuffs, bangles, leather bracelets, and jewelry gifts online.',
+    eyebrow: 'Sizing mistakes',
+    heading: 'Viking Bracelet Size Mistakes To Avoid',
+    intro:
+      'Most online bracelet problems come from guessing size, confusing cuff fit with chain fit, or ignoring how the wearer actually uses jewelry.',
+    heroProductName: 'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+    productNames: [
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+    ],
+    sections: [
+      {
+        title: 'Mistake 1: Measuring A Different Bracelet',
+        body: 'Measuring another bracelet can be misleading because leather, cuffs, chains, and bangles all sit differently. A flexible bracelet length does not tell you whether a rigid cuff opening will feel right.',
+      },
+      {
+        title: 'Mistake 2: Ignoring Wrist Shape',
+        body: 'Some wrists are flatter, some are rounder, and some people wear bracelets higher or lower on the arm. Cuffs need enough room to slide on comfortably and then sit securely without pinching.',
+      },
+      {
+        title: 'Mistake 3: Choosing Only By Photo',
+        body: 'A bracelet can look balanced in a product photo but feel larger on a smaller wrist. Always compare listed measurements, material, and shape with what the wearer already likes.',
+      },
+      {
+        title: 'Mistake 4: Guessing On Gifts',
+        body: 'If you cannot estimate wrist size, choose a leather bracelet with clearer fit flexibility or a necklace. A gift should feel easy to wear, not like a sizing gamble.',
+      },
+    ],
+    related: ['/blog/how-to-measure-for-a-viking-bracelet', '/viking-bracelet', '/contact'],
+  },
+  '/blog/raven-bracelet-vs-odin-raven-necklace': {
+    path: '/blog/raven-bracelet-vs-odin-raven-necklace',
+    title: 'Raven Bracelet Vs Odin Raven Necklace',
+    description:
+      'Compare raven bracelets and Odin raven necklaces for Norse symbolism, gifting, daily wear, and outfit styling.',
+    eyebrow: 'Raven comparison',
+    heading: 'Raven Bracelet Vs Odin Raven Necklace',
+    intro:
+      'Both raven bracelets and Odin raven necklaces carry Norse symbolism, but they solve different buying problems.',
+    heroProductName: 'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    productNames: [
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+    ],
+    sections: [
+      {
+        title: 'Choose A Bracelet For Visibility',
+        body: 'A raven bracelet is easier to notice during daily movement. It works well for someone who already wears watches, rings, or wrist accessories and wants the symbol to be part of their visible style.',
+      },
+      {
+        title: 'Choose A Necklace For Easier Gifting',
+        body: 'A necklace is safer when wrist size is unknown. Odin raven pendants also feel more directly connected to mythology because the symbol sits close to the chest and can be worn under or over layers.',
+      },
+      {
+        title: 'Symbol Difference',
+        body: 'Raven bracelets can feel protective and watchful. Odin raven necklaces feel more story-driven because shoppers often connect them with Huginn and Muninn, thought, memory, and Norse myth.',
+      },
+      {
+        title: 'Best Pairing',
+        body: 'If buying both over time, start with the piece the wearer will use most. A bracelet suits accessory wearers; a necklace suits people who already wear pendants or prefer sizing-safe gifts.',
+      },
+    ],
+    related: ['/raven-jewelry', '/products/odin-raven-necklace', '/raven-bracelet'],
+  },
+  '/blog/best-viking-jewelry-for-everyday-wear': {
+    path: '/blog/best-viking-jewelry-for-everyday-wear',
+    title: 'Best Viking Jewelry For Everyday Wear',
+    description:
+      'Choose Viking jewelry for everyday outfits by comparing leather bracelets, stainless steel cuffs, wolf pendants, and raven pieces.',
+    eyebrow: 'Everyday wear',
+    heading: 'Best Viking Jewelry For Everyday Wear',
+    intro:
+      'Everyday Viking jewelry should add character without making normal outfits feel overstyled.',
+    heroProductName: 'Viking Leather Bracelet, Braided Black Leather Chain',
+    productNames: [
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+    ],
+    sections: [
+      {
+        title: 'Leather Is The Easiest Daily Start',
+        body: 'A black leather bracelet works with denim, tees, hoodies, boots, and watches. It gives the outfit texture without demanding that every other accessory match.',
+      },
+      {
+        title: 'Steel Cuffs Need Simpler Outfits',
+        body: 'Stainless steel cuffs are wearable every day when the outfit is simple. The cleaner the clothing, the more intentional a twisted cuff or raven cuff looks.',
+      },
+      {
+        title: 'Pendants Are Flexible',
+        body: 'A wolf fang or raven pendant can sit under a jacket or over a plain shirt. Necklaces are useful for people who want symbolism without adding weight to the wrist.',
+      },
+      {
+        title: 'Avoid Too Many Symbols',
+        body: 'For daily wear, one strong symbol is usually enough. Pair a raven bracelet with simple clothing or a wolf pendant with a quiet leather bracelet instead of wearing every motif at once.',
+      },
+    ],
+    related: ['/viking-jewelry', '/viking-leather-bracelets', '/viking-necklaces'],
+  },
+  '/blog/how-to-clean-leather-viking-bracelet': {
+    path: '/blog/how-to-clean-leather-viking-bracelet',
+    title: 'How To Clean A Leather Viking Bracelet',
+    description:
+      'Care tips for black leather Viking bracelets, including cleaning, drying, storage, and when to remove leather jewelry.',
+    eyebrow: 'Leather care',
+    heading: 'How To Clean A Leather Viking Bracelet',
+    intro:
+      'Leather Viking bracelets are easy to wear, but they last longer when moisture, sweat, and storage are handled carefully.',
+    heroProductName: 'Viking Leather Bracelet, Braided Black Leather Chain',
+    productNames: [
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+    ],
+    sections: [
+      {
+        title: 'Wipe After Wear',
+        body: 'Use a soft dry cloth after wearing the bracelet, especially in warm weather. Removing surface moisture and skin oil keeps the leather from looking tired too quickly.',
+      },
+      {
+        title: 'Avoid Soaking',
+        body: 'Do not soak a leather bracelet or leave it wet in a drawer. If it gets damp, pat it dry and let it air dry away from direct heat, which can make leather feel stiff.',
+      },
+      {
+        title: 'Store Separately',
+        body: 'Keep leather away from sharp metal jewelry that can mark the surface. A small pouch, tray, or separate section of a drawer is enough for everyday storage.',
+      },
+      {
+        title: 'Remove Before Heavy Use',
+        body: 'Take leather bracelets off before swimming, heavy gym sessions, harsh cleaners, or work that creates heavy abrasion. Leather is practical, but it is not meant to be treated like a tool.',
+      },
+    ],
+    related: ['/products/viking-leather-bracelet', '/viking-leather-bracelets', '/blog/viking-jewelry-materials-guide'],
+  },
+  '/blog/viking-bracelet-gift-mistakes': {
+    path: '/blog/viking-bracelet-gift-mistakes',
+    title: 'Viking Bracelet Gift Mistakes To Avoid',
+    description:
+      'Avoid common Viking bracelet gift mistakes around sizing, symbolism, material choice, and over-styled designs.',
+    eyebrow: 'Gift mistakes',
+    heading: 'Viking Bracelet Gift Mistakes To Avoid',
+    intro:
+      'A Viking bracelet gift feels better when it matches the person, not just the search keyword.',
+    heroProductName: "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    productNames: [
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+    ],
+    sections: [
+      {
+        title: 'Mistake 1: Ignoring The Wearer',
+        body: 'A bold dragon cuff may be perfect for one person and too loud for another. Look at the recipient\'s normal clothing, watches, rings, and shoes before choosing the strongest design.',
+      },
+      {
+        title: 'Mistake 2: Guessing Size',
+        body: 'Bracelet gifts fail when the fit is uncomfortable. If you cannot estimate wrist size, consider leather for flexibility or a necklace for less sizing risk.',
+      },
+      {
+        title: 'Mistake 3: Choosing Random Symbols',
+        body: 'Ravens, wolves, dragons, and twisted cuffs all suggest different moods. Pick the symbol because it fits the person, not because it appears first in search results.',
+      },
+      {
+        title: 'Mistake 4: Overbuilding The Gift',
+        body: 'One strong bracelet is often better than a busy set. A single useful piece has a better chance of becoming part of daily style.',
+      },
+    ],
+    related: ['/blog/viking-jewelry-gifts-for-men', '/blog/viking-jewelry-gift-sizing-guide', '/mens-viking-bracelet'],
+  },
+  '/blog/norse-jewelry-symbols-for-gifts': {
+    path: '/blog/norse-jewelry-symbols-for-gifts',
+    title: 'Norse Jewelry Symbols For Gifts',
+    description:
+      'Choose Norse jewelry gifts by symbol, including raven, wolf, dragon, and twisted cuff meanings for modern wearers.',
+    eyebrow: 'Symbol gifts',
+    heading: 'Norse Jewelry Symbols For Gifts',
+    intro:
+      'Symbol choice is what makes a Norse jewelry gift feel personal instead of generic.',
+    heroProductName: 'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    productNames: [
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    ],
+    sections: [
+      {
+        title: 'Raven For Thoughtful Symbolism',
+        body: 'Raven jewelry suits people who like mythology, darker accessories, and symbols connected with watchfulness, memory, and Odin stories.',
+      },
+      {
+        title: 'Wolf For Rugged Style',
+        body: 'Wolf fang pendants are good for someone who prefers animal motifs, protective symbolism, and jewelry that feels less formal than a classic chain.',
+      },
+      {
+        title: 'Dragon For Bold Personality',
+        body: 'Dragon bracelets are best for someone who enjoys stronger accessories and does not mind a piece that becomes the center of the outfit.',
+      },
+      {
+        title: 'Twisted Cuff For Classic Viking Style',
+        body: 'A twisted cuff is a good middle path because it feels old-world and sculptural without relying on one specific animal symbol.',
+      },
+    ],
+    related: ['/norse-jewelry', '/raven-jewelry', '/blog/viking-jewelry-gifts-for-men'],
+  },
+  '/blog/stainless-steel-viking-bracelet-durability-guide': {
+    path: '/blog/stainless-steel-viking-bracelet-durability-guide',
+    title: 'Stainless Steel Viking Bracelet Durability Guide',
+    description:
+      'Learn why stainless steel Viking bracelets are practical for daily wear and what can still affect finish, comfort, and longevity.',
+    eyebrow: 'Durability guide',
+    heading: 'Stainless Steel Viking Bracelet Durability Guide',
+    intro:
+      'Stainless steel is one of the most practical materials for Viking-inspired cuffs, but durability still depends on care and use.',
+    heroProductName: 'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+    productNames: [
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    ],
+    sections: [
+      {
+        title: 'Why Steel Works For Cuffs',
+        body: 'Cuffs need structure. Stainless steel holds shape well, supports carved details, and gives raven, dragon, and twisted designs enough presence to feel like real jewelry.',
+      },
+      {
+        title: 'Durable Does Not Mean Careless',
+        body: 'Steel can handle daily wear, but rough storage, hard impacts, and harsh chemicals can still affect the finish. Treat the bracelet like jewelry, not hardware.',
+      },
+      {
+        title: 'Comfort Depends On Shape',
+        body: 'A durable bracelet still needs to feel comfortable. Width, opening, edge shape, and wrist size matter as much as material when deciding whether a cuff is right for daily use.',
+      },
+      {
+        title: 'Best Use Case',
+        body: 'Choose stainless steel when the buyer wants a stronger statement, long-term structure, and a polished metal look. Choose leather when softness is more important than sculptural shape.',
+      },
+    ],
+    related: ['/stainless-steel-viking-bracelet', '/viking-cuff-bracelet', '/blog/how-to-care-for-stainless-steel-viking-jewelry'],
+  },
+  '/blog/how-to-layer-viking-necklaces-and-bracelets': {
+    path: '/blog/how-to-layer-viking-necklaces-and-bracelets',
+    title: 'How To Layer Viking Necklaces And Bracelets',
+    description:
+      'Learn how to layer Viking necklaces, raven pendants, wolf fang necklaces, leather bracelets, and cuffs without over-styling.',
+    eyebrow: 'Layering guide',
+    heading: 'How To Layer Viking Necklaces And Bracelets',
+    intro:
+      'Layering Viking jewelry works best when one piece leads and the rest support the same mood quietly.',
+    heroProductName: 'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+    productNames: [
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+    ],
+    sections: [
+      {
+        title: 'Pick A Lead Piece',
+        body: 'Choose either the pendant or the bracelet as the main point of attention. A wolf fang necklace can lead the outfit while a leather bracelet adds texture quietly.',
+      },
+      {
+        title: 'Repeat Material Or Mood',
+        body: 'Silver-tone steel can repeat across a cuff and necklace. Black leather can repeat the rugged mood of a wolf fang pendant. The pieces do not need to match exactly.',
+      },
+      {
+        title: 'Keep Symbols Limited',
+        body: 'A raven, wolf, and dragon all worn together can feel crowded. Choose one animal symbol, then support it with simpler textures or a plain chain.',
+      },
+      {
+        title: 'Use Clothing As Space',
+        body: 'Plain tees, denim jackets, dark button-downs, and simple outerwear give jewelry room to work. Busy graphics make layered accessories harder to read.',
+      },
+    ],
+    related: ['/viking-necklaces', '/blog/how-to-build-a-small-viking-jewelry-set', '/blog/how-to-style-a-viking-bracelet'],
+  },
+  '/blog/viking-jewelry-checklist-for-etsy-shoppers': {
+    path: '/blog/viking-jewelry-checklist-for-etsy-shoppers',
+    title: 'Viking Jewelry Checklist For Etsy Shoppers',
+    description:
+      'A practical Etsy shopper checklist for reviewing Viking jewelry photos, materials, sizing, delivery, returns, and support before checkout.',
+    eyebrow: 'Etsy checklist',
+    heading: 'Viking Jewelry Checklist For Etsy Shoppers',
+    intro:
+      'Before buying Viking-inspired jewelry through Etsy, slow down and check the details that affect fit, comfort, and support.',
+    heroProductName: 'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+    productNames: [
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    ],
+    sections: [
+      {
+        title: 'Check The Product Photos',
+        body: 'Look for angles that show size, texture, clasp, pendant shape, cuff opening, and detail. Viking-inspired jewelry depends on small details, so one pretty image is not enough.',
+      },
+      {
+        title: 'Check Material And Fit',
+        body: 'Read whether the piece is leather, stainless steel, a cuff, a bangle, a pendant, or a flexible bracelet. Material and shape tell you more about daily comfort than the title alone.',
+      },
+      {
+        title: 'Check Delivery And Returns',
+        body: 'Review Etsy shipping estimates, destination availability, return eligibility, and order support before checkout. These details can change over time, so the live Etsy listing is the final source.',
+      },
+      {
+        title: 'Ask Before Buying',
+        body: 'If a product is being bought as a gift or the sizing feels uncertain, ask before checkout. Use NovaVentory contact options with the product name so the question is easy to answer.',
+      },
+    ],
+    related: ['/blog/what-to-check-before-buying-viking-jewelry-online', '/shipping-and-returns', '/contact'],
+  },
   '/blog/odin-raven-necklace-meaning-and-gift-guide': {
     path: '/blog/odin-raven-necklace-meaning-and-gift-guide',
     title: 'Odin Raven Necklace Meaning And Gift Guide',
@@ -1282,6 +1631,163 @@ export const blogPages = {
     related: ['/products/odin-raven-necklace', '/raven-jewelry', '/blog/raven-symbol-meaning-in-norse-jewelry'],
   },
 }
+
+const toSentenceList = (items = []) => {
+  const uniqueItems = [...new Set(items.filter(Boolean))]
+
+  if (uniqueItems.length <= 1) {
+    return uniqueItems[0] || 'the featured NovaVentory product'
+  }
+
+  if (uniqueItems.length === 2) {
+    return `${uniqueItems[0]} and ${uniqueItems[1]}`
+  }
+
+  return `${uniqueItems.slice(0, -1).join(', ')}, and ${uniqueItems.at(-1)}`
+}
+
+const getMaterialFocus = (page) => {
+  const text = `${page.heading} ${page.title} ${page.description} ${(page.keywords || []).join(' ')}`.toLowerCase()
+
+  if (text.includes('leather')) {
+    return 'Leather is best for shoppers who care about comfort, casual styling, and an easy first bracelet. It usually feels softer beside a watch or jacket sleeve, but buyers should still check clasp style, listed length, and how the leather is described on the Etsy listing.'
+  }
+
+  if (text.includes('necklace') || text.includes('pendant') || text.includes('fang')) {
+    return 'Necklaces and pendants are easier to gift than bracelets because wrist size is not the main risk. The important checks are pendant size, chain style, metal tone, and whether the symbol feels right for the person who will wear it.'
+  }
+
+  return 'Stainless steel cuffs and bangles are best for shoppers who want structure, visible shape, and a stronger jewelry presence. Before buying, compare the opening, width, and listed material with pieces the wearer already uses so the bracelet feels intentional rather than oversized.'
+}
+
+const getSymbolFocus = (page) => {
+  const text = `${page.heading} ${page.title} ${page.description} ${(page.productNames || []).join(' ')}`.toLowerCase()
+
+  if (text.includes('raven') || text.includes('odin') || text.includes('huginn')) {
+    return 'Raven and Odin pieces work best for buyers who want a symbol with a story: thought, memory, watchfulness, and Norse myth. They are strongest when the rest of the outfit stays simple enough for the raven detail to be noticed.'
+  }
+
+  if (text.includes('wolf') || text.includes('fang')) {
+    return 'Wolf and fang pieces feel more rugged than polished. They suit buyers who like animal-symbol jewelry, darker layers, and pendants that read as protective or instinctive rather than formal.'
+  }
+
+  if (text.includes('dragon')) {
+    return 'Dragon pieces make the boldest statement in the collection. They are best for shoppers who already like heavier accessories, fantasy or medieval references, and designs that are meant to be seen quickly.'
+  }
+
+  return 'The safest styling approach is to choose one main Norse cue, then keep the other accessories quieter. That makes the jewelry feel personal and wearable instead of like a costume set.'
+}
+
+const addCommercialDepth = (page) => ({
+  ...page,
+  sections: [
+    ...(page.sections || []),
+    {
+      title: 'How To Compare These Pieces',
+      body: `Use this page as a buying path, not only a keyword page. Compare ${toSentenceList(page.productNames || [])} by material, symbol, size risk, and how often the wearer will realistically use the piece. A daily bracelet should feel comfortable with watches, sleeves, and casual outfits, while a statement cuff or pendant can be chosen for stronger visual impact.`,
+    },
+    {
+      title: 'Material And Fit Notes',
+      body: getMaterialFocus(page),
+    },
+    {
+      title: 'Symbol And Styling Notes',
+      body: getSymbolFocus(page),
+    },
+    {
+      title: 'Checkout And Support Notes',
+      body: 'NovaVentory product pages send shoppers to active Etsy listings for the final price, delivery estimate, return eligibility, and secure checkout. If a buyer is unsure about sizing, materials, or which piece fits a gift, the Contact page and support email give a clear way to ask before ordering.',
+    },
+    {
+      title: 'Why This Page Exists',
+      body: `This page is written to help a visitor make a specific comparison before checkout, not to act as a doorway page. The copy explains how ${page.heading.toLowerCase()} relates to material choice, symbolism, sizing risk, daily wear, gift intent, and the rest of the NovaVentory guide library.`,
+    },
+  ],
+})
+
+const addProductDepth = (page) => ({
+  ...page,
+  sections: [
+    ...(page.sections || []),
+    {
+      title: 'Product-Specific Buying Notes',
+      body: `${page.productName} is presented with practical buying context so shoppers can compare more than the photo. Check the current Etsy listing for live price, sale status, size details, delivery estimate, and return information before checkout.`,
+    },
+    {
+      title: 'Fit, Material, And Daily Use',
+      body: getMaterialFocus(page),
+    },
+    {
+      title: 'Symbol And Outfit Match',
+      body: getSymbolFocus(page),
+    },
+    {
+      title: 'When This Product Is The Right Choice',
+      body: `Choose ${page.productName} when its shape and symbol match the buyer's usual style. If the wearer prefers subtle everyday jewelry, compare it with leather or necklace options. If they already like bold cuffs, rings, boots, denim, or darker accessories, this product is more likely to feel natural.`,
+    },
+    {
+      title: 'Why This Page Exists',
+      body: 'This product page adds buying guidance around fit, styling, materials, and symbolism so shoppers do not have to judge the piece from a product photo alone. It is meant to support a more informed Etsy visit rather than function as a thin affiliate bridge.',
+    },
+  ],
+})
+
+const addBlogDepth = (page) => {
+  if (page.path === '/blog') {
+    return {
+      ...page,
+      sections: [
+        {
+          title: 'How These Guides Are Organized',
+          body: 'The guide library is built around shopper questions: meaning, sizing, material choice, gift selection, care, symbolism, and styling. Each article links back to relevant product and collection pages so readers can move from research to comparison without landing on a thin product bridge.',
+        },
+        {
+          title: 'What To Read First',
+          body: 'Start with the bracelet meaning guide if the symbol matters, the measuring guide if fit is the concern, and the stainless steel versus leather comparison if the buyer is choosing between comfort and structure. Gift shoppers should read the gift sizing guide before choosing a cuff.',
+        },
+        {
+          title: 'Why The Blog Exists',
+          body: 'NovaVentory publishes guides so visitors can research before shopping: how to measure, how to choose materials, how symbols differ, how to avoid gift mistakes, and how to care for jewelry after purchase. The blog is the research layer behind the product collection.',
+        },
+        {
+          title: 'How To Use The Guides Before Etsy Checkout',
+          body: 'Read one practical guide before choosing a product page, then compare the listed product details on Etsy. The guide pages are meant to slow down rushed purchases by explaining size risk, daily comfort, care habits, gift clues, and the difference between symbolic jewelry and costume styling.',
+        },
+      ],
+    }
+  }
+
+  return {
+    ...page,
+    sections: [
+      ...(page.sections || []),
+      {
+        title: 'Practical Buying Takeaway',
+        body: `The useful decision is not simply whether the design looks Viking-inspired. For ${page.heading.toLowerCase()}, compare the symbol, material, fit risk, and whether the piece will be worn daily or saved for stronger outfits. This keeps the purchase practical instead of only decorative.`,
+      },
+      {
+        title: 'How This Connects To The Collection',
+        body: `This guide supports related NovaVentory pages such as ${toSentenceList(page.related || [])}. Internal links are included so readers can keep researching sizing, care, gifts, and symbolism before moving to Etsy checkout.`,
+      },
+      {
+        title: 'Reader-First Note',
+        body: 'The guide is written for a shopper who needs a usable answer before buying, not only a search phrase. It focuses on decisions a real person would make: comfort, material, symbol, gift risk, outfit match, and whether the product will be worn often.',
+      },
+    ],
+  }
+}
+
+Object.keys(commercialPages).forEach((path) => {
+  commercialPages[path] = addCommercialDepth(commercialPages[path])
+})
+
+Object.keys(productPages).forEach((path) => {
+  productPages[path] = addProductDepth(productPages[path])
+})
+
+Object.keys(blogPages).forEach((path) => {
+  blogPages[path] = addBlogDepth(blogPages[path])
+})
 
 export const commercialPagePaths = Object.keys(commercialPages)
 export const productPagePaths = Object.keys(productPages)

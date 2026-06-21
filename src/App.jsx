@@ -35,6 +35,10 @@ import etsySatinBowClip from './assets/etsy-listings/satin-bow-hair-clip.jpg'
 import etsyDragonBracelet from './assets/etsy-listings/viking-dragon-bracelet.jpg'
 import etsyOdinRavenNecklace from './assets/etsy-listings/odin-raven-necklace.jpg'
 
+const supportEmail = 'support@novaventory.com'
+const supportEmailHref = `mailto:${supportEmail}`
+const businessIdentity = 'United States-focused online jewelry storefront'
+
 const heroSlides = [
   {
     eyebrow: 'Best-selling product reel',
@@ -412,8 +416,15 @@ const legalPages = {
       {
         title: 'Who We Are',
         body: [
-          'NovaVentory is an Etsy-based jewelry shop focused on Viking-inspired bracelets, Norse necklaces, raven jewelry, stainless steel cuffs, and Nordic accessories.',
+          `NovaVentory is a ${businessIdentity} and Etsy-based jewelry shop focused on Viking-inspired bracelets, Norse necklaces, raven jewelry, stainless steel cuffs, and Nordic accessories.`,
           'This website is built as a product guide and storefront preview. It helps visitors compare styles, read buying guides, and reach the active NovaVentory Etsy listings for checkout.',
+        ],
+      },
+      {
+        title: 'Business Identity And Service Region',
+        body: [
+          'NovaVentory serves shoppers in the United States through this website and the NovaVentory Etsy storefront. Product discovery, buying guides, and support information are published here, while checkout and order records are handled on Etsy.',
+          `For general site, product, or sizing questions, shoppers can email ${supportEmail} or use the Contact page before visiting Etsy checkout.`,
         ],
       },
       {
@@ -440,7 +451,7 @@ const legalPages = {
       {
         title: 'Support And Transparency',
         body: [
-          'Visitors can use the Contact page for product questions, sizing help, collaboration requests, or general support before visiting Etsy.',
+          `Visitors can use the Contact page or email ${supportEmail} for product questions, sizing help, collaboration requests, or general support before visiting Etsy.`,
           'Order-specific checkout, payment, tax, and delivery details are confirmed through Etsy because that is where the final purchase is completed.',
         ],
       },
@@ -459,6 +470,13 @@ const legalPages = {
     updatedLabel: 'Last reviewed',
     updated: 'June 9, 2026',
     sections: [
+      {
+        title: 'Support Email',
+        body: [
+          `For non-urgent product, sizing, collaboration, or website questions, email ${supportEmail}. Please do not send payment card details by email or through the contact form.`,
+          'Order-specific questions are still best handled through Etsy messages because Etsy keeps the message connected to the listing and order record.',
+        ],
+      },
       {
         title: 'Best Way To Contact Us',
         body: [
@@ -488,7 +506,10 @@ const legalPages = {
       src: 'https://tally.so/embed/aQkE5v?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1',
       fallbackUrl: 'https://tally.so/r/aQkE5v',
     },
-    actions: [{ label: 'Message On Etsy', href: shopUrl, external: true }],
+    actions: [
+      { label: 'Email Support', href: supportEmailHref },
+      { label: 'Message On Etsy', href: shopUrl, external: true },
+    ],
   },
   '/privacy-policy': {
     title: 'Privacy Policy | NovaVentory',
@@ -503,6 +524,7 @@ const legalPages = {
         body: [
           'NovaVentory is an Etsy-based jewelry shop. This website introduces our products and links visitors to Etsy to view listings or complete purchases.',
           'This policy explains the limited information handled by this website and how order-related information may be handled through Etsy.',
+          `For privacy or support questions about this website, contact ${supportEmail}.`,
         ],
       },
       {
@@ -570,7 +592,7 @@ const legalPages = {
         title: 'Shipping And Order Support',
         body: [
           'Shipping times, available destinations, tracking, and order messages should be reviewed on the relevant Etsy listing or order page because Etsy displays the current order details.',
-          'For support, use the contact form or Etsy messages and include the product name or order number so the request can be matched to the correct listing.',
+          `For support, use the contact form, email ${supportEmail}, or Etsy messages and include the product name or order number so the request can be matched to the correct listing.`,
         ],
       },
       {
@@ -583,6 +605,7 @@ const legalPages = {
     ],
     actions: [
       { label: 'Contact Support', href: '/contact' },
+      { label: 'Email Support', href: supportEmailHref },
       { label: 'Visit Etsy Shop', href: shopUrl, external: true },
     ],
   },
@@ -2310,12 +2333,15 @@ function App() {
       <footer className="footer">
         <div className="footer-brand">
           <strong>NovaVentory</strong>
-          <span>Viking jewelry and accessories available on Etsy.</span>
+          <span>United States-focused Viking jewelry guide and Etsy storefront.</span>
+          <a className="footer-contact" href={supportEmailHref}>
+            {supportEmail}
+          </a>
         </div>
         <nav className="footer-links" aria-label="Footer navigation">
           <a href="/bracelets">Bracelets</a>
           <a href="/viking-jewelry">Viking Jewelry</a>
-          <a href="/nordic-bracelet">Nordic Bracelet</a>
+          <a href="/raven-jewelry">Raven Jewelry</a>
             <a href="/blog">Guides</a>
             <a href="/about">About</a>
             <a href="/contact">Contact</a>

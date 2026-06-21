@@ -1679,6 +1679,15 @@ body.mobile-menu-open {
   color: #f2c84b;
 }
 
+.footer .footer-contact {
+  width: fit-content;
+  color: #dfc45b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .footer-badge {
   justify-self: end;
   flex: none;
