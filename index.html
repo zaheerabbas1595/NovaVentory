@@ -17,10 +17,6 @@
       name="description"
       content="Shop NovaVentory Viking jewelry for US shoppers on Etsy, including Viking bracelets, Norse cuffs, raven jewelry, wolf fang necklaces, Odin pendants, and Nordic stainless steel accessories with USD pricing and free USA shipping."
     />
-    <meta
-      name="keywords"
-      content="NovaVentory, Viking jewelry, Viking bracelet, raven bracelet, Norse cuff, Odin raven necklace, wolf fang necklace, Nordic jewelry, Etsy jewelry"
-    />
     <meta name="author" content="NovaVentory" />
     <meta name="geo.region" content="US" />
     <meta name="geo.placename" content="United States" />
@@ -59,11 +55,68 @@
       body {
         background: #050505;
       }
+
+      .static-fallback {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 20px;
+        background: #ffffff;
+        color: #1a1a1a;
+        font-family: Arial, sans-serif;
+        line-height: 1.7;
+      }
+
+      .static-fallback h1 {
+        margin: 0 0 18px;
+        font-size: 42px;
+        line-height: 1.1;
+      }
+
+      .static-fallback h2 {
+        margin: 34px 0 10px;
+        font-size: 24px;
+      }
+
+      .static-fallback a {
+        color: #6f5000;
+        font-weight: 700;
+      }
     </style>
     <title>Viking Jewelry & Viking Bracelets | Norse Necklaces | NovaVentory</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main class="static-fallback" id="main-content">
+        <h1>NovaVentory Viking Jewelry And Buying Guides</h1>
+        <p>
+          NovaVentory is an Etsy-based jewelry shop and product guide for Viking-inspired bracelets,
+          Norse cuffs, raven jewelry, wolf fang necklaces, Odin raven pendants, and stainless steel accessories.
+        </p>
+        <section>
+          <h2>Useful Before Checkout</h2>
+          <p>
+            The site includes original guides for bracelet sizing, stainless steel care, leather versus steel
+            comparisons, Norse symbolism, gift sizing, necklace selection, shipping notes, and product styling.
+          </p>
+        </section>
+        <section>
+          <h2>Main Sections</h2>
+          <p>
+            Browse <a href="/bracelets">bracelets</a>, <a href="/viking-jewelry">Viking jewelry</a>,
+            <a href="/raven-jewelry">raven jewelry</a>, <a href="/viking-necklaces">Viking necklaces</a>,
+            or the <a href="/blog">NovaVentory guide library</a>.
+          </p>
+        </section>
+        <section>
+          <h2>Support Pages</h2>
+          <p>
+            Read <a href="/about">About NovaVentory</a>, use the <a href="/contact">contact form</a>,
+            review <a href="/shipping-and-returns">shipping and returns</a>, or see the
+            <a href="/privacy-policy">Privacy Policy</a> and <a href="/terms-and-conditions">Terms</a>.
+          </p>
+        </section>
+      </main>
+    </div>
     <noscript>NovaVentory sells Viking-inspired bracelets, raven necklaces, Norse cuffs, and Nordic accessories through Etsy.</noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>

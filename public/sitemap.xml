@@ -4,7 +4,7 @@
     <loc>https://novaventory.com/</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -44,7 +44,7 @@
     <loc>https://novaventory.com/bracelets</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/bracelets" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/bracelets" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -72,7 +72,7 @@
     <loc>https://novaventory.com/viking-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -93,34 +93,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://novaventory.com/nordic-bracelet</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/nordic-bracelet" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/nordic-bracelet" />
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
-      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
-      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
-      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
-      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://novaventory.com/raven-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/raven-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/raven-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -140,7 +116,7 @@
     <loc>https://novaventory.com/viking-jewelry</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-jewelry" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-jewelry" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -165,58 +141,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://novaventory.com/norse-jewelry</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/norse-jewelry" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/norse-jewelry" />
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
-      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
-      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
-      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
-      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://novaventory.com/nordic-jewelry</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/nordic-jewelry" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/nordic-jewelry" />
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
-      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
-      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
-      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
-      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://novaventory.com/viking-necklaces</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-necklaces" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-necklaces" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -232,7 +160,7 @@
     <loc>https://novaventory.com/raven-jewelry</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/raven-jewelry" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/raven-jewelry" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -249,22 +177,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://novaventory.com/wolf-fang-necklace</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/wolf-fang-necklace" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/wolf-fang-necklace" />
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
-      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://novaventory.com/mens-viking-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/mens-viking-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/mens-viking-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -285,34 +201,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://novaventory.com/stainless-steel-viking-bracelet</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/stainless-steel-viking-bracelet" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/stainless-steel-viking-bracelet" />
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
-      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
-      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
-      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
-      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://novaventory.com/viking-cuff-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-cuff-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-cuff-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -332,7 +224,7 @@
     <loc>https://novaventory.com/viking-leather-bracelets</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-leather-bracelets" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-leather-bracelets" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -349,74 +241,10 @@
     </image:image>
   </url>
   <url>
-    <loc>https://novaventory.com/viking-arm-ring</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-arm-ring" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-arm-ring" />
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
-      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
-      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
-      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://novaventory.com/norse-bracelets</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/norse-bracelets" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/norse-bracelets" />
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
-      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
-      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
-      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
-      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://novaventory.com/viking-dragon-bracelet</loc>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/viking-dragon-bracelet" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/viking-dragon-bracelet" />
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
-      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
-      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
-      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
-    </image:image>
-  </url>
-  <url>
     <loc>https://novaventory.com/products/viking-twisted-cuff-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/viking-twisted-cuff-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/viking-twisted-cuff-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -428,7 +256,7 @@
     <loc>https://novaventory.com/products/viking-leather-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/viking-leather-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/viking-leather-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -440,7 +268,7 @@
     <loc>https://novaventory.com/products/norse-raven-cuff-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/norse-raven-cuff-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/norse-raven-cuff-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -452,7 +280,7 @@
     <loc>https://novaventory.com/products/viking-raven-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/viking-raven-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/viking-raven-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -464,7 +292,7 @@
     <loc>https://novaventory.com/products/viking-dragon-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/viking-dragon-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/viking-dragon-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -476,7 +304,7 @@
     <loc>https://novaventory.com/products/wolf-fang-pendant-necklace</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/wolf-fang-pendant-necklace" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/wolf-fang-pendant-necklace" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -488,7 +316,7 @@
     <loc>https://novaventory.com/products/odin-raven-necklace</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/odin-raven-necklace" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/odin-raven-necklace" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -500,7 +328,7 @@
     <loc>https://novaventory.com/products/satin-bow-hair-clip</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/products/satin-bow-hair-clip" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/products/satin-bow-hair-clip" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -512,7 +340,7 @@
     <loc>https://novaventory.com/blog</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -532,7 +360,7 @@
     <loc>https://novaventory.com/blog/what-does-a-viking-bracelet-mean</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/what-does-a-viking-bracelet-mean" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/what-does-a-viking-bracelet-mean" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -552,7 +380,7 @@
     <loc>https://novaventory.com/blog/how-to-style-a-viking-bracelet</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/how-to-style-a-viking-bracelet" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/how-to-style-a-viking-bracelet" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -572,7 +400,7 @@
     <loc>https://novaventory.com/blog/raven-symbol-meaning-in-norse-jewelry</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/raven-symbol-meaning-in-norse-jewelry" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/raven-symbol-meaning-in-norse-jewelry" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -592,7 +420,7 @@
     <loc>https://novaventory.com/blog/stainless-steel-vs-leather-viking-bracelets</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/stainless-steel-vs-leather-viking-bracelets" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/stainless-steel-vs-leather-viking-bracelets" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -612,7 +440,7 @@
     <loc>https://novaventory.com/blog/viking-jewelry-gifts-for-men</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/viking-jewelry-gifts-for-men" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/viking-jewelry-gifts-for-men" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -629,10 +457,202 @@
     </image:image>
   </url>
   <url>
+    <loc>https://novaventory.com/blog/how-to-measure-for-a-viking-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/how-to-measure-for-a-viking-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/how-to-measure-for-a-viking-bracelet" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/how-to-care-for-stainless-steel-viking-jewelry</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/how-to-care-for-stainless-steel-viking-jewelry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/how-to-care-for-stainless-steel-viking-jewelry" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/norse-raven-cuff.jpg</image:loc>
+      <image:title>Norse raven stainless steel Viking cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/viking-cuff-vs-bangle-vs-bracelet</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/viking-cuff-vs-bangle-vs-bracelet" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/viking-cuff-vs-bangle-vs-bracelet" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/norse-symbols-in-modern-jewelry</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/norse-symbols-in-modern-jewelry" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/norse-symbols-in-modern-jewelry" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/how-to-choose-a-viking-necklace</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/how-to-choose-a-viking-necklace" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/how-to-choose-a-viking-necklace" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/viking-jewelry-materials-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/viking-jewelry-materials-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/viking-jewelry-materials-guide" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/viking-jewelry-gift-sizing-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/viking-jewelry-gift-sizing-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/viking-jewelry-gift-sizing-guide" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-dragon-bracelet.jpg</image:loc>
+      <image:title>Men’s Viking dragon stainless steel Nordic cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/what-to-check-before-buying-viking-jewelry-online</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/what-to-check-before-buying-viking-jewelry-online" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/what-to-check-before-buying-viking-jewelry-online" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/wolf-fang-pendant.jpg</image:loc>
+      <image:title>Stainless steel wolf fang Viking pendant necklace close-up</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-twisted-cuff.jpg</image:loc>
+      <image:title>Viking twisted stainless steel cuff bracelet on dark wood</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/how-to-build-a-small-viking-jewelry-set</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/how-to-build-a-small-viking-jewelry-set" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/how-to-build-a-small-viking-jewelry-set" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-leather-bracelet.jpg</image:loc>
+      <image:title>Braided black leather Viking bracelet with metal chain detail</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/blog/odin-raven-necklace-meaning-and-gift-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/blog/odin-raven-necklace-meaning-and-gift-guide" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/blog/odin-raven-necklace-meaning-and-gift-guide" />
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/odin-raven-necklace.jpg</image:loc>
+      <image:title>Odin raven Huginn Muninn Viking pendant necklace</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>Viking raven stainless steel Norse cuff bracelet</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://novaventory.com/about</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/about" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/about" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <image:image>
@@ -644,7 +664,7 @@
     <loc>https://novaventory.com/contact</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/contact" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/contact" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <image:image>
@@ -656,7 +676,7 @@
     <loc>https://novaventory.com/privacy-policy</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/privacy-policy" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/privacy-policy" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <image:image>
@@ -668,7 +688,19 @@
     <loc>https://novaventory.com/terms-and-conditions</loc>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/terms-and-conditions" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/terms-and-conditions" />
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <image:image>
+      <image:loc>https://novaventory.com/images/viking-raven-bracelet.jpg</image:loc>
+      <image:title>NovaVentory Viking raven bracelet product photo</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://novaventory.com/shipping-and-returns</loc>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://novaventory.com/shipping-and-returns" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://novaventory.com/shipping-and-returns" />
+    <lastmod>2026-06-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
     <image:image>

@@ -65,14 +65,18 @@ const setMeta = (selector, attribute, value) => {
 }
 
 export function updateDocumentSeo(page = {}) {
-  const canonicalUrl = absoluteUrl(page.path || '/')
+  const canonicalUrl = absoluteUrl(page.canonicalPath || page.path || '/')
   const title = page.title || siteTitle
   const description = page.description || siteDescription
   const previewImage = absoluteUrl(page.image || defaultSeoImage.path)
   const previewImageAlt = page.imageAlt || defaultSeoImage.alt
+  const robotsContent = page.noindex
+    ? 'noindex, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 
   document.title = title
   setMeta('link[rel="canonical"]', 'href', canonicalUrl)
+  setMeta('meta[name="robots"]', 'content', robotsContent)
   setMeta('meta[name="description"]', 'content', description)
   setMeta('meta[property="og:url"]', 'content', canonicalUrl)
   setMeta('meta[property="og:title"]', 'content', title)

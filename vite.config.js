@@ -27,6 +27,7 @@ export default defineConfig({
         about: resolve(rootDir, 'about.html'),
         contact: resolve(rootDir, 'contact.html'),
         privacyPolicy: resolve(rootDir, 'privacy-policy.html'),
+        shippingAndReturns: resolve(rootDir, 'shipping-and-returns.html'),
         termsAndConditions: resolve(rootDir, 'terms-and-conditions.html'),
       },
     },

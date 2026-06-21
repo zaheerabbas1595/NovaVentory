@@ -430,6 +430,20 @@ const legalPages = {
           'Our goal is to make the site useful before a purchase, not only to send visitors to a product page.',
         ],
       },
+      {
+        title: 'Editorial Standards',
+        body: [
+          'Every guide is written for shoppers who need practical help before buying: sizing, materials, care, symbolism, styling, shipping expectations, and gift decisions.',
+          'We avoid claiming museum-level historical accuracy for modern accessories. When a design is Viking-inspired, Norse-inspired, or symbolic, we describe it that way so visitors can understand the style honestly.',
+        ],
+      },
+      {
+        title: 'Support And Transparency',
+        body: [
+          'Visitors can use the Contact page for product questions, sizing help, collaboration requests, or general support before visiting Etsy.',
+          'Order-specific checkout, payment, tax, and delivery details are confirmed through Etsy because that is where the final purchase is completed.',
+        ],
+      },
     ],
     actions: [
       { label: 'Browse Products', href: '/#products' },
@@ -467,6 +481,13 @@ const legalPages = {
         ],
       },
     ],
+    form: {
+      title: 'Send Us A Message',
+      intro:
+        'Use this form for product questions, sizing help, collaboration requests, or general NovaVentory support.',
+      src: 'https://tally.so/embed/aQkE5v?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1',
+      fallbackUrl: 'https://tally.so/r/aQkE5v',
+    },
     actions: [{ label: 'Message On Etsy', href: shopUrl, external: true }],
   },
   '/privacy-policy': {
@@ -528,6 +549,41 @@ const legalPages = {
           'You can manage browser cookies through your browser settings and review Google advertising controls through Google account and ad settings where available.',
         ],
       },
+    ],
+  },
+  '/shipping-and-returns': {
+    title: 'Shipping And Returns | NovaVentory',
+    description:
+      'Read NovaVentory shipping, delivery, return, and order support notes for Etsy purchases and Viking jewelry product questions.',
+    eyebrow: 'Shipping And Returns',
+    heading: 'Shipping And Returns',
+    updated: 'June 21, 2026',
+    sections: [
+      {
+        title: 'Where Checkout Happens',
+        body: [
+          'NovaVentory product pages link to active Etsy listings. Checkout, order confirmation, taxes, payment handling, and final shipping details are managed through Etsy.',
+          'The product pages on this website help shoppers compare materials, sizing notes, style intent, and gift suitability before moving to Etsy checkout.',
+        ],
+      },
+      {
+        title: 'Shipping And Order Support',
+        body: [
+          'Shipping times, available destinations, tracking, and order messages should be reviewed on the relevant Etsy listing or order page because Etsy displays the current order details.',
+          'For support, use the contact form or Etsy messages and include the product name or order number so the request can be matched to the correct listing.',
+        ],
+      },
+      {
+        title: 'Returns And Issues',
+        body: [
+          'If an item arrives damaged, incorrect, delayed, or different from the listing details, contact NovaVentory through Etsy or the contact form as soon as possible.',
+          'Return eligibility and timing may depend on the Etsy listing terms, order status, and the nature of the issue.',
+        ],
+      },
+    ],
+    actions: [
+      { label: 'Contact Support', href: '/contact' },
+      { label: 'Visit Etsy Shop', href: shopUrl, external: true },
     ],
   },
   '/terms-and-conditions': {
@@ -1255,6 +1311,31 @@ function LegalPage({ page }) {
         ) : null}
       </section>
 
+      {page.form ? (
+        <section className="contact-form-band" aria-labelledby="contact-form-title">
+          <div>
+            <p className="eyebrow">Direct contact</p>
+            <h2 id="contact-form-title">{page.form.title}</h2>
+            <p>{page.form.intro}</p>
+            <div className="tally-form-frame">
+              <iframe
+                src={page.form.src}
+                title={`${page.heading} form`}
+                width="100%"
+                height="760"
+              />
+            </div>
+            <p className="contact-form-fallback">
+              If the form does not load, open it directly:{' '}
+              <a href={page.form.fallbackUrl} target="_blank" rel="noreferrer">
+                NovaVentory contact form
+              </a>
+              .
+            </p>
+          </div>
+        </section>
+      ) : null}
+
       <section className="legal-content" aria-label={page.heading}>
         {page.sections.map((section) => (
           <article className="legal-section" key={section.title}>
@@ -1497,6 +1578,31 @@ function ProductPage({ page, product, seoPages }) {
         </div>
       </section>
 
+      <section className="product-research-notes" aria-label={`${page.heading} buying notes`}>
+        <article>
+          <h2>Before You Buy</h2>
+          <p>
+            Check the Etsy listing for current availability, exact checkout total,
+            delivery estimate, and return eligibility before placing an order.
+          </p>
+        </article>
+        <article>
+          <h2>Fit And Wear</h2>
+          <p>
+            Compare the product shape with jewelry you already wear. Cuffs feel
+            more structured, leather feels softer, and pendants are usually easier
+            to gift when wrist size is unknown.
+          </p>
+        </article>
+        <article>
+          <h2>Support</h2>
+          <p>
+            Use the Contact page for sizing or product questions, and include the
+            product name if you need help comparing {product.name}.
+          </p>
+        </article>
+      </section>
+
       <RelatedLinks links={page.related} seoPages={seoPages} />
     </main>
   )
@@ -1566,6 +1672,9 @@ function BlogPost({ page, seoPages }) {
         <header>
           <p className="eyebrow">{page.eyebrow}</p>
           <h1>{page.heading}</h1>
+          <p className="article-meta">
+            By NovaVentory Editorial Team · Updated {page.updated || 'June 21, 2026'}
+          </p>
           <p>{page.intro}</p>
         </header>
         {heroProduct ? (
@@ -1987,142 +2096,112 @@ function HomeFaq() {
 }
 
 function HomePage() {
-  const [showDeferredContent, setShowDeferredContent] = useState(
-    () => window.location.hash === '#products' || window.location.hash === '#reviews',
-  )
-
-  useEffect(() => {
-    if (showDeferredContent) {
-      return undefined
-    }
-
-    const revealContent = () => setShowDeferredContent(true)
-
-    if ('requestIdleCallback' in window) {
-      const idleId = window.requestIdleCallback(revealContent, { timeout: 1400 })
-
-      return () => {
-        if ('cancelIdleCallback' in window) {
-          window.cancelIdleCallback(idleId)
-        }
-      }
-    }
-
-    const timer = window.setTimeout(revealContent, 900)
-
-    return () => window.clearTimeout(timer)
-  }, [showDeferredContent])
-
   return (
     <main className="home-page" id="main-content">
       <Hero />
 
-      {showDeferredContent ? (
-        <>
-          <section className="editorial-split">
-            <div className="editorial-copy">
-              <p className="eyebrow">Viking winter trends</p>
-              <h2>Check Nordic Trends</h2>
-              <p>
-                Raven motifs, black leather, and twisted metal bracelets bring a
-                rugged edge to the season.
-              </p>
-              <a className="inline-link" href="#products">
-                Explore Viking jewelry
-                <ArrowRight size={17} />
-              </a>
-            </div>
-            <a
-              className="editorial-product-link"
-              href="/products/viking-leather-bracelet"
-              aria-label="View Viking leather bracelet product page"
-            >
-              <img
-                src={etsyLeatherBracelet}
-                alt="Viking leather bracelet listing photo"
-                loading="lazy"
-              />
-            </a>
-            <a
-              className="editorial-product-link"
-              href="/products/wolf-fang-pendant-necklace"
-              aria-label="View wolf fang pendant necklace product page"
-            >
-              <img
-                src={etsyWolfFang}
-                alt="Wolf fang pendant necklace listing photo"
-                loading="lazy"
-              />
-            </a>
-            <a
-              className="editorial-product-link"
-              href="/products/norse-raven-cuff-bracelet"
-              aria-label="View Norse raven cuff bracelet product page"
-            >
-              <img
-                src={etsyNorseRavenCuff}
-                alt="Norse raven cuff bracelet listing photo"
-                loading="lazy"
-              />
-            </a>
-          </section>
+      <section className="editorial-split">
+        <div className="editorial-copy">
+          <p className="eyebrow">Viking winter trends</p>
+          <h2>Check Nordic Trends</h2>
+          <p>
+            Raven motifs, black leather, and twisted metal bracelets bring a
+            rugged edge to the season.
+          </p>
+          <a className="inline-link" href="#products">
+            Explore Viking jewelry
+            <ArrowRight size={17} />
+          </a>
+        </div>
+        <a
+          className="editorial-product-link"
+          href="/products/viking-leather-bracelet"
+          aria-label="View Viking leather bracelet product page"
+        >
+          <img
+            src={etsyLeatherBracelet}
+            alt="Viking leather bracelet listing photo"
+            loading="lazy"
+          />
+        </a>
+        <a
+          className="editorial-product-link"
+          href="/products/wolf-fang-pendant-necklace"
+          aria-label="View wolf fang pendant necklace product page"
+        >
+          <img
+            src={etsyWolfFang}
+            alt="Wolf fang pendant necklace listing photo"
+            loading="lazy"
+          />
+        </a>
+        <a
+          className="editorial-product-link"
+          href="/products/norse-raven-cuff-bracelet"
+          aria-label="View Norse raven cuff bracelet product page"
+        >
+          <img
+            src={etsyNorseRavenCuff}
+            alt="Norse raven cuff bracelet listing photo"
+            loading="lazy"
+          />
+        </a>
+      </section>
 
-          <HomeCollectionHub />
+      <HomeCollectionHub />
 
-          <section className="products-section" id="products">
-            <div className="section-title">
-              <p className="eyebrow">NovaVentory Etsy listings</p>
-              <h2>Featured Products</h2>
-              <p>All active shop listings with current sale pricing.</p>
-            </div>
-            <div className="product-grid">
-              {products.map((product) => (
-                <ProductCard product={product} key={product.name} />
-              ))}
-            </div>
-          </section>
+      <section className="products-section" id="products">
+        <div className="section-title">
+          <p className="eyebrow">NovaVentory Etsy listings</p>
+          <h2>Featured Products</h2>
+          <p>All active shop listings with current sale pricing.</p>
+        </div>
+        <div className="product-grid">
+          {products.map((product) => (
+            <ProductCard product={product} key={product.name} />
+          ))}
+        </div>
+      </section>
 
-          <TestimonialSlider />
+      <TestimonialSlider />
 
-          <HomeSeoStory />
+      <HomeSeoStory />
 
-          <section className="campaign-band">
-            <div>
-              <span>Super discount for your first purchase</span>
-              <h2>2nd shopping surprise campaign!</h2>
-              <p>Use discount code in checkout page.</p>
-            </div>
-            <a className="button button-dark" href="#products">
-              Check Products
-            </a>
-          </section>
+      <section className="campaign-band">
+        <div>
+          <span>Super discount for your first purchase</span>
+          <h2>2nd shopping surprise campaign!</h2>
+          <p>Use discount code in checkout page.</p>
+        </div>
+        <a className="button button-dark" href="#products">
+          Check Products
+        </a>
+      </section>
 
-          <section className="feature-row">
-            <img src={etsyDragonBracelet} alt="Viking dragon bracelet listing photo" loading="lazy" />
-            <div>
-              <p className="eyebrow">This Month's Best Sellers</p>
-              <h2>Viking Products of The Week</h2>
-              <p>
-                Choose a raven bracelet or Nordic necklace that brings character
-                to daily wear.
-              </p>
-              <a className="inline-link" href="#products">
-                Shop the edit
-                <ArrowRight size={17} />
-              </a>
-            </div>
-            <img src={etsyOdinRavenNecklace} alt="Odin raven necklace listing photo" loading="lazy" />
-          </section>
+      <section className="feature-row">
+        <img src={etsyDragonBracelet} alt="Viking dragon bracelet listing photo" loading="lazy" />
+        <div>
+          <p className="eyebrow">This Month's Best Sellers</p>
+          <h2>Viking Products of The Week</h2>
+          <p>
+            Choose a raven bracelet or Nordic necklace that brings character
+            to daily wear.
+          </p>
+          <a className="inline-link" href="#products">
+            Shop the edit
+            <ArrowRight size={17} />
+          </a>
+        </div>
+        <img src={etsyOdinRavenNecklace} alt="Odin raven necklace listing photo" loading="lazy" />
+      </section>
 
-          <section className="service-grid" aria-label="Store services">
-            {services.map((service) => (
-              <ServiceItem service={service} key={service.title} />
-            ))}
-          </section>
+      <section className="service-grid" aria-label="Store services">
+        {services.map((service) => (
+          <ServiceItem service={service} key={service.title} />
+        ))}
+      </section>
 
-          <HomeFaq />
-        </>
-      ) : null}
+      <HomeFaq />
     </main>
   )
 }
@@ -2167,12 +2246,13 @@ function App() {
           <a href="/bracelets">Bracelets</a>
           <a href="/viking-jewelry">Viking Jewelry</a>
           <a href="/nordic-bracelet">Nordic Bracelet</a>
-          <a href="/blog">Guides</a>
-          <a href="/about">About</a>
-          <a href="/contact">Contact</a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-and-conditions">Terms</a>
-        </nav>
+            <a href="/blog">Guides</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/shipping-and-returns">Shipping & Returns</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-and-conditions">Terms</a>
+          </nav>
         <ShieldCheck className="footer-badge" size={20} aria-hidden="true" />
       </footer>
     </>

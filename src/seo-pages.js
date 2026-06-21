@@ -285,6 +285,8 @@ export const commercialPages = {
   },
   '/nordic-bracelet': {
     path: '/nordic-bracelet',
+    canonicalPath: '/bracelets',
+    noindex: true,
     title: 'Nordic Bracelet & Norse Bracelet Collection | NovaVentory',
     description:
       'Explore Nordic bracelet and Norse bracelet designs from NovaVentory, including raven cuffs, twisted bangles, and stainless steel Viking wristwear.',
@@ -369,6 +371,8 @@ export const commercialPages = {
   },
   '/norse-jewelry': {
     path: '/norse-jewelry',
+    canonicalPath: '/viking-jewelry',
+    noindex: true,
     title: 'Norse Jewelry | Raven, Wolf & Viking Accessories | NovaVentory',
     description:
       'Shop Norse jewelry from NovaVentory, including raven bracelets, Odin pendants, wolf fang necklaces, and stainless steel Viking cuffs.',
@@ -397,6 +401,8 @@ export const commercialPages = {
   },
   '/nordic-jewelry': {
     path: '/nordic-jewelry',
+    canonicalPath: '/viking-jewelry',
+    noindex: true,
     title: 'Nordic Jewelry | Viking Bracelets & Norse Necklaces | NovaVentory',
     description:
       'Explore Nordic jewelry from NovaVentory, including Viking bracelets, Norse cuffs, raven necklaces, wolf fang pendants, and stainless steel accessories.',
@@ -478,6 +484,8 @@ export const commercialPages = {
   },
   '/wolf-fang-necklace': {
     path: '/wolf-fang-necklace',
+    canonicalPath: '/products/wolf-fang-pendant-necklace',
+    noindex: true,
     title: 'Wolf Fang Necklace | Viking Wolf Tooth Pendant | NovaVentory',
     description:
       'Shop the NovaVentory wolf fang necklace collection and learn how the stainless steel Viking wolf tooth pendant fits Norse jewelry styling.',
@@ -529,6 +537,8 @@ export const commercialPages = {
   },
   '/stainless-steel-viking-bracelet': {
     path: '/stainless-steel-viking-bracelet',
+    canonicalPath: '/viking-cuff-bracelet',
+    noindex: true,
     title: 'Stainless Steel Viking Bracelet | Norse Cuff Collection',
     description:
       'Shop stainless steel Viking bracelet styles from NovaVentory, including twisted cuffs, raven bangles, dragon cuffs, and Nordic wristwear.',
@@ -611,6 +621,8 @@ export const commercialPages = {
   },
   '/viking-arm-ring': {
     path: '/viking-arm-ring',
+    canonicalPath: '/viking-cuff-bracelet',
+    noindex: true,
     title: 'Viking Arm Ring | Norse Cuff & Bangle Bracelet Styles',
     description:
       'Explore Viking arm ring styles from NovaVentory, including twisted cuffs, Norse bangles, raven cuffs, and stainless steel Viking bracelets.',
@@ -638,6 +650,8 @@ export const commercialPages = {
   },
   '/norse-bracelets': {
     path: '/norse-bracelets',
+    canonicalPath: '/bracelets',
+    noindex: true,
     title: 'Norse Bracelets | Raven Cuffs & Viking Bangle Styles',
     description:
       'Shop Norse bracelets from NovaVentory, including raven cuffs, Viking bangles, stainless steel bracelets, and Nordic wristwear.',
@@ -666,6 +680,8 @@ export const commercialPages = {
   },
   '/viking-dragon-bracelet': {
     path: '/viking-dragon-bracelet',
+    canonicalPath: '/products/viking-dragon-bracelet',
+    noindex: true,
     title: 'Viking Dragon Bracelet | Nordic Dragon Cuff Styles',
     description:
       'Shop Viking dragon bracelet styles from NovaVentory, including stainless steel Nordic cuffs and bold dragon-inspired wristwear.',
@@ -917,6 +933,354 @@ export const blogPages = {
     ],
     related: ['/mens-viking-bracelet', '/viking-necklaces', '/raven-jewelry'],
   },
+  '/blog/how-to-measure-for-a-viking-bracelet': {
+    path: '/blog/how-to-measure-for-a-viking-bracelet',
+    title: 'How To Measure For A Viking Bracelet | Fit Guide',
+    description:
+      'Learn how to measure wrist size for Viking bracelets, cuffs, leather bracelets, and gift purchases before ordering on Etsy.',
+    eyebrow: 'Sizing guide',
+    heading: 'How To Measure For A Viking Bracelet',
+    intro:
+      'Bracelet fit is one of the most important details to check before buying a Viking-inspired cuff or leather bracelet online.',
+    heroProductName: 'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+    productNames: [
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+    ],
+    sections: [
+      {
+        title: 'Measure The Wrist, Not Another Bracelet',
+        body: 'Use a soft measuring tape around the part of the wrist where the bracelet will sit. If you do not have one, wrap a strip of paper around the wrist, mark the overlap, and measure the paper flat with a ruler. Measuring another bracelet can be misleading because cuff shape, leather thickness, and clasp style all change how the piece wears.',
+      },
+      {
+        title: 'Leave Room For Movement',
+        body: 'A bracelet should feel secure without pinching. For a close fit, add a small amount of ease to the exact wrist measurement. For a relaxed fit, add a little more so the bracelet can move naturally when the wrist bends. Buyers who dislike movement usually prefer cuffs; buyers who want comfort often prefer leather.',
+      },
+      {
+        title: 'Cuffs Fit Differently From Leather',
+        body: 'Open cuffs and bangles need enough opening space to pass over the side of the wrist, then sit comfortably once rotated into position. Leather bracelets usually rely more on clasp length and strap flexibility. That is why a cuff can feel correct even when it does not match the exact length of a closed bracelet.',
+      },
+      {
+        title: 'Gift Sizing Advice',
+        body: 'When buying as a gift, look for clues from watches or bracelets the person already wears. If sizing is uncertain, a necklace can be safer than a bracelet. If the person already wears cuffs, a stainless steel Viking bracelet is more likely to feel familiar.',
+      },
+    ],
+    related: ['/viking-bracelet', '/products/viking-twisted-cuff-bracelet', '/contact'],
+  },
+  '/blog/how-to-care-for-stainless-steel-viking-jewelry': {
+    path: '/blog/how-to-care-for-stainless-steel-viking-jewelry',
+    title: 'How To Care For Stainless Steel Viking Jewelry',
+    description:
+      'Care tips for stainless steel Viking bracelets, Norse cuffs, raven necklaces, and wolf fang pendants.',
+    eyebrow: 'Care guide',
+    heading: 'How To Care For Stainless Steel Viking Jewelry',
+    intro:
+      'Stainless steel is durable, but a few simple habits keep Viking-inspired bracelets and pendants looking cleaner for longer.',
+    heroProductName: 'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+    productNames: [
+      'Norse Raven Cuff Bracelet, Stainless Steel Viking Bangle',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    ],
+    sections: [
+      {
+        title: 'Clean With A Soft Cloth',
+        body: 'For routine care, wipe the bracelet or pendant with a soft dry cloth after wear. This removes skin oil, dust, and moisture before they sit on detailed areas. Avoid rough pads because they can dull polished surfaces and catch on carved details.',
+      },
+      {
+        title: 'Use Mild Soap When Needed',
+        body: 'If a piece needs more cleaning, use a small amount of mild soap with lukewarm water, then dry the jewelry fully. Do not leave a cuff or necklace wet in a drawer. Moisture trapped around textured details can make the piece look cloudy even when the metal itself is strong.',
+      },
+      {
+        title: 'Store Pieces Separately',
+        body: 'Store stainless steel jewelry away from sharper accessories so pendants and cuffs do not rub against each other. A small pouch, box, or separate tray works well. This is especially useful for raven and dragon pieces with raised details.',
+      },
+      {
+        title: 'When To Remove Jewelry',
+        body: 'Remove jewelry before heavy work, swimming, intense gym sessions, or applying strong chemicals. Stainless steel is practical for everyday wear, but no jewelry benefits from being exposed to unnecessary abrasion or cleaners.',
+      },
+    ],
+    related: ['/stainless-steel-viking-bracelet', '/viking-cuff-bracelet', '/products/norse-raven-cuff-bracelet'],
+  },
+  '/blog/viking-cuff-vs-bangle-vs-bracelet': {
+    path: '/blog/viking-cuff-vs-bangle-vs-bracelet',
+    title: 'Viking Cuff Vs Bangle Vs Bracelet | Buying Guide',
+    description:
+      'Compare Viking cuffs, bangles, and bracelets so you can choose the right Norse-inspired wristwear style.',
+    eyebrow: 'Comparison guide',
+    heading: 'Viking Cuff Vs Bangle Vs Bracelet',
+    intro:
+      'The words cuff, bangle, and bracelet are often used together, but they describe different wearing experiences.',
+    heroProductName: 'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+    productNames: [
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+    ],
+    sections: [
+      {
+        title: 'Cuffs Feel Structured',
+        body: 'A cuff is usually more rigid and often has an opening. It gives the wrist a sculptural shape and works well for Viking-inspired designs because carved ends, ravens, dragons, and twisted metal can be shown clearly.',
+      },
+      {
+        title: 'Bangles Feel More Continuous',
+        body: 'A bangle is typically a more continuous ring shape. It may feel closer to an old-world arm ring visually, especially when the design is twisted or rounded. Bangles can be striking, but sizing matters because they need to pass over the hand or side of the wrist.',
+      },
+      {
+        title: 'Bracelets Cover The Broadest Group',
+        body: 'Bracelet is the general term that can include cuffs, leather styles, chains, and wristbands. If a buyer is unsure what they want, browsing bracelet pages first makes sense. If they already know they want metal structure, cuff pages are more useful.',
+      },
+      {
+        title: 'Which One Should You Choose?',
+        body: 'Choose a cuff for a bold statement, a bangle for classic structure, and a leather bracelet for casual comfort. Shoppers who wear watches often adapt easily to leather bracelets, while people who like rings and heavier accessories often enjoy cuffs.',
+      },
+    ],
+    related: ['/viking-cuff-bracelet', '/bracelets', '/products/viking-raven-bracelet'],
+  },
+  '/blog/norse-symbols-in-modern-jewelry': {
+    path: '/blog/norse-symbols-in-modern-jewelry',
+    title: 'Norse Symbols In Modern Jewelry | Raven, Wolf & Dragon',
+    description:
+      'Learn how raven, wolf, dragon, and twisted metal motifs appear in modern Norse-inspired jewelry.',
+    eyebrow: 'Symbol guide',
+    heading: 'Norse Symbols In Modern Jewelry',
+    intro:
+      'Modern Norse-inspired jewelry uses symbols to create mood, meaning, and identity, even when the piece is designed for everyday wear.',
+    heroProductName: 'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    productNames: [
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    ],
+    sections: [
+      {
+        title: 'Ravens Suggest Thought And Watchfulness',
+        body: 'Raven motifs are often chosen by people who like Odin stories, darker jewelry, and symbols connected with thought, memory, or observation. A raven piece can feel intelligent and mysterious without needing to be oversized.',
+      },
+      {
+        title: 'Wolves Feel Rugged And Protective',
+        body: 'Wolf fang pendants and wolf tooth shapes give jewelry a sharper, more instinctive character. They work well for buyers who want a necklace that feels rugged, protective, and less polished than a simple chain.',
+      },
+      {
+        title: 'Dragons Create A Stronger Statement',
+        body: 'Dragon designs usually feel more dramatic than raven or wolf motifs. They suit shoppers who want a bracelet to stand out immediately and who enjoy fantasy, medieval, or old-world design language.',
+      },
+      {
+        title: 'Twisted Metal Adds Old-World Texture',
+        body: 'Twisted cuff shapes can suggest forged metal and arm-ring traditions without claiming to be exact historical replicas. That balance is important: the jewelry can feel inspired by Norse design while staying practical for modern outfits.',
+      },
+    ],
+    related: ['/norse-jewelry', '/raven-jewelry', '/viking-jewelry'],
+  },
+  '/blog/how-to-choose-a-viking-necklace': {
+    path: '/blog/how-to-choose-a-viking-necklace',
+    title: 'How To Choose A Viking Necklace | Pendant Guide',
+    description:
+      'Compare Viking necklace styles, including Odin raven pendants and wolf fang necklaces for gifts and daily wear.',
+    eyebrow: 'Necklace guide',
+    heading: 'How To Choose A Viking Necklace',
+    intro:
+      'A Viking necklace is usually easier to size than a bracelet, which makes pendants useful for gifts and first-time buyers.',
+    heroProductName: 'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+    productNames: [
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    ],
+    sections: [
+      {
+        title: 'Start With The Symbol',
+        body: 'The symbol should match the wearer. Odin raven necklaces suit people who like mythology, thought, memory, and dark symbolic jewelry. Wolf fang pendants suit people who prefer rugged animal motifs and a sharper everyday look.',
+      },
+      {
+        title: 'Think About Layering',
+        body: 'A pendant that is too large can be difficult to layer, while a very small pendant may disappear against heavier outfits. For daily wear, choose a size that can sit over a plain shirt or under a jacket without catching attention for the wrong reason.',
+      },
+      {
+        title: 'Match Metal Tone To Existing Accessories',
+        body: 'Silver-tone stainless steel pairs naturally with watches, rings, belt hardware, and most black or denim outfits. Buyers who already wear silver-tone accessories will usually find stainless steel Viking necklaces easy to style.',
+      },
+      {
+        title: 'Gift Advice',
+        body: 'When unsure about wrist size, a necklace is often safer than a bracelet. Choose the raven pendant for someone who talks about Norse mythology and the wolf fang pendant for someone who likes rugged, minimal, animal-symbol jewelry.',
+      },
+    ],
+    related: ['/viking-necklaces', '/products/odin-raven-necklace', '/products/wolf-fang-pendant-necklace'],
+  },
+  '/blog/viking-jewelry-materials-guide': {
+    path: '/blog/viking-jewelry-materials-guide',
+    title: 'Viking Jewelry Materials Guide | Steel, Leather & Finish',
+    description:
+      'Understand common materials in Viking-inspired jewelry, including stainless steel, leather, finish, weight, and daily wear.',
+    eyebrow: 'Material guide',
+    heading: 'Viking Jewelry Materials Guide',
+    intro:
+      'Material choice affects comfort, durability, styling, and how premium a Viking-inspired piece feels in daily wear.',
+    heroProductName: 'Viking Leather Bracelet, Braided Black Leather Chain',
+    productNames: [
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+    ],
+    sections: [
+      {
+        title: 'Stainless Steel For Structure',
+        body: 'Stainless steel is a strong choice for cuffs, bangles, and pendants because it holds shape and keeps a polished metal presence. It works especially well when the design depends on sculpted details such as ravens, dragons, or twisted forms.',
+      },
+      {
+        title: 'Leather For Comfort',
+        body: 'Leather brings softness and flexibility. A black leather bracelet is usually easier for casual wear than a rigid cuff, especially for buyers who spend long hours typing, driving, or wearing watches.',
+      },
+      {
+        title: 'Finish Changes The Mood',
+        body: 'Bright metal feels cleaner and more polished. Darker or oxidized-looking detail feels more rugged and old-world. A good Viking-inspired piece often balances both so it has character without looking like costume jewelry.',
+      },
+      {
+        title: 'Weight Matters',
+        body: 'Some shoppers want a heavy statement piece, while others prefer something they can forget they are wearing. Product pages should be read with lifestyle in mind: daily comfort, gift impact, and how often the wearer uses accessories.',
+      },
+    ],
+    related: ['/bracelets', '/blog/stainless-steel-vs-leather-viking-bracelets', '/viking-jewelry'],
+  },
+  '/blog/viking-jewelry-gift-sizing-guide': {
+    path: '/blog/viking-jewelry-gift-sizing-guide',
+    title: 'Viking Jewelry Gift Sizing Guide | Bracelet Or Necklace',
+    description:
+      'Choose safer Viking jewelry gifts by comparing bracelet sizing risk, necklace fit, and product style clues.',
+    eyebrow: 'Gift sizing',
+    heading: 'Viking Jewelry Gift Sizing Guide',
+    intro:
+      'The best Viking jewelry gift is not only about the symbol; it also needs to fit the person comfortably.',
+    heroProductName: "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+    productNames: [
+      "Men's Viking Dragon Bracelet, Stainless Steel Nordic Cuff",
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    ],
+    sections: [
+      {
+        title: 'Necklaces Are Usually Safer',
+        body: 'If you do not know wrist size, a necklace is often the safer gift. Pendants do not need the same exact fit as cuffs or leather bracelets, and they can be worn over different shirt styles.',
+      },
+      {
+        title: 'Use Existing Accessories As Clues',
+        body: 'If the person already wears wide watches or metal rings, a stainless steel cuff may suit them. If they prefer hoodies, denim, and casual outfits, a black leather bracelet may feel more natural.',
+      },
+      {
+        title: 'Choose Symbol Before Price',
+        body: 'A raven piece feels thoughtful for someone who likes mythology. A wolf fang pendant feels rugged. A dragon bracelet feels bold. Choosing by symbol makes the gift feel personal rather than random.',
+      },
+      {
+        title: 'Include Product Context',
+        body: 'When gifting, mention why you chose the piece. A simple note about the raven, wolf, or cuff shape can make the jewelry feel more meaningful and helps the recipient understand the design.',
+      },
+    ],
+    related: ['/blog/viking-jewelry-gifts-for-men', '/viking-necklaces', '/contact'],
+  },
+  '/blog/what-to-check-before-buying-viking-jewelry-online': {
+    path: '/blog/what-to-check-before-buying-viking-jewelry-online',
+    title: 'What To Check Before Buying Viking Jewelry Online',
+    description:
+      'A practical checklist for checking photos, materials, sizing, shipping, returns, and symbolism before buying Viking jewelry online.',
+    eyebrow: 'Buyer checklist',
+    heading: 'What To Check Before Buying Viking Jewelry Online',
+    intro:
+      'Online jewelry pages should answer more than price. Good product research checks fit, material, photos, policy details, and how the piece will actually be worn.',
+    heroProductName: 'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+    productNames: [
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Wolf Fang Pendant Necklace, Stainless Steel Viking Wolf Tooth',
+      'Viking Twisted Cuff Bracelet, 316L Stainless Steel Norse Bangle',
+    ],
+    sections: [
+      {
+        title: 'Check Real Product Photos',
+        body: 'Look for clear product photos that show the shape, finish, and details. For Viking-inspired jewelry, close-up detail matters because ravens, dragons, twisted metal, and fang shapes can look very different depending on lighting and angle.',
+      },
+      {
+        title: 'Read Material Notes',
+        body: 'Material affects durability and comfort. Stainless steel, leather, and plated finishes wear differently. If a buyer wants daily jewelry, material clarity is more important than a dramatic product title.',
+      },
+      {
+        title: 'Review Shipping And Return Details',
+        body: 'Before checkout, review current Etsy shipping estimates, delivery destinations, return eligibility, and order support instructions. A good buying decision includes the policy details, not only the product image.',
+      },
+      {
+        title: 'Match The Style To The Wearer',
+        body: 'Raven and Odin pieces suit mythology-focused buyers. Wolf fang pendants suit rugged animal-symbol styling. Leather bracelets are easiest for daily use, while metal cuffs create a stronger statement.',
+      },
+    ],
+    related: ['/shipping-and-returns', '/privacy-policy', '/terms-and-conditions'],
+  },
+  '/blog/how-to-build-a-small-viking-jewelry-set': {
+    path: '/blog/how-to-build-a-small-viking-jewelry-set',
+    title: 'How To Build A Small Viking Jewelry Set',
+    description:
+      'Learn how to pair Viking bracelets, raven necklaces, wolf fang pendants, and leather wristwear without over-styling.',
+    eyebrow: 'Styling guide',
+    heading: 'How To Build A Small Viking Jewelry Set',
+    intro:
+      'A small jewelry set works best when one piece leads and the others support it.',
+    heroProductName: 'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    productNames: [
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+      'Viking Leather Bracelet, Braided Black Leather Chain',
+    ],
+    sections: [
+      {
+        title: 'Choose One Main Symbol',
+        body: 'Start with one symbol: raven, wolf, dragon, or twisted metal. Let that piece define the set. Too many strong symbols at once can make an outfit feel crowded instead of intentional.',
+      },
+      {
+        title: 'Pair Metal With Quiet Texture',
+        body: 'A stainless steel raven bracelet can pair well with a simple chain or a quiet leather piece. The supporting accessory should not compete for attention; it should repeat the mood or material in a calmer way.',
+      },
+      {
+        title: 'Use Necklaces For Balance',
+        body: 'A pendant can balance a wrist piece without making one area look too heavy. For example, a raven bracelet and Odin raven necklace create a clear theme, while a leather bracelet and wolf fang pendant create a rugged everyday pairing.',
+      },
+      {
+        title: 'Stop Before It Looks Costumed',
+        body: 'Two pieces are usually enough for daily wear. Three can work if one is subtle. The goal is to look like someone with a personal style, not someone dressed for a theme event.',
+      },
+    ],
+    related: ['/blog/how-to-style-a-viking-bracelet', '/raven-jewelry', '/viking-necklaces'],
+  },
+  '/blog/odin-raven-necklace-meaning-and-gift-guide': {
+    path: '/blog/odin-raven-necklace-meaning-and-gift-guide',
+    title: 'Odin Raven Necklace Meaning And Gift Guide',
+    description:
+      'Learn what Odin raven necklaces can represent and when a Huginn Muninn pendant makes a thoughtful gift.',
+    eyebrow: 'Odin raven guide',
+    heading: 'Odin Raven Necklace Meaning And Gift Guide',
+    intro:
+      'An Odin raven necklace is a strong gift choice for someone who likes mythology, symbolism, and darker pendant designs.',
+    heroProductName: 'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+    productNames: [
+      'Odin Raven Necklace, Huginn Muninn Viking Pendant',
+      'Viking Raven Bracelet, Stainless Steel Norse Cuff Wristband',
+    ],
+    sections: [
+      {
+        title: 'Why Odin Ravens Feel Symbolic',
+        body: 'Odin ravens are often associated with thought, memory, watchfulness, and old Norse storytelling. That gives a raven necklace more emotional weight than a plain pendant for the right wearer.',
+      },
+      {
+        title: 'Who It Suits',
+        body: 'This kind of necklace suits someone who likes mythology, fantasy, medieval style, symbolic jewelry, black clothing, silver-tone accessories, or pieces with a story behind them.',
+      },
+      {
+        title: 'How To Wear It',
+        body: 'Wear the pendant with a plain tee, dark button-down, denim jacket, or simple outer layer. The necklace should be visible enough to read as intentional but not surrounded by too many competing symbols.',
+      },
+      {
+        title: 'Gift Pairing',
+        body: 'If you want to build a gift set over time, start with the necklace and add a raven bracelet later. The two pieces share a theme without needing to be worn together every day.',
+      },
+    ],
+    related: ['/products/odin-raven-necklace', '/raven-jewelry', '/blog/raven-symbol-meaning-in-norse-jewelry'],
+  },
 }
 
 export const commercialPagePaths = Object.keys(commercialPages)
@@ -928,3 +1292,6 @@ export const allSeoPages = {
   ...blogPages,
 }
 export const allSeoPagePaths = Object.keys(allSeoPages)
+export const indexableSeoPagePaths = Object.entries(allSeoPages)
+  .filter(([, page]) => !page.noindex)
+  .map(([path]) => path)
