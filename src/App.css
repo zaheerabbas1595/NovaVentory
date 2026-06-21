@@ -2728,6 +2728,11 @@ body.mobile-menu-open {
     font-size: 12px;
     letter-spacing: 1px;
   }
+
+  .tally-form-frame,
+  .tally-form-frame iframe {
+    max-height: 420px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
