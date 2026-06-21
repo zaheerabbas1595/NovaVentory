@@ -2188,12 +2188,14 @@ body.mobile-menu-open {
   border: 1px solid #e8e1d6;
   background: #f8f7f4;
   min-height: 350px;
+  max-height: 350px;
 }
 
 .tally-form-frame iframe {
   display: block;
   width: 100%;
   min-height: 350px;
+  max-height: 350px;
   border: 0;
   overflow: hidden;
 }
