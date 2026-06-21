@@ -2170,7 +2170,6 @@ body.mobile-menu-open {
 }
 
 .tally-form-frame {
-  min-height: 760px;
   margin-top: 24px;
   overflow: hidden;
   border: 1px solid #e8e1d6;
@@ -2180,7 +2179,6 @@ body.mobile-menu-open {
 .tally-form-frame iframe {
   display: block;
   width: 100%;
-  min-height: 760px;
   border: 0;
 }
 

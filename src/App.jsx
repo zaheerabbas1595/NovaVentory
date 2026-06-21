@@ -1307,6 +1307,61 @@ const renderLegalText = (text) =>
     )
   })
 
+function TallyFormFrame({ form, title }) {
+  useEffect(() => {
+    const scriptSrc = 'https://tally.so/widgets/embed.js'
+    const loadEmbeds = () => {
+      if (window.Tally?.loadEmbeds) {
+        window.Tally.loadEmbeds()
+        return
+      }
+
+      document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((iframe) => {
+        iframe.src = iframe.dataset.tallySrc
+      })
+    }
+
+    const existingScript = document.querySelector(`script[src="${scriptSrc}"]`)
+
+    if (existingScript) {
+      existingScript.addEventListener('load', loadEmbeds)
+      existingScript.addEventListener('error', loadEmbeds)
+      loadEmbeds()
+
+      return () => {
+        existingScript.removeEventListener('load', loadEmbeds)
+        existingScript.removeEventListener('error', loadEmbeds)
+      }
+    }
+
+    const script = document.createElement('script')
+    script.src = scriptSrc
+    script.async = true
+    script.onload = loadEmbeds
+    script.onerror = loadEmbeds
+    document.body.appendChild(script)
+
+    return () => {
+      script.onload = null
+      script.onerror = null
+    }
+  }, [form.src])
+
+  return (
+    <div className="tally-form-frame">
+      <iframe
+        data-tally-src={form.src}
+        loading="lazy"
+        title={title}
+        width="100%"
+        frameBorder="0"
+        marginHeight="0"
+        marginWidth="0"
+      />
+    </div>
+  )
+}
+
 function LegalPage({ page }) {
   return (
     <main className="legal-page" id="main-content">
@@ -1339,14 +1394,7 @@ function LegalPage({ page }) {
             <p className="eyebrow">Direct contact</p>
             <h2 id="contact-form-title">{page.form.title}</h2>
             <p>{page.form.intro}</p>
-            <div className="tally-form-frame">
-              <iframe
-                src={page.form.src}
-                title={`${page.heading} form`}
-                width="100%"
-                height="760"
-              />
-            </div>
+            <TallyFormFrame form={page.form} title={`${page.heading} form`} />
             <p className="contact-form-fallback">
               If the form does not load, open it directly:{' '}
               <a href={page.form.fallbackUrl} target="_blank" rel="noreferrer">
