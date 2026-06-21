@@ -798,21 +798,39 @@ const testimonials = [
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(() => window.scrollY > 8)
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState(null)
   const [searchQuery, setSearchQuery] = useState('')
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const closeDropdownTimerRef = useRef(null)
+  const lastScrollYRef = useRef(window.scrollY)
   const searchResults = getHeaderSearchResults(searchQuery)
 
   useEffect(() => {
+    const shouldKeepHeaderVisible = isMobileMenuOpen || isSearchOpen || activeDropdown
+
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 8)
+      const currentScrollY = window.scrollY
+      const scrollDelta = currentScrollY - lastScrollYRef.current
+
+      setIsScrolled(currentScrollY > 8)
+
+      if (shouldKeepHeaderVisible || currentScrollY <= 80) {
+        setIsHeaderHidden(false)
+      } else if (scrollDelta > 8) {
+        setIsHeaderHidden(true)
+      } else if (scrollDelta < -8) {
+        setIsHeaderHidden(false)
+      }
+
+      lastScrollYRef.current = currentScrollY
     }
 
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [activeDropdown, isMobileMenuOpen, isSearchOpen])
 
   useEffect(
     () => () => {
@@ -893,7 +911,11 @@ function Header() {
   }
 
   return (
-    <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`}>
+    <header
+      className={`site-header ${isScrolled ? 'is-scrolled' : ''} ${
+        isHeaderHidden ? 'is-hidden' : ''
+      }`}
+    >
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
