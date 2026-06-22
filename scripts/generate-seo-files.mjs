@@ -641,8 +641,10 @@ const createHtml = (page) => {
 <html lang="${siteLanguage}">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="icon" type="image/svg+xml" sizes="any" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href="${canonicalUrl}" />
     <link rel="alternate" hreflang="${siteLanguage}" href="${canonicalUrl}" />
