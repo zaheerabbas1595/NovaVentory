@@ -671,8 +671,10 @@ const createHtml = (page) => {
     <meta name="google-site-verification" content="bfVFvSd2-GiDeRZMRsjeT9RSeL9kQtxtsHjluEgemJg" />
     <meta name="google-adsense-account" content="${adsensePublisherId}" />
     <script type="application/ld+json">${escapeJsonScript(JSON.stringify(staticSchema))}</script>
+    <script>document.documentElement.classList.add('js-enabled')</script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsensePublisherId}" crossorigin="anonymous"></script>
 ${tallyScript}    <style>
+      .js-enabled .static-fallback{display:none}
       .static-fallback{max-width:940px;margin:0 auto;padding:48px 20px;font-family:Arial,sans-serif;line-height:1.7;color:#1a1a1a;background:#fff}
       .static-fallback h1{font-size:40px;line-height:1.1;margin:0 0 18px}
       .static-fallback h2{font-size:24px;margin:34px 0 10px}
