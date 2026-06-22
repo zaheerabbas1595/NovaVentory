@@ -327,6 +327,9 @@ const getPageProductNames = (page) =>
     ...(page.productNames || []),
   ].filter(Boolean)
 
+const getProductPathByName = (productName) =>
+  Object.values(allSeoPages).find((page) => page.productName === productName)?.path
+
 const createBreadcrumbSchema = (page, pageUrl) => ({
   '@type': 'BreadcrumbList',
   '@id': `${pageUrl}#breadcrumb`,
@@ -550,7 +553,18 @@ const renderStaticContent = (page) => {
         productNames.length
           ? `<section>
         <h2>Related NovaVentory Products</h2>
-        <ul>${productNames.map((productName) => `<li>${escapeHtml(productName)}</li>`).join('')}</ul>
+        <ul>${productNames
+          .map((productName) => {
+            const productPath = getProductPathByName(productName)
+            const image = productSeoImages[productName] || getPageSeoImage(page)
+            const productLabel = escapeHtml(productName)
+            const productContent = `<img src="${escapeHtml(image.path)}" alt="${escapeHtml(image.alt)}" loading="lazy" width="320" /> <span>${productLabel}</span>`
+
+            return productPath
+              ? `<li><a href="${escapeHtml(productPath)}">${productContent}</a></li>`
+              : `<li>${productContent}</li>`
+          })
+          .join('')}</ul>
       </section>`
           : ''
       }

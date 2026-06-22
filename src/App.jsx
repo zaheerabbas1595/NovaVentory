@@ -1752,6 +1752,7 @@ function BlogIndex({ page, blogPages }) {
 
 function BlogProductFeature({ page }) {
   const featureProducts = getProductsForPage(page)
+  const featureLimit = page.productFeatureLimit || 3
 
   if (!featureProducts.length) {
     return null
@@ -1761,7 +1762,7 @@ function BlogProductFeature({ page }) {
     <aside className="blog-product-feature" aria-label="Featured NovaVentory products">
       <h2>Featured NovaVentory Picks</h2>
       <div>
-        {featureProducts.slice(0, 3).map((product) => (
+        {featureProducts.slice(0, featureLimit).map((product) => (
           <a href={product.path} key={product.name}>
             <img src={product.image} alt={product.name} />
             <span>{product.name}</span>
