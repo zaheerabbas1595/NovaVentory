@@ -1801,7 +1801,7 @@ body.mobile-menu-open {
 
 .collection-links {
   width: min(1120px, calc(100% - 40px));
-  margin: 0 auto 84px;
+  margin: 0 auto clamp(108px, 8vw, 148px);
   padding-top: 28px;
   display: flex;
   justify-content: center;
